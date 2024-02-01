@@ -15,24 +15,32 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
 
 function Home() {
-    const [txtAni, setTxtAni] = useState<string>('');
-    dayjs.locale('ko')
+    dayjs.locale('ko');
     let time = dayjs();
+    
+    const content = "안녕하세요!\n손하늘입니다!";
+    const [txtAni, setTxtAni] = useState<string>(content[0]);
+let i = 0;
 
-    const content = "안녕하세요!";
-    let i = 0;
-    let typing = () => {
-        let txtt = content[i++] === "\n" ? "<br/>" : content[i++];
-        setTxtAni([...txtAni, txtt]);
-        if (i > content.length) {
-            setTxtAni('')
-            i = 0;
-        }
-        setInterval(typing, 200)
+const typing = () => {
+    if (i < content.length-1) {
+        i++;
+        console.log(content[i], i)
+        setTxtAni((prevTxt) => prevTxt + content[i]);
+    } else {
+        setTxtAni(content[0]);
+        i = 0;
     }
-    useEffect(() => {
-        typing();
-    }, [])
+};
+
+useEffect(() => {
+    const timeout = setTimeout(() => {
+        const interval = setInterval(typing,500);
+        return () => clearInterval(interval);
+    }, 500);
+    return () => clearTimeout(timeout);
+}, []);
+
 
     return (
         <>
@@ -58,7 +66,7 @@ function Home() {
             </header>
             <section>
                 <div id="main-left-cont">
-                    <span className="text">{txtAni}</span><span className="blink">|</span>
+                    <span className="text">{txtAni}</span>
                 </div>
                 <div id="main-right-cont">
                     <ul>
