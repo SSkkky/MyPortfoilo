@@ -1,48 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 89.66 96.4" style="enable-background:new 0 0 89.66 96.4;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#FFFFFF;}
-	.st1{fill:#231F20;}
-</style>
-<g>
-	<polygon class="st0" points="85.18,13.45 85.18,13.45 85.18,8.97 80.69,8.97 76.21,8.97 76.21,8.97 71.73,8.97 71.73,8.97 
-		71.73,8.97 67.25,8.97 67.25,8.97 62.76,8.97 58.28,8.97 58.28,4.48 53.8,4.48 53.8,0 49.31,0 49.31,0 44.83,0 44.83,0 40.35,0 
-		40.35,0 35.86,0 35.86,4.48 35.86,4.48 31.38,4.48 31.38,8.97 31.38,8.97 26.9,8.97 22.41,8.97 17.93,8.97 13.45,8.97 8.97,8.97 
-		4.48,8.97 4.48,13.45 0,13.45 0,17.93 0,22.42 0,26.9 4.48,26.9 4.48,26.9 4.48,31.38 8.97,31.38 8.97,87.44 8.97,91.92 
-		13.45,91.92 13.45,96.4 17.93,96.4 67.25,96.4 69.98,96.4 71.73,96.4 76.21,96.4 76.21,91.92 80.69,91.92 80.69,87.44 80.69,31.38 
-		85.18,31.38 85.18,26.9 85.18,26.9 89.66,26.9 89.66,22.42 89.66,17.93 89.66,13.45 	"/>
-	<rect x="4.48" y="17.93" class="st1" width="4.48" height="4.48"/>
-	<rect x="17.93" y="87.44" class="st1" width="52.05" height="4.48"/>
-	<rect x="67.25" y="87.44" class="st1" width="4.48" height="4.48"/>
-	<rect x="13.45" y="26.9" class="st1" width="4.48" height="60.54"/>
-	<rect x="22.41" y="31.23" class="st1" width="4.48" height="51.31"/>
-	<rect x="62.76" y="31.23" class="st1" width="4.48" height="51.31"/>
-	<rect x="35.86" y="31.23" class="st1" width="4.48" height="51.31"/>
-	<rect x="49.31" y="31.23" class="st1" width="4.48" height="51.31"/>
-	<rect x="71.73" y="26.9" class="st1" width="4.48" height="60.54"/>
-	<rect x="35.86" y="8.97" class="st1" width="4.48" height="4.48"/>
-	<rect x="49.31" y="8.97" class="st1" width="4.48" height="4.48"/>
-	<rect x="40.35" y="4.48" class="st1" width="4.48" height="4.48"/>
-	<rect x="44.83" y="4.48" class="st1" width="4.48" height="4.48"/>
-	<rect x="80.69" y="17.93" class="st1" width="4.48" height="4.48"/>
-	<rect x="8.97" y="22.42" class="st1" width="71.73" height="4.48"/>
-	<rect x="8.97" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="13.45" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="17.93" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="22.41" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="26.9" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="31.38" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="35.86" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="40.35" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="44.83" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="49.31" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="53.8" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="58.28" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="62.76" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="67.25" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="71.73" y="13.45" class="st1" width="4.48" height="4.48"/>
-	<rect x="76.21" y="13.45" class="st1" width="4.48" height="4.48"/>
-</g>
+<svg id="TrIcon" width="90" height="97" viewBox="0 0 90 97" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_25_3363)">
+        <path
+            d="M85.18 13.45V8.97H80.69H76.21H71.73H67.25H62.76H58.28V4.48H53.8V0H49.31H44.83H40.35H35.86V4.48H31.38V8.97H26.9H22.41H17.93H13.45H8.97H4.48V13.45H0V17.93V22.42V26.9H4.48V31.38H8.97V87.44V91.92H13.45V96.4H17.93H67.25H69.98H71.73H76.21V91.92H80.69V87.44V31.38H85.18V26.9H89.66V22.42V17.93V13.45H85.18Z"
+            fill="white" />
+        <path d="M8.95998 17.9301H4.47998V22.4101H8.95998V17.9301Z" fill="#231F20" />
+        <path d="M69.9799 87.4399H17.9299V91.9199H69.9799V87.4399Z" fill="#231F20" />
+        <path d="M71.73 87.4399H67.25V91.9199H71.73V87.4399Z" fill="#231F20" />
+        <path d="M17.93 26.9H13.45V87.44H17.93V26.9Z" fill="#231F20" />
+        <path d="M26.8899 31.23H22.4099V82.54H26.8899V31.23Z" fill="#231F20" />
+        <path d="M67.24 31.23H62.76V82.54H67.24V31.23Z" fill="#231F20" />
+        <path d="M40.3401 31.23H35.8601V82.54H40.3401V31.23Z" fill="#231F20" />
+        <path d="M53.7901 31.23H49.3101V82.54H53.7901V31.23Z" fill="#231F20" />
+        <path d="M76.21 26.9H71.73V87.44H76.21V26.9Z" fill="#231F20" />
+        <path d="M40.3401 8.96997H35.8601V13.45H40.3401V8.96997Z" fill="#231F20" />
+        <path d="M53.7901 8.96997H49.3101V13.45H53.7901V8.96997Z" fill="#231F20" />
+        <path d="M44.8301 4.47998H40.3501V8.95998H44.8301V4.47998Z" fill="#231F20" />
+        <path d="M49.3101 4.47998H44.8301V8.95998H49.3101V4.47998Z" fill="#231F20" />
+        <path d="M85.1699 17.9301H80.6899V22.4101H85.1699V17.9301Z" fill="#231F20" />
+        <path d="M80.7 22.42H8.96997V26.9H80.7V22.42Z" fill="#231F20" />
+        <path d="M13.45 13.45H8.96997V17.93H13.45V13.45Z" fill="#231F20" />
+        <path d="M17.93 13.45H13.45V17.93H17.93V13.45Z" fill="#231F20" />
+        <path d="M22.4099 13.45H17.9299V17.93H22.4099V13.45Z" fill="#231F20" />
+        <path d="M26.8899 13.45H22.4099V17.93H26.8899V13.45Z" fill="#231F20" />
+        <path d="M31.3799 13.45H26.8999V17.93H31.3799V13.45Z" fill="#231F20" />
+        <path d="M35.8599 13.45H31.3799V17.93H35.8599V13.45Z" fill="#231F20" />
+        <path d="M40.3401 13.45H35.8601V17.93H40.3401V13.45Z" fill="#231F20" />
+        <path d="M44.8301 13.45H40.3501V17.93H44.8301V13.45Z" fill="#231F20" />
+        <path d="M49.3101 13.45H44.8301V17.93H49.3101V13.45Z" fill="#231F20" />
+        <path d="M53.7901 13.45H49.3101V17.93H53.7901V13.45Z" fill="#231F20" />
+        <path d="M58.28 13.45H53.8V17.93H58.28V13.45Z" fill="#231F20" />
+        <path d="M62.76 13.45H58.28V17.93H62.76V13.45Z" fill="#231F20" />
+        <path d="M67.24 13.45H62.76V17.93H67.24V13.45Z" fill="#231F20" />
+        <path d="M71.73 13.45H67.25V17.93H71.73V13.45Z" fill="#231F20" />
+        <path d="M76.21 13.45H71.73V17.93H76.21V13.45Z" fill="#231F20" />
+        <path d="M80.69 13.45H76.21V17.93H80.69V13.45Z" fill="#231F20" />
+    </g>
+    <defs>
+        <clipPath id="clip0_25_3363">
+            <rect width="89.66" height="96.4" fill="white" />
+        </clipPath>
+    </defs>
 </svg>
