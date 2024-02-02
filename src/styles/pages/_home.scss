@@ -85,16 +85,6 @@ aside {
     }
 }
 
-.react-draggable {
-    background: url();
-}
-
-.main-sec-cont {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-}
-
 footer {
     position: fixed;
     bottom: 0;
@@ -108,4 +98,20 @@ footer {
         text-align: center;
         color: #fff;
     }
+}
+
+
+
+
+.main-cont-bg {
+    .bg-box-2 {
+        .title {
+            position: absolute;
+            z-index: 2;
+            top: 15px;
+            left: calc(50% - 30px);
+            color: #fff;
+        }
+    }
+
 }
