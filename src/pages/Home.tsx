@@ -14,32 +14,32 @@ import { ReactComponent as TrIcon } from '../assets/icons/trash.svg';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
 
+
 function Home() {
     dayjs.locale('ko');
     let time = dayjs();
-    
-    const content = "안녕하세요!\n손하늘입니다!";
+
+    const content = "프론트엔드 개발자 손하늘입니다 :)";
     const [txtAni, setTxtAni] = useState<string>(content[0]);
-let i = 0;
+    let i = 0;
 
-const typing = () => {
-    if (i < content.length-1) {
-        i++;
-        console.log(content[i], i)
-        setTxtAni((prevTxt) => prevTxt + content[i]);
-    } else {
-        setTxtAni(content[0]);
-        i = 0;
-    }
-};
+    const typing = () => {
+        if (i < content.length - 1) {
+            i++;
+            setTxtAni((prevTxt) => prevTxt + content[i]);
+        } else {
+            setTxtAni(content[0]);
+            i = 0;
+        }
+    };
 
-useEffect(() => {
-    const timeout = setTimeout(() => {
-        const interval = setInterval(typing,500);
-        return () => clearInterval(interval);
-    }, 500);
-    return () => clearTimeout(timeout);
-}, []);
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            const interval = setInterval(typing, 300);
+            return () => clearInterval(interval);
+        }, 500);
+        return () => clearTimeout(timeout);
+    }, []);
 
 
     return (
@@ -84,7 +84,7 @@ useEffect(() => {
                 </div>
             </aside>
             <footer>
-
+                <p>ⓒ 2024. 손하늘 all rights reserved.</p>
             </footer>
         </>
     );

@@ -13,6 +13,17 @@
     cursor: url(../assets/icons/cursor.svg) 2 2, auto;
 }
 
+body,
+html,
+#root,
+.App {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
 body {
     background: url(../assets/images/bg.png)
 }
