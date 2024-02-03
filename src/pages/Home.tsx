@@ -1,16 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import '../styles/main.min.css';
-import { ReactComponent as Logo } from '../assets/icons/cloud-fill.svg';
-import { ReactComponent as WifiIcon } from '../assets/icons/wifi.svg';
-import { ReactComponent as BetteryIcon } from '../assets/icons/bettery.svg';
-import { ReactComponent as HanIcon } from '../assets/icons/han.svg';
-import { ReactComponent as MeIcon } from '../assets/icons/me.svg';
-import { ReactComponent as PfIcon } from '../assets/icons/folder.svg';
-import { ReactComponent as CtIcon } from '../assets/icons/contect.svg';
-import { ReactComponent as GitIcon } from '../assets/icons/git.svg';
-import { ReactComponent as VelogIcon } from '../assets/icons/velog.svg';
-import { ReactComponent as TrIcon } from '../assets/icons/trash.svg';
+import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, TrIcon } from '../assets/icons/icons';
+
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
 

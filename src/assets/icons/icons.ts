@@ -1,0 +1,10 @@
+export { ReactComponent as Logo } from './cloud-fill.svg';
+export { ReactComponent as WifiIcon } from './wifi.svg';
+export { ReactComponent as BetteryIcon } from './bettery.svg';
+export { ReactComponent as HanIcon } from './han.svg';
+export { ReactComponent as MeIcon } from './me.svg';
+export { ReactComponent as PfIcon } from './folder.svg';
+export { ReactComponent as CtIcon } from './contect.svg';
+export { ReactComponent as GitIcon } from './git.svg';
+export { ReactComponent as VelogIcon } from './velog.svg';
+export { ReactComponent as TrIcon } from './trash.svg';
