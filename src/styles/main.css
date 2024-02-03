@@ -87,6 +87,7 @@ body {
   position: absolute;
   top: 4rem;
   left: 2rem;
+  padding-right: 1.5rem;
 }
 .main-sec-cont .content::-webkit-scrollbar {
   width: 1rem;
@@ -163,8 +164,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -420,13 +420,30 @@ template {
   display: none;
 }
 
+.about-introduce {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.about-introduce #text-title {
+  position: absolute;
+  z-index: 1;
+  max-width: 20rem;
+}
+.about-introduce .text-description {
+  margin: 0 2rem;
+  position: relative;
+  top: 1.7rem;
+  max-width: 100%;
+  height: 100%;
+}
 header {
   width: 100svw;
   padding: 0 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ddd;
+  background-color: #eee;
   font-size: 0.8rem;
   box-shadow: 0 0 10px 0 #000;
 }
@@ -457,23 +474,23 @@ header .side .bettery {
   gap: 0.3rem;
 }
 
-section {
+#main-section {
   height: 80svh;
   display: flex;
   justify-content: space-between;
   padding: 2rem;
 }
-section #main-left-cont {
+#main-section #main-left-cont {
   width: 90%;
   display: grid;
   place-items: center;
 }
-section #main-left-cont .text {
+#main-section #main-left-cont .text {
   margin: 0 6rem;
   font-size: 4rem;
   color: #fff;
 }
-section #main-left-cont .blink {
+#main-section #main-left-cont .blink {
   animation: blink 0.5s infinite;
   font-size: 2.5rem;
   color: #fff;
@@ -483,23 +500,23 @@ section #main-left-cont .blink {
     opacity: 0;
   }
 }
-section #main-right-cont ul {
+#main-section #main-right-cont ul {
   display: flex;
   gap: 3rem;
   flex-direction: column;
 }
-section #main-right-cont ul li {
+#main-section #main-right-cont ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
-section #main-right-cont ul li #MeIcon,
-section #main-right-cont ul li #PfIcon,
-section #main-right-cont ul li #CtIcon {
+#main-section #main-right-cont ul li #MeIcon,
+#main-section #main-right-cont ul li #PfIcon,
+#main-section #main-right-cont ul li #CtIcon {
   width: 5rem;
 }
-section #main-right-cont ul li p {
+#main-section #main-right-cont ul li p {
   color: #fff;
   text-align: center;
 }
@@ -551,4 +568,8 @@ footer p {
   top: 15px;
   left: calc(50% - 30px);
   color: #fff;
+}
+
+.introduce-cont {
+  border: 1px solid #000;
 }

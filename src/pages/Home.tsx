@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import '../styles/main.min.css';
 import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, TrIcon } from '../assets/icons/icons';
+import '../styles/main.min.css';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
@@ -9,7 +9,15 @@ import 'dayjs/locale/ko';
 
 function Home() {
     dayjs.locale('ko');
-    let time = dayjs();
+    const [time, setTime] = useState(dayjs());
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTime(dayjs());
+        }, 60000);
+        return () => clearInterval(interval); // 컴포넌트 언마운트 시 인터벌 해제
+    }, []);
+
 
     const content = "프론트엔드 개발자 손하늘입니다 :)";
     const [txtAni, setTxtAni] = useState<string>(content[0]);
@@ -52,11 +60,11 @@ function Home() {
                     </div>
                     <HanIcon />
                     <span>
-                        {time.format("(ddd) HH시 ss분")}
+                        {time.format("(ddd) HH시 mm분")}
                     </span>
                 </div>
             </header>
-            <section>
+            <section id="main-section">
                 <div id="main-left-cont">
                     <span className="text">{txtAni}</span>
                 </div>

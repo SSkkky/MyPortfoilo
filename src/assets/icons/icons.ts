@@ -8,3 +8,7 @@ export { ReactComponent as CtIcon } from './contect.svg';
 export { ReactComponent as GitIcon } from './git.svg';
 export { ReactComponent as VelogIcon } from './velog.svg';
 export { ReactComponent as TrIcon } from './trash.svg';
+export { ReactComponent as TitleIcon } from './text-title.svg';
+export { ReactComponent as TextDesL } from './text-description-L.svg';
+export { ReactComponent as TextDesM } from './text-description-M.svg';
+export { ReactComponent as TextDesS } from './text-description-S.svg';
