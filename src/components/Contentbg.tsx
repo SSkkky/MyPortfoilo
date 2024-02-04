@@ -3,7 +3,7 @@ import { TextDesL, TextDesM, TextDesS, TitleIcon } from '../assets/icons/icons';
 
 function Contentbg() {
     return (
-        <div>
+        <div className='content-dot-bg'>
             <TitleIcon />
             <TextDesS />
         </div>

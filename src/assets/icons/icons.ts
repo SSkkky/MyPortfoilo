@@ -12,3 +12,5 @@ export { ReactComponent as TitleIcon } from './text-title.svg';
 export { ReactComponent as TextDesL } from './text-description-L.svg';
 export { ReactComponent as TextDesM } from './text-description-M.svg';
 export { ReactComponent as TextDesS } from './text-description-S.svg';
+export { ReactComponent as TextBox } from './text-box.svg';
+export { ReactComponent as BgDot } from './bg-dot.svg';
