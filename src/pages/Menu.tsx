@@ -9,7 +9,7 @@ class Menu extends React.Component<{}, State> {
         super(props);
         this.state = {
             width: window.innerWidth * 0.8,
-            height: window.innerHeight * 0.6,
+            height: window.innerHeight * 0.7,
             x: 60,
             y: 90
         };

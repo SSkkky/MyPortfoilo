@@ -511,15 +511,44 @@ footer p {
 }
 .about .about-top .about-ani {
   overflow: hidden;
+  white-space: nowrap;
   padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .about .about-top .about-ani p {
   font-weight: bold;
   font-size: 9rem;
   opacity: 0.1;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+@keyframes slidein {
+  from {
+    transform: translateX(50%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes slideout {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+.about .about-top .about-ani .ani1 {
+  animation-name: slidein;
+}
+.about .about-top .about-ani .ani2 {
+  animation-name: slideout;
 }
 .about .about-introduce {
-  margin-bottom: 3rem;
   width: 100%;
   height: 100%;
 }
@@ -539,38 +568,84 @@ footer p {
   left: 1rem;
   z-index: 1;
 }
-.about .about-introduce .introduce-cont .content-bg-text {
-  width: 95%;
-  position: relative;
-  top: 1.5rem;
-  left: 1.5rem;
+.about .about-introduce .introduce-cont::after {
+  content: "";
+  display: block;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: 94%;
+  height: 20px;
+  background-image: url("../assets/icons/bg-dot.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-skill {
+  margin-bottom: 3rem;
+}
+.about-skill .introduce-cont .skills-cont {
+  display: flex;
+  gap: 1rem;
+  height: 100%;
   padding: 4rem;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 1.8;
 }
-.about .about-edu .skills {
-  width: 100%;
-}
-.about .about-edu .skills ul {
-  width: 100%;
+.about-skill .introduce-cont .skills-cont ul {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 1rem;
+  height: 100%;
+  justify-content: space-around;
 }
-.about .about-edu .skills ul li {
+.about-skill .introduce-cont .skills-cont .skills {
+  width: 5rem;
+}
+.about-skill .introduce-cont .skills-cont .skills-level {
+  width: 100%;
+  max-width: 400px;
+}
+.about-skill .introduce-cont .skills-cont .skills-level li {
+  width: 100%;
+  border: 1rem dashed #000;
+}
+.about-skill .introduce-cont .skills-cont .skills-level li:nth-child(2) {
+  width: 85%;
+}
+.about-skill .introduce-cont .skills-cont .skills-level li:nth-child(3),
+.about-skill .introduce-cont .skills-cont .skills-level li:nth-child(4),
+.about-skill .introduce-cont .skills-cont .skills-level li:nth-child(6) {
+  width: 70%;
+}
+.about-skill .introduce-cont .skills-cont .skills-level li:nth-child(5) {
+  width: 55%;
+}
+.about-skill .introduce-cont .skills-cont .skills-level li:nth-child(7) {
+  width: 40%;
+}
+
+.about-edu .edus {
   width: 100%;
   display: flex;
-  gap: 1rem;
+  justify-content: center;
   align-items: center;
 }
-.about .about-edu .skills ul li span {
+.about-edu .edus ul {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+}
+.about-edu .edus ul li {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   text-align: left;
 }
-.about .about-edu .skills ul li p {
+.about-edu .edus ul li span {
+  width: 30%;
+  opacity: 0.3;
+}
+.about-edu .edus ul li p {
   width: 100%;
-  height: 1rem;
-  background-color: #000;
 }
 
 .main-cont-bg .bg-box-2 .title {
@@ -656,26 +731,19 @@ footer p {
 }
 
 .content-bg-text {
-  width: 100%;
-  height: 100%;
   border-top: 6px solid #000;
   border-bottom: 6px solid #000;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.introduce-cont::after {
-  content: "";
-  display: block;
-  margin-left: 2rem;
-  margin-top: 2rem;
-  width: 94%;
-  height: 20px;
-  background-image: url("../assets/icons/bg-dot.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 95%;
+  position: relative;
+  top: 1.5rem;
+  left: 1.5rem;
+  padding: 4rem 1rem;
+  text-align: center;
+  line-height: 1.8;
 }
