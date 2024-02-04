@@ -1,0 +1,44 @@
+header {
+    width: 100svw;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eee;
+    font-size: 0.8rem;
+    box-shadow: 0 0 10px 0 #000;
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        h1 {
+            line-height: 0;
+            margin: 0;
+
+            #cloud-fill {
+                width: 30px;
+            }
+        }
+
+        ul {
+            display: flex;
+            gap: 1rem;
+
+            li {}
+        }
+    }
+
+    .side {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .bettery {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+    }
+}

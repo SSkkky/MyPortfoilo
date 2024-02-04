@@ -1,0 +1,219 @@
+[
+    {
+        "id": 0,
+        "name": "나이키 홈페이지 클론",
+        "image_url": "",
+        "video_url": "",
+        "deploy_url": "https://sskkky.github.io/NIKE-WOMAN/",
+        "date_team": "2023.12 (1인)",
+        "goal": {
+            "goal1": "3단계 반응형 웹 구축",
+            "goal2": "스크롤 애니메이션 구현",
+            "goal3": "PC, 모바일 헤더 분리",
+            "goal4": "모바일 검색 화면, 메뉴 화면 구현"
+        },
+        "link": {
+            "Github": "https://github.com/SSkkky/NIKE-WOMAN"
+        },
+        "overview": "<나이키 홈페이지 클론>은 기초 HTML, CSS, JavaScript 지식을 바탕으로 나이키 우먼 웹사이트를 클론하여 개념을 실제로 활용하는 법을 학습한 프로젝트입니다.",
+        "function": {
+            "fn1": "모바일/태블릿/데스크탑 웹 해상도 대응",
+            "fn2": "메뉴 hover, 옵저브 스크롤 애니메이션",
+            "fn3": "모바일 검색 화면, 버거 메뉴 구현",
+            "fn4": "Top버튼(상단 이동 스크롤) 구현"
+        },
+        "skill": {
+            "Frontend": "HTML, SASS, JavaScript",
+            "Deployment": "GitHub Pages"
+        },
+        "review": "기초 지식이 파편화되어 있던 것을 클론 프로젝트를 통해 하나로 연결하며, 지식을 '알고 있다'와 '사용한다'는 것의 차이를 배우게 된 경험이었습니다. 유연한 해상도 대응을 위해 CSS를 flex, %, viewport를 활용하여 설계하고 구현하는 과정이 재미있었습니다. 프로젝트를 진행하며 JavaScript로 다양한 클릭 이벤트를 생성하였는데, 이 과정을 통해 JavaScript가 'HTML과 CSS로 구성된 웹 페이지를 동적으로 만들어주는 언어'라는 것을 명확히 이해할 수 있었습니다.",
+        "trouble": [
+            {
+                "id": 0,
+                "title": "출력 함수 로직 오류",
+                "problem": "전체 배열에 로컬스토리지값 적용 후 배열 정렬이 되지 않음",
+                "reason": "화면 출력 함수 내부에 로컬스토리지 값을 반영하는 함수가 있어서 정렬 후 출력 함수 실행시 로컬스토리지가 반영된 배열이 sort 배열을 덮음",
+                "solve": "화면 출력 함수 내 배열 처리 기능(getItem, print)을 분리함"
+            },
+            {
+                "id": 1,
+                "title": "로컬스토리지 리스트 중복 저장",
+                "problem": "참조타입 오류로 인한 배열 초기화 실패",
+                "reason": "출력 함수 배열에 담은 로컬스토리지 값이 함수 실행시 초기화되지 않고 누적됨",
+                "solve": "비구조화 할당 문법을 활용하여 초기 배열을 저장함"
+            },
+            {
+                "id": 2,
+                "title": "검색 결과 클릭시 이동 기능 구현에 어려움을 겪음",
+                "problem": "배열내 값을 활용해 location.href로 이동을 구현하려 함",
+                "reason": "data 전송(get) 방식 구조의 이해도가 낮아 로직을 구현하기 어려웠음",
+                "solve": "제품 URL의 구조를 이해하고(/view.html?name=beer&idx=3 으로 주종과 idx를 지정한 형태) 검색 결과의 idx를 각각의 dataset에 저장하여 그 값을 활용하는 식으로 이동 기능을 구현함"
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "해피펍 개발 프로젝트",
+        "image_url": "",
+        "video_url": "",
+        "deploy_url": "https://alclsrkawk.github.io/bottle/",
+        "date_team": "2023.12~2024.01 (5인)",
+        "goal": {
+            "goal1": "JSON fetch 활용 데이터 관리",
+            "goal2": "별점 드래그 기능",
+            "goal3": "실시간 데이터 동기화",
+            "goal4": "로컬스토리지 데이터 저장",
+            "goal5": "리뷰 최신/별점/작성일 순 정렬",
+            "goal6": "전체 데이터 검색",
+            "goal7": "클릭시 상품 페이지 이동"
+        },
+        "link": {
+            "Github": "https://github.com/alclsrkawk/bottle"
+        },
+        "overview": "<해피펍>은 주류 큐레이션 쇼핑몰로 HTML, SCSS, JAVASCRIPT를 활용하여 다양한 기능을 구현하였습니다. 팀원 모두가 공감하는 주류 문화를 기반으로 기획, 개발, 디자인했고 유연한 웹 해상도 대응을 위한 4단계 반응형 작업을 진행하였습니다. 저는 이 팀 프로젝트에서 고객 리뷰, 통합 검색 기능을 담당하고 JSON 데이터 수집, 기획, 디자인에 참여했습니다.",
+        "function": {
+            "fn1": "전체 리뷰 별점의 평균과 수치에 해당하는 면적을 별모양으로 시각화하여 노출",
+            "fn2": "리뷰 10자 이하 입력시 오류 팝업 출력",
+            "fn3": "작성 팝업 속 0.5단위 별점 드래그 구현",
+            "fn4": "좋아요 기능, 중복 클릭시 취소 구현",
+            "fn5": "최신, 좋아요, 별점순 정렬 기능 및 드롭다운 메뉴 구현",
+            "fn6": "로컬스토리지 활용 데이터 저장 및 신규 데이터 반영",
+            "fn7": "검색 키워드 및 결과 수량 노출",
+            "fn8": "검색 결과 클릭시 해당 제품으로 링크 이동",
+            "fn9": "공백 검색 방지(2글자 이상 검색시 결과 노출)"
+        },
+        "skill": {
+            "Frontend": "HTML, SASS, JavaScript",
+            "Deployment": "GitHub Pages",
+            "Etc": "GitHub, figma"
+        },
+        "review": "이 프로젝트는 웹 개발의 기초를 공부하고 처음으로 경험한 팀 프로젝트였습니다. 프로젝트 개발 과정을 통해 구현 목표를 달성하고, 파편화된 지식을 하나로 통합할 수 있었고 문제 해결 방법과 로직으로 생각을 전환하는 과정에 익숙해졌습니다. 실제로 기능을 구현하는 개발 과정이 매우 재미있었습니다!",
+        "trouble": [
+            {
+                "id": 0,
+                "title": "출력 함수 로직 오류",
+                "problem": "전체 배열에 로컬스토리지값 적용 후 배열 정렬이 되지 않음",
+                "reason": "화면 출력 함수 내부에 로컬스토리지 값을 반영하는 함수가 있어서 정렬 후 출력 함수 실행시 로컬스토리지가 반영된 배열이 sort 배열을 덮음",
+                "solve": "화면 출력 함수 내 배열 처리 기능(getItem, print)을 분리함"
+            },
+            {
+                "id": 1,
+                "title": "로컬스토리지 리스트 중복 저장",
+                "problem": "참조타입 오류로 인한 배열 초기화 실패",
+                "reason": "출력 함수 배열에 담은 로컬스토리지 값이 함수 실행시 초기화되지 않고 누적됨",
+                "solve": "비구조화 할당 문법을 활용하여 초기 배열을 저장함"
+            },
+            {
+                "id": 2,
+                "title": "검색 결과 클릭시 이동 기능 구현에 어려움을 겪음",
+                "problem": "배열내 값을 활용해 location.href로 이동을 구현하려 함",
+                "reason": "data 전송(get) 방식 구조의 이해도가 낮아 로직을 구현하기 어려웠음",
+                "solve": "제품 URL의 구조를 이해하고(/view.html?name=beer&idx=3 으로 주종과 idx를 지정한 형태) 검색 결과의 idx를 각각의 dataset에 저장하여 그 값을 활용하는 식으로 이동 기능을 구현함"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "SFLIX",
+        "image_url": "",
+        "video_url": "",
+        "deploy_url": "",
+        "date_team": "2024.01 (1인)",
+        "goal": {
+            "goal1": "MOVIE API 활용",
+            "goal2": "Postman을 이용한 데이터 검증",
+            "goal3": "React 컴포넌트 설계 및 Route 응용",
+            "goal4": "로컬스토리지 데이터 저장",
+            "goal5": "전역 상태 관리",
+            "goal6": "Swiper JS 응용"
+        },
+        "link": {
+            "Github": "https://github.com/SSkkky/React-study/tree/main/240115-movie"
+        },
+        "overview": "<SFLIX>는 사용자가 영화와 TV 프로그램에 대한 정보를 확인할 수 있는 웹 서비스입니다. 이 서비스는 themoviedb API를 활용하여 개발되었습니다. 메인 페이지에서는 실시간 박스오피스 순위 정보를 슬라이드 형식으로 제공하며, 인기순/신규순으로 정렬된 미디어 정보를 리스트로 확인할 수 있습니다. UI 디자인은 넷플릭스를 참고하여 사용자 친화적이고 직관적인 스타일로 구성하였습니다.",
+        "function": {
+            "fn1": "영화 박스오피스 노출",
+            "fn2": "미디어 상세 정보 확인(제목, 줄거리, 제작진, 배우 등)",
+            "fn3": "리스트 자동 슬라이드"
+        },
+        "skill": {
+            "Frontend": " React, SASS, JavaScript, Zustand, Swiper, Axios",
+            "Deployment": "GitHub Pages"
+        },
+        "review": "공개 API를 활용한 첫 프로젝트입니다. 지금까지 간단한 JSON 데이터를 만들어 데이터로 사용하였는데 이번 영화 웹 서비스 개발을 통해 API를 활용하며 다양한 API를 통해 데이터를 얻을 수 있다는 것을 알게되었습니다. 또한 그 활용은 개발자의 몫이므로 평소에 관심을 가지고 재미있는 아이디어를 구상해야겠다고 생각했습니다.\n 그리고 이번 개발을 통해 Axois로 API를 호출하는 방법을 공부했고 테스트를 위해 Postman과 같은 API 플랫폼을 사용하는게 편리하다는 걸 느꼈습니다.",
+        "trouble": [
+            {
+                "id": 0,
+                "title": "출력 함수 로직 오류",
+                "problem": "전체 배열에 로컬스토리지값 적용 후 배열 정렬이 되지 않음",
+                "reason": "화면 출력 함수 내부에 로컬스토리지 값을 반영하는 함수가 있어서 정렬 후 출력 함수 실행시 로컬스토리지가 반영된 배열이 sort 배열을 덮음",
+                "solve": "화면 출력 함수 내 배열 처리 기능(getItem, print)을 분리함"
+            },
+            {
+                "id": 1,
+                "title": "로컬스토리지 리스트 중복 저장",
+                "problem": "참조타입 오류로 인한 배열 초기화 실패",
+                "reason": "출력 함수 배열에 담은 로컬스토리지 값이 함수 실행시 초기화되지 않고 누적됨",
+                "solve": "비구조화 할당 문법을 활용하여 초기 배열을 저장함"
+            },
+            {
+                "id": 2,
+                "title": "검색 결과 클릭시 이동 기능 구현에 어려움을 겪음",
+                "problem": "배열내 값을 활용해 location.href로 이동을 구현하려 함",
+                "reason": "data 전송(get) 방식 구조의 이해도가 낮아 로직을 구현하기 어려웠음",
+                "solve": "제품 URL의 구조를 이해하고(/view.html?name=beer&idx=3 으로 주종과 idx를 지정한 형태) 검색 결과의 idx를 각각의 dataset에 저장하여 그 값을 활용하는 식으로 이동 기능을 구현함"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "2024 My Bucket List",
+        "image_url": "",
+        "video_url": "",
+        "deploy_url": "https://sskkky.github.io/bucket-list/",
+        "date_team": "2024.01 (1인)",
+        "goal": {
+            "goal1": "Typescript의 데이터 타입 활용",
+            "goal2": "MongoDB 도입 및 학습 ",
+            "goal3": "조건에 부합하는 리스트 출력",
+            "goal4": "전역 상태 관리",
+            "goal5": "CRUD 구현"
+        },
+        "link": {
+            "Github": "https://github.com/SSkkky/bucket-list"
+        },
+        "overview": "<2024 My Bucket List>는 사용자들이 자신의 버킷 리스트를 작성하고 관리할 수 있는 웹 서비스입니다. 진행 중이거나 완료한 목록을 별도로 확인할 수 있는 탭 기능을 추가하였으며, 사용자 경험 최적화를 위해 버킷 리스트 작성 화면을 팝업 형태로 제공하였습니다",
+        "function": {
+            "fn1": "버킷 리스트에 대한 CRUD(작성, 읽기, 수정, 삭제)",
+            "fn2": "조건에 따른 리스트 정렬"
+        },
+        "skill": {
+            "Frontend": " React, SASS, JavaScript, Zustand, Swiper, Axios",
+            "Deployment": "GitHub Pages"
+        },
+        "review": "단순한 기능 학습이 아니라 사용자의 입장에서 기능을 고려한 후 개발 방향을 정한 첫 프로젝트여서 의미가 깊습니다. Typescript를 처음 사용해봤다는 것만으로도 의미가 있었지만 axios 통신 중에 Typescript가 데이터 타입을 한번 더 체크해줌으로써 통신 오류를 줄일 수 있다는 것을 직접 느낀 점에서 더욱 의미가 있었습니다. \n 또한 Express, axios, MongoDB를 통한 CRUD와 cors, dotenv의 기능과 역할에 대해 학습할 수 있었습니다.",
+        "trouble": [
+            {
+                "id": 0,
+                "title": "데이터 타입 에러",
+                "problem": "update, delete시 axios error 발생",
+                "reason": "type interface으로 id에 number타입을 적용했기 때문에 리퀘스트 값이 동일한 타입일 것이라고 생각하였으나, id의 타입이 숫자가 아니어서 에러가 발생함",
+                "solve": "DB 업데이트 시, Number()를 사용하여 데이터 타입 명시"
+            },
+            {
+                "id": 1,
+                "title": "로컬 통신",
+                "problem": "DB 데이터가 프론트에 출력되지 않음",
+                "reason": "클라이언트와 서버를 다른 도메인에서 구동시키고 있었으나 데이터 요청을 허가하는 대처를 따로 하지 않았음",
+                "solve": "cors를 사용하여 프론트에서 들어오는 요청을 허가함"
+            },
+            {
+                "id": 2,
+                "title": "MongoDB 연결 실패",
+                "problem": "DB 쿼리 존재에도 불구하고 데이터가 빈 배열로 나타남",
+                "reason": "환경변수 주소와 모델명 불일치",
+                "solve": "atlas에서 데이터베이스와 컬렉션 이름을 확인하고 환경변수 주소와 모델명을 수정함"
+            }
+        ]
+    }
+]

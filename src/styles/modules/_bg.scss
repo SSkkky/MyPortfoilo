@@ -1,0 +1,26 @@
+.dot-bg {
+    position: relative;
+
+    #text-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        max-width: 20rem;
+
+    }
+
+    .text-description {
+        margin: 0 2rem;
+        position: relative;
+        top: 1.7rem;
+        max-width: 100%;
+        height: 100%;
+    }
+
+    #text-description-L {}
+
+    #text-description-M {}
+
+    #text-description-S {}
+}
