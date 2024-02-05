@@ -1,10 +1,16 @@
-import React from 'react';
+import { useStore } from '../store';
 
 function Menubg() {
+    const { menuActive, setMenuActive } = useStore();
+
+    const handleClick = (event: React.MouseEvent<HTMLButtonElement>)=>{
+        setMenuActive(false);
+    }
+
     return (
         <div className='main-cont-bg'>
                         <div className='btns'>
-                            <button className='close-btn'></button>
+                            <button className='close-btn' onClick={handleClick}></button>
                             <button className='mini-btn'></button>
                             <button className='max-btn'></button>
                         </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useStore } from '../store';
 
 import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, TrIcon } from '../assets/icons/icons';
 import '../styles/main.min.css';
@@ -41,6 +42,10 @@ function Home() {
         return () => clearTimeout(timeout);
     }, []);
 
+    const { menuActive, setMenuActive } = useStore();
+    const handleClick = (event: React.MouseEvent<HTMLLIElement>)=>{
+        setMenuActive(true);
+    }
 
     return (
         <>
@@ -70,7 +75,7 @@ function Home() {
                 </div>
                 <div id="main-right-cont">
                     <ul>
-                        <li><MeIcon /><p>ABOUT_ME</p></li>
+                        <li onClick={handleClick}><MeIcon /><p>ABOUT_ME</p></li>
                         <li><PfIcon /><p>PORTFOLIO</p></li>
                         <li><CtIcon /><p>CONTECT_ME</p></li>
                     </ul>
