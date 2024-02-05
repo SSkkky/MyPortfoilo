@@ -1,8 +1,9 @@
 [
     {
         "id": 0,
-        "name": "나이키 홈페이지 클론",
-        "image_url": "",
+        "name": "나이키 클론",
+        "keyword": "nike",
+        "image_url": "https://velog.velcdn.com/images/worte5633/post/a2beecc6-9e4b-4a6e-9b83-878eaec907e5/image.png",
         "video_url": "",
         "deploy_url": "https://sskkky.github.io/NIKE-WOMAN/",
         "date_team": "2023.12 (1인)",
@@ -53,8 +54,9 @@
     },
     {
         "id": 1,
-        "name": "해피펍 개발 프로젝트",
-        "image_url": "",
+        "name": "해피펍",
+        "keyword": "happypub",
+        "image_url": "https://velog.velcdn.com/images/worte5633/post/db701b1a-10ea-4c21-82cd-3fb88e28b613/image.png",
         "video_url": "",
         "deploy_url": "https://alclsrkawk.github.io/bottle/",
         "date_team": "2023.12~2024.01 (5인)",
@@ -115,7 +117,8 @@
     {
         "id": 2,
         "name": "SFLIX",
-        "image_url": "",
+        "keyword": "sflix",
+        "image_url": "https://velog.velcdn.com/images/worte5633/post/a5b789cf-014a-4b46-8e64-b4115daa7409/image.png",
         "video_url": "",
         "deploy_url": "",
         "date_team": "2024.01 (1인)",
@@ -167,8 +170,9 @@
     },
     {
         "id": 3,
-        "name": "2024 My Bucket List",
-        "image_url": "",
+        "name": "My Bucket List",
+        "keyword": "mybucketlist",
+        "image_url": "https://velog.velcdn.com/images/worte5633/post/14bcbcdf-8898-4ffe-8f4b-d22cc5c5cdf2/image.png",
         "video_url": "",
         "deploy_url": "https://sskkky.github.io/bucket-list/",
         "date_team": "2024.01 (1인)",

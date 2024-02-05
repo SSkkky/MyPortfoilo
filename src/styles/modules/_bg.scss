@@ -1,13 +1,12 @@
 .dot-bg {
     width: 100%;
-    height: 100%;
     position: relative;
 
     #text-title {
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 2;
         max-width: 20rem;
     }
 
@@ -20,8 +19,6 @@
     }
 
     .dot-bg-inner {
-        height: 100%;
-
         .content-bg-title {
             p {
                 display: grid;

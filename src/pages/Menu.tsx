@@ -61,7 +61,7 @@ const Menu = () => {
     }
 
     
-    console.log(nowMenu, "<-selectContent")
+    // console.log(nowMenu, "<-selectContent")
 
     return (
         <Rnd className={`${menuActive ? "display-block" : "display-none"} ${maxMenu ? "max-menu" : ""}`}
