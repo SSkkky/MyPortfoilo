@@ -1,20 +1,51 @@
 import React, { useEffect, useState } from 'react'
-import Menu from '../pages/Menu'
-import { MeIcon, TitleIcon} from '../assets/icons/icons';
-import jsonData from '../data.json';
+import { TitleIcon} from '../assets/icons/icons';
+import axios from 'axios';
 
+type DataType = {
+    [key: string]: number | string | DataType[] | null;
+    id: number; 
+    name: string;
+    image_url: string;
+}
+  
 function PortfolioContent() {
-    const data = jsonData;
+    const [loading, setLoading] = useState(false);
+    const [data, setData] = useState<DataType[] | null>(null);
 
-    useEffect(() => {
-        console.log(data, 'data');
-    }, [data]);
+    // useEffect(() => {
+    //     console.log(data, 'data');
+    // }, [data]);
+
+    // 데이터 로딩 함수
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const response = await axios.get('../data.json');
+      setData(response.data);
+    } catch (e) {
+      console.error(e);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...!</div>  // 로딩 중일 때 로딩 화면 노출
+  }
+
+  if (!data) {
+    return null;  // 데이터가 없을 때
+  }
     
 
   return (
     <div className='content portfolio'>
         {
-            data.map((item)=>
+            data?.map((item:DataType)=>
                 <section className='dot-bg portfolio-section' key={item.id}>
                     <div className='dot-bg-inner'>
                         <div className="content-bg-title">

@@ -1,0 +1,41 @@
+.contect {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .contect-top {
+        span {
+            display: block;
+            font-size: 5rem;
+            font-weight: bold;
+            margin: 2rem 0;
+        }
+
+        p {
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+    }
+
+    .contect-cont {
+        margin-top: 4rem;
+        display: flex;
+        max-width: 600px;
+
+        div {
+            padding: 0 2rem;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            p {
+                margin-top: 1rem;
+            }
+        }
+
+        .contect-email {
+            border-right: 4px dashed #ddd;
+        }
+    }
+}
