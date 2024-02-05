@@ -4,7 +4,7 @@ import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
 import AboutContent from '../components/AboutContent';
 import PortfolioContent from '../components/PortfolioContent';
-import ContactContent from '../components/ContactContent';
+import ContectContent from '../components/ContectContent';
 
 import { useStore } from '../store';
 
@@ -56,7 +56,7 @@ const Menu = () => {
         } if(ContentName == 'PORTFOLIO'){
             return <PortfolioContent />
         } else{
-            return <ContactContent />
+            return <ContectContent />
         }
     }
 
