@@ -114,3 +114,19 @@
     text-align: center;
     line-height: 1.8;
 }
+
+
+// rnd Menu.tsx
+.display-block{
+    display: inline-block !important;
+}
+
+.display-none{
+    display: none !important;
+}
+
+.max-menu{
+    width: 100svw !important;
+    height: 100svh !important;
+    transform: translate(0) !important;
+}

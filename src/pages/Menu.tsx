@@ -2,25 +2,27 @@ import React, { useEffect } from 'react';
 import { Rnd, DraggableData, ResizableDelta } from 'react-rnd';
 import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
-import Menucontent from '../components/Menucontent';
+import AboutContent from '../components/AboutContent';
+import PortfolioContent from '../components/PortfolioContent';
+import ContactContent from '../components/ContactContent';
 
 import { useStore } from '../store';
 
 const Menu = () => {
-    const { menuActive } = useStore();
+    const { menuActive, maxMenu, nowMenu } = useStore();
 
     const [state, setState] = React.useState<State>({
         width: window.innerWidth * 0.8,
         height: window.innerHeight * 0.7,
-        x: 60,
-        y: 90
+        x: 0,
+        y: 0
     });
 
     const updateWindowDimensions = () => {
         setState(prevState => ({
             ...prevState,
             width: Math.min(window.innerWidth * 0.8, prevState.width),
-            height: Math.min(window.innerHeight * 0.6, prevState.height)
+            height: Math.min(window.innerHeight * 0.7, prevState.height)
         }));
     };
 
@@ -48,21 +50,32 @@ const Menu = () => {
         }));
     };
 
+    const selectContent = (ContentName:string)=>{
+        if(ContentName == 'ABOUT_ME'){
+            return <AboutContent />
+        } if(ContentName == 'PORTFOLIO'){
+            return <PortfolioContent />
+        } else{
+            return <ContactContent />
+        }
+    }
+
+    
+    console.log(nowMenu, "<-selectContent")
+
     return (
-        <div style={{ display: menuActive ? "block" : "none" }}>
-        <Rnd className={menuActive ? "display-block" : "display-none"}
+        <Rnd className={`${menuActive ? "display-block" : "display-none"} ${maxMenu ? "max-menu" : ""}`}
             size={{ width: state.width, height: state.height }}
             position={{ x: state.x, y: state.y }}
             onDragStop={handleDragStop}
             onResizeStop={handleResizeStop}
-            bounds="parent"
+            bounds="body"
         >
             <div className="about_me main-sec-cont">
                 <Menubg />
-                <Menucontent />
+                {selectContent(nowMenu)}
             </div>
         </Rnd>
-        </div>
     );
 };
 

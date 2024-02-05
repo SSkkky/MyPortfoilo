@@ -1,22 +1,32 @@
 import { useStore } from '../store';
 
 function Menubg() {
-    const { menuActive, setMenuActive } = useStore();
+    const { setMenuActive, menuActive, setMaxMenu, nowMenu } = useStore();
 
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>)=>{
-        setMenuActive(false);
+    //event: React.MouseEvent<HTMLButtonElement>
+    const handleClickClose = ()=>{
+            setMenuActive(!menuActive);
+            console.log(menuActive, '<--close maxMenu')
+    }
+
+    const handleClickMax = ()=>{
+        setMaxMenu(true);
+    }
+
+    const handleClickMin= ()=>{
+        setMaxMenu(false);
     }
 
     return (
         <div className='main-cont-bg'>
                         <div className='btns'>
-                            <button className='close-btn' onClick={handleClick}></button>
-                            <button className='mini-btn'></button>
-                            <button className='max-btn'></button>
+                            <button className='close-btn' onClick={handleClickClose}></button>
+                            <button className='mini-btn' onClick={handleClickMin}></button>
+                            <button className='max-btn' onClick={handleClickMax}></button>
                         </div>
                         <div className="bg-box-1"></div>
-                        <div className="bg-box-2 about_me_cont">
-                            <p className='title'>ABOUT_ME</p>
+                        <div className="bg-box-2">
+                            <p className='title'>{nowMenu}</p>
                         </div>
                         <div className="bg-box-3"></div>
                     </div>
