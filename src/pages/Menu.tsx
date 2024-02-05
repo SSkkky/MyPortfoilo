@@ -49,18 +49,20 @@ const Menu = () => {
     };
 
     return (
-        <Rnd
+        <div style={{ display: menuActive ? "block" : "none" }}>
+        <Rnd className={menuActive ? "display-block" : "display-none"}
             size={{ width: state.width, height: state.height }}
             position={{ x: state.x, y: state.y }}
             onDragStop={handleDragStop}
             onResizeStop={handleResizeStop}
             bounds="parent"
         >
-            <div className="about_me main-sec-cont" style={{ display: menuActive ? "block" : "none" }}>
+            <div className="about_me main-sec-cont">
                 <Menubg />
                 <Menucontent />
             </div>
         </Rnd>
+        </div>
     );
 };
 

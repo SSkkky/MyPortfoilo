@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useStore } from '../store';
 
 import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, TrIcon } from '../assets/icons/icons';
-import '../styles/main.min.css';
+import '../styles/main.scss';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
