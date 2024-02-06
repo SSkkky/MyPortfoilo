@@ -14,3 +14,7 @@ export { ReactComponent as TextDesM } from './text-description-M.svg';
 export { ReactComponent as TextDesS } from './text-description-S.svg';
 export { ReactComponent as TextBox } from './text-box.svg';
 export { ReactComponent as BgDot } from './bg-dot.svg';
+export { ReactComponent as Tel } from './tel.svg';
+export { ReactComponent as Tel2 } from './tel2.svg';
+export { ReactComponent as Email } from './Email.svg';
+export { ReactComponent as Resume } from './resume.svg';

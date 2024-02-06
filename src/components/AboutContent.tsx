@@ -1,7 +1,7 @@
 import React from 'react';
 import { MeIcon, TitleIcon} from '../assets/icons/icons';
 
-function Menucontent() {
+function AboutContent() {
     return (
         <div className='content about'>
             <section className='about-top'>
@@ -15,7 +15,7 @@ function Menucontent() {
                 </div>
             </section>
             <section className='about-introduce dot-bg'>
-                <div className='introduce-cont'>
+                <div className='introduce-cont dot-bg-inner'>
                     <div className="content-bg-title">
                         <TitleIcon />
                         <p>About ME</p>
@@ -26,7 +26,7 @@ function Menucontent() {
                 </div>
             </section>
             <section className='about-introduce dot-bg about-skill'>
-                <div className='introduce-cont'>
+                <div className='introduce-cont dot-bg-inner'>
                     <div className="content-bg-title">
                         <TitleIcon />
                         <p>사용 기술</p>
@@ -54,7 +54,7 @@ function Menucontent() {
                 </div>
             </section>
             <section className='about-introduce dot-bg about-edu'>
-                <div className='introduce-cont'>
+                <div className='introduce-cont dot-bg-inner'>
                     <div className="content-bg-title">
                         <TitleIcon />
                         <p>교육 이력</p>
@@ -79,4 +79,4 @@ function Menucontent() {
     );
 }
 
-export default Menucontent;
+export default AboutContent;

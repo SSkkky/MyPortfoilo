@@ -10,7 +10,8 @@
     color: #000;
     list-style: none;
     box-sizing: border-box;
-    cursor: url(../assets/icons/cursor.svg) 2 2, auto;
+    text-decoration-line: none;
+    cursor: url(../../assets/icons/cursor.svg) 2 2, auto;
 }
 
 body,
@@ -25,5 +26,13 @@ html,
 }
 
 body {
-    background: url(../assets/images/bg.png)
+    background: url(../../assets/images/bg.png)
+}
+
+.nowLoading,
+.nowError {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
 }

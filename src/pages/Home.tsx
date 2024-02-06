@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
+import { useStore } from '../store';
 
-import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, TrIcon } from '../assets/icons/icons';
-import '../styles/main.min.css';
+import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, TrIcon, Resume } from '../assets/icons/icons';
+import '../styles/main.scss';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
+import About from './About';
+import Contact from './Contact';
+import Portfolio from './Portfolio';
 
 
 function Home() {
@@ -19,7 +23,7 @@ function Home() {
     }, []);
 
 
-    const content = "프론트엔드 개발자 손하늘입니다 :)";
+    const content = "프론트엔드 개발을 합니다 :)";
     const [txtAni, setTxtAni] = useState<string>(content[0]);
     let i = 0;
 
@@ -40,6 +44,19 @@ function Home() {
         }, 500);
         return () => clearTimeout(timeout);
     }, []);
+
+    // menu open
+    const { menuActive, setMenuActive, nowMenu, setNowMenu } = useStore();
+    const handleClick = (e: string) => {
+        if (e == 'ABOUTME') { setNowMenu('ABOUT_ME'); setMenuActive(true); }
+        else if (e == 'PORTFOLIO') { setNowMenu('PORTFOLIO'); setMenuActive(true); }
+        else { setNowMenu('CONTECT_ME'); setMenuActive(true); }
+    }
+
+    // menu open console!!!
+    useEffect(() => {
+        console.log(nowMenu, '<--nowMenu');
+    }, [nowMenu]);
 
 
     return (
@@ -70,9 +87,9 @@ function Home() {
                 </div>
                 <div id="main-right-cont">
                     <ul>
-                        <li><MeIcon /><p>ABOUT_ME</p></li>
-                        <li><PfIcon /><p>PORTFOLIO</p></li>
-                        <li><CtIcon /><p>CONTECT_ME</p></li>
+                        <li onClick={() => { handleClick('ABOUTME') }}><MeIcon /><p>ABOUT_ME</p></li>
+                        <li onClick={() => { handleClick('PORTFOLIO') }}><PfIcon /><p>PORTFOLIO</p></li>
+                        <li onClick={() => { handleClick('CONTECTME') }}><CtIcon /><p>CONTECT_ME</p></li>
                     </ul>
                 </div>
             </section>
@@ -80,12 +97,16 @@ function Home() {
                 <div className="main-side-icons">
                     <a href="https://github.com/SSkkky" target='_blank'><GitIcon /></a>
                     <a href="https://velog.io/@worte5633/posts" target='_blank'><VelogIcon /></a>
+                    <a href="./resume.pdf" download="프론트엔드_손하늘"><Resume /></a>
                     <TrIcon />
                 </div>
             </aside>
             <footer>
                 <p>ⓒ 2024. 손하늘 all rights reserved.</p>
             </footer>
+            <About />
+            <Contact />
+            <Portfolio />
         </>
     );
 }

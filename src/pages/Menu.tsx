@@ -1,58 +1,82 @@
-import React from 'react';
-import { Rnd } from 'react-rnd';
-import { State } from '../models/dataTypes'
+import React, { useEffect } from 'react';
+import { Rnd, DraggableData, ResizableDelta } from 'react-rnd';
+import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
-import Menucontent from '../components/Menucontent';
+import AboutContent from '../components/AboutContent';
+import PortfolioContent from '../components/PortfolioContent';
+import ContectContent from '../components/ContectContent';
 
-class Menu extends React.Component<{}, State> {
-    constructor(props: {} | Readonly<{}>) {
-        super(props);
-        this.state = {
-            width: window.innerWidth * 0.8,
-            height: window.innerHeight * 0.7,
-            x: 60,
-            y: 90
-        };
-        this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
-    }
+import { useStore } from '../store';
 
-    componentDidMount() {
-        this.updateWindowDimensions();
-        window.addEventListener('resize', this.updateWindowDimensions);
-    }
+const Menu = () => {
+    const { menuActive, maxMenu, nowMenu } = useStore();
 
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.updateWindowDimensions);
-    }
+    const [state, setState] = React.useState<State>({
+        width: window.innerWidth * 0.8,
+        height: window.innerHeight * 0.7,
+        x: 0,
+        y: 0
+    });
 
-    updateWindowDimensions() {
-        this.setState(prevState => ({
+    const updateWindowDimensions = () => {
+        setState(prevState => ({
+            ...prevState,
             width: Math.min(window.innerWidth * 0.8, prevState.width),
-            height: Math.min(window.innerHeight * 0.6, prevState.height)
+            height: Math.min(window.innerHeight * 0.7, prevState.height)
         }));
+    };
+
+    useEffect(() => {
+        updateWindowDimensions();
+        window.addEventListener('resize', updateWindowDimensions);
+        return () => {
+            window.removeEventListener('resize', updateWindowDimensions);
+        };
+    }, []);
+
+    const handleDragStop = (e: any, d: DraggableData) => {
+        setState(prevState => ({
+            ...prevState,
+            x: d.x,
+            y: d.y
+        }));
+    };
+
+    const handleResizeStop = (e: any, direction: string, ref: HTMLElement, delta: ResizableDelta, position: { x: number, y: number }) => {
+        setState(prevState => ({
+            ...prevState,
+            width: parseInt(ref.style.width),
+            height: parseInt(ref.style.height)
+        }));
+    };
+
+    const selectContent = (ContentName: string) => {
+        if (ContentName == 'ABOUT_ME') {
+            return <AboutContent />
+        } if (ContentName == 'PORTFOLIO') {
+            return <PortfolioContent />
+        } else {
+            return <ContectContent />
+        }
     }
 
-    render() {
-        return (
-            <Rnd
-                size={{ width: this.state.width, height: this.state.height }}
-                position={{ x: this.state.x, y: this.state.y }}
-                onDragStop={(e, d) => { this.setState({ x: d.x, y: d.y }) }}
-                onResizeStop={(e, direction, ref, delta, position) => {
-                    this.setState({
-                        width: parseInt(ref.style.width),
-                        height: parseInt(ref.style.height),
-                    });
-                }}
-                bounds="parent"
-            >
-                <div className="about_me main-sec-cont">
-                    <Menubg/>
-                    <Menucontent/>
-                </div>
-            </Rnd>
-        );
-    }
-}
+
+    // console.log(nowMenu, "<-selectContent")
+
+    return (
+        <Rnd className={`${menuActive ? "display-block" : "display-none"} ${maxMenu ? "max-menu" : ""}`}
+            size={{ width: state.width, height: state.height }}
+            position={{ x: state.x, y: state.y }}
+            onDragStop={handleDragStop}
+            onResizeStop={handleResizeStop}
+            bounds="body"
+        >
+            <div className="about_me main-sec-cont">
+                <Menubg />
+                {selectContent(nowMenu)}
+            </div>
+        </Rnd>
+    );
+};
 
 export default Menu;
