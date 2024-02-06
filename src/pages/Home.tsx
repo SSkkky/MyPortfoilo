@@ -97,7 +97,7 @@ function Home() {
                 <div className="main-side-icons">
                     <a href="https://github.com/SSkkky" target='_blank'><GitIcon /></a>
                     <a href="https://velog.io/@worte5633/posts" target='_blank'><VelogIcon /></a>
-                    <a href="../assets/icons/resume.svg" download="손하늘 이력서"><Resume /></a>
+                    <a href="./resume.pdf" download="프론트엔드_손하늘"><Resume /></a>
                     <TrIcon />
                 </div>
             </aside>
