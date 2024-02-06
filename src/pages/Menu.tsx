@@ -50,17 +50,17 @@ const Menu = () => {
         }));
     };
 
-    const selectContent = (ContentName:string)=>{
-        if(ContentName == 'ABOUT_ME'){
+    const selectContent = (ContentName: string) => {
+        if (ContentName == 'ABOUT_ME') {
             return <AboutContent />
-        } if(ContentName == 'PORTFOLIO'){
+        } if (ContentName == 'PORTFOLIO') {
             return <PortfolioContent />
-        } else{
+        } else {
             return <ContectContent />
         }
     }
 
-    
+
     // console.log(nowMenu, "<-selectContent")
 
     return (
