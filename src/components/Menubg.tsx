@@ -1,13 +1,19 @@
+import { useEffect } from 'react';
 import { useStore } from '../store';
-
-function Menubg() {
-    const { setMenuActive, menuActive, setMaxMenu, nowMenu, setIsOnTrue } = useStore();
+interface Own { name: string }
+function Menubg({ name }: Own) {
+    const { setAbout, setPortfolio, setContact, setMaxMenu } = useStore();
 
     //event: React.MouseEvent<HTMLButtonElement>
     const handleClickClose = () => {
-        setMenuActive(!menuActive);
-        setIsOnTrue(false);
-        console.log(menuActive, '<--close maxMenu')
+        console.log(name)
+        if (name == 'about') {
+            setAbout(false);
+        } else if (name == 'portfolio') {
+            setPortfolio(false)
+        } else {
+            setContact(false)
+        }
     }
 
     const handleClickMax = () => {
@@ -19,16 +25,14 @@ function Menubg() {
     }
 
     return (
-        <div className='main-cont-bg'>
+        <div className='main-cont-bg drag-handle'>
             <div className='btns'>
                 <button className='close-btn' onClick={handleClickClose}></button>
                 <button className='mini-btn' onClick={handleClickMin}></button>
                 <button className='max-btn' onClick={handleClickMax}></button>
             </div>
             <div className="bg-box-1"></div>
-            <div className="bg-box-2">
-                <p className='title'>{nowMenu}</p>
-            </div>
+            <div className="bg-box-2"></div>
             <div className="bg-box-3"></div>
         </div>
     );

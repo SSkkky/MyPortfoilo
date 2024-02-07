@@ -46,18 +46,21 @@ function Home() {
     }, []);
 
     // menu open
-    const { menuActive, setMenuActive, nowMenu, setNowMenu } = useStore();
+    const { menuActive, setMenuActive, nowMenu, setNowMenu, setAbout, about, portfolio, setPortfolio, contact, setContact } = useStore();
     const handleClick = (e: string) => {
-        if (e == 'ABOUTME') { setNowMenu('ABOUT_ME'); setMenuActive(true); }
-        else if (e == 'PORTFOLIO') { setNowMenu('PORTFOLIO'); setMenuActive(true); }
-        else { setNowMenu('CONTECT_ME'); setMenuActive(true); }
+        if (e == 'About') {
+            setAbout(true); // display:block
+            setNowMenu('About');
+        }
+        else if (e == 'Portfolio') {
+            setPortfolio(true);
+            setNowMenu('Portfolio');
+        }
+        else {
+            setContact(true);
+            setNowMenu('Contact')
+        }
     }
-
-    // menu open console!!!
-    useEffect(() => {
-        console.log(nowMenu, '<--nowMenu');
-    }, [nowMenu]);
-
 
     return (
         <>
@@ -87,9 +90,9 @@ function Home() {
                 </div>
                 <div id="main-right-cont">
                     <ul>
-                        <li onClick={() => { handleClick('ABOUTME') }}><MeIcon /><p>ABOUT_ME</p></li>
-                        <li onClick={() => { handleClick('PORTFOLIO') }}><PfIcon /><p>PORTFOLIO</p></li>
-                        <li onClick={() => { handleClick('CONTECTME') }}><CtIcon /><p>CONTECT_ME</p></li>
+                        <li onClick={() => { handleClick('About') }}><MeIcon /><p>ABOUT_ME</p></li>
+                        <li onClick={() => { handleClick('Portfolio') }}><PfIcon /><p>PORTFOLIO</p></li>
+                        <li onClick={() => { handleClick('Contact') }}><CtIcon /><p>CONTECT_ME</p></li>
                     </ul>
                 </div>
             </section>
@@ -104,9 +107,9 @@ function Home() {
             <footer>
                 <p>ⓒ 2024. 손하늘 all rights reserved.</p>
             </footer>
-            <About />
-            <Contact />
-            <Portfolio />
+            <About name="about" />
+            <Portfolio name="portfolio" />
+            <Contact name="contact" />
         </>
     );
 }

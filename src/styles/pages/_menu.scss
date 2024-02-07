@@ -117,16 +117,20 @@
 
 
 // rnd Menu.tsx
-.display-block{
+.display-block {
     display: inline-block !important;
 }
 
-.display-none{
+.display-none {
     display: none !important;
 }
 
-.max-menu{
+.max-menu {
     width: 100svw !important;
     height: 100svh !important;
     transform: translate(0) !important;
+}
+
+.zIndex {
+    z-index: 10;
 }
