@@ -22,8 +22,8 @@ function Contact({ name }: Own) {
     const updateWindowDimensions = () => {
         setState(prevState => ({
             ...prevState,
-            width: Math.min(window.innerWidth * 0.8, prevState.width),
-            height: Math.min(window.innerHeight * 0.7, prevState.height)
+            width: Math.min(window.innerWidth * 0.5, prevState.width),
+            height: Math.min(window.innerHeight * 0.5, prevState.height)
         }));
     };
 
@@ -47,7 +47,9 @@ function Contact({ name }: Own) {
         setState(prevState => ({
             ...prevState,
             width: parseInt(ref.style.width),
-            height: parseInt(ref.style.height)
+            height: parseInt(ref.style.height),
+            x: position.x,
+            y: position.y
         }));
     };
 
@@ -81,6 +83,7 @@ function Contact({ name }: Own) {
                 ref={refDiv}
                 style={{ zIndex: contactZNum }}
             >
+                <p className='positionTitle'>CONTACT</p>
                 <div className="contact main-sec-cont">
                     <Menubg name={name} />
                     <ContactContent />

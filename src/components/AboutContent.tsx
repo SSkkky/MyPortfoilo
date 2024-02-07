@@ -1,11 +1,13 @@
-import React from 'react';
-import { MeIcon, TitleIcon} from '../assets/icons/icons';
+import React, { useRef } from 'react';
+import { MeIcon, TitleIcon } from '../assets/icons/icons';
 
 function AboutContent() {
+    const pRefs = useRef<null[] | HTMLParagraphElement[]>([]);
+
     return (
         <div className='content about'>
             <section className='about-top'>
-            <div className="about-ani">
+                <div className="about-ani">
                     <p className="ani1">FRONT_END DEVELOPER</p>
                     <p className="ani2">FRONT_END DEVELOPER</p>
                 </div>
@@ -18,7 +20,7 @@ function AboutContent() {
                 <div className='introduce-cont dot-bg-inner'>
                     <div className="content-bg-title">
                         <TitleIcon />
-                        <p>About ME</p>
+                        <p className="about-title mobile" ref={(ref) => { pRefs.current[0] = ref }}>About ME</p>
                     </div>
                     <div className="content-bg-text content-bg-s">
                         빡세게 열심히하는 신입 프론트엔드 <br></br>개발자 손하늘입니다!
@@ -29,7 +31,7 @@ function AboutContent() {
                 <div className='introduce-cont dot-bg-inner'>
                     <div className="content-bg-title">
                         <TitleIcon />
-                        <p>사용 기술</p>
+                        <p className="about-title" ref={(ref) => { pRefs.current[1] = ref }}>사용 기술</p>
                     </div>
                     <div className="content-bg-text content-bg-l skills-cont">
                         <ul className='skills'>
@@ -57,7 +59,7 @@ function AboutContent() {
                 <div className='introduce-cont dot-bg-inner'>
                     <div className="content-bg-title">
                         <TitleIcon />
-                        <p>교육 이력</p>
+                        <p className="about-title" ref={(ref) => { pRefs.current[2] = ref }}>교육 이력</p>
                     </div>
                     <div className="content-bg-text content-bg-m">
                         <div className='edus'>

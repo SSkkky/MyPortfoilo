@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useStore } from '../store';
 interface Own { name: string }
 function Menubg({ name }: Own) {
-    const { setAbout, setPortfolio, setContact, setMaxMenu } = useStore();
+    const { setAbout, setPortfolio, setContact, maxMenu, setMaxMenu } = useStore();
 
     //event: React.MouseEvent<HTMLButtonElement>
     const handleClickClose = () => {
@@ -17,11 +17,11 @@ function Menubg({ name }: Own) {
     }
 
     const handleClickMax = () => {
-        setMaxMenu(true);
+        setMaxMenu(!maxMenu);
     }
 
-    const handleClickMin = () => {
-        setMaxMenu(false);
+    const handleClickMin = () => { // 축소버튼
+        //도크로 쏙 들어가야해용
     }
 
     return (

@@ -39,9 +39,9 @@
     .dot-bg-inner::after {
         content: '';
         display: block;
-        margin-left: 2rem;
+        margin-left: 1rem;
         margin-top: 2rem;
-        width: 94%;
+        width: calc(100% - 1rem);
         height: 20px;
         background-image: url('../../assets/icons/bg-dot.svg');
         background-repeat: no-repeat;

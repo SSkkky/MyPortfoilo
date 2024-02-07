@@ -154,3 +154,24 @@
         }
     }
 }
+
+.about {
+    .dot-bg {
+        .dot-bg-inner {
+            .content-bg-title {
+                p {
+                    white-space: nowrap;
+                }
+
+                .mobile {
+                    color: red;
+                    font-size: 1.2rem;
+                    width: auto;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 1rem;
+                }
+            }
+        }
+    }
+}

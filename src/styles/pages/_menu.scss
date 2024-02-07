@@ -106,10 +106,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 100%;
     position: relative;
     top: 1.5rem;
-    left: 1.5rem;
     padding: 4rem 1rem;
     text-align: center;
     line-height: 1.8;
@@ -133,4 +132,12 @@
 
 .zIndex {
     z-index: 10;
+}
+
+.positionTitle {
+    position: absolute;
+    color: #fff;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
 }

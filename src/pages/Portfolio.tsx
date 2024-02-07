@@ -46,7 +46,9 @@ function Portfolio({ name }: Own) {
         setState(prevState => ({
             ...prevState,
             width: parseInt(ref.style.width),
-            height: parseInt(ref.style.height)
+            height: parseInt(ref.style.height),
+            x: position.x,
+            y: position.y
         }));
     };
 
@@ -79,6 +81,7 @@ function Portfolio({ name }: Own) {
                 ref={refDiv}
                 style={{ zIndex: portfolioZNum }}
             >
+                <p className='positionTitle'>PORTFOLIO</p>
                 <div className="portfolio main-sec-cont">
                     <Menubg name={name} />
                     <PortfolioContent />

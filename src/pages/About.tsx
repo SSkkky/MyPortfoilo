@@ -23,8 +23,16 @@ function About({ name }: Own) {
     const updateWindowDimensions = () => {
         setState(prevState => ({
             ...prevState,
-            width: Math.min(window.innerWidth * 0.8, prevState.width),
-            height: Math.min(window.innerHeight * 0.7, prevState.height)
+            width: Math.min(window.innerWidth * 1, prevState.width),
+            height: Math.min(window.innerHeight * 1, prevState.height)
+        }));
+    };
+
+    const handleDragStop = (e: any, d: DraggableData) => {
+        setState(prevState => ({
+            ...prevState,
+            x: d.x,
+            y: d.y
         }));
     };
 
@@ -35,14 +43,6 @@ function About({ name }: Own) {
             window.removeEventListener('resize', updateWindowDimensions);
         };
     }, []);
-
-    const handleDragStop = (e: any, d: DraggableData) => {
-        setState(prevState => ({
-            ...prevState,
-            x: d.x,
-            y: d.y
-        }));
-    };
 
     // z-index
     const zIndexUp = () => {
@@ -68,18 +68,30 @@ function About({ name }: Own) {
         setState(prevState => ({
             ...prevState,
             width: parseInt(ref.style.width),
-            height: parseInt(ref.style.height)
+            height: parseInt(ref.style.height),
+            x: position.x,
+            y: position.y
         }));
     };
 
     useEffect(() => {
-        // console.log(state.width, '<-- state.width')
-        if (state.width < 420) {
-            // about window width가 420 이하일때 style
+        console.log('setState값', state.x, state.y)
+    }, [state])
 
+    useEffect(() => {
+        console.log(state.width, '<-- state.width')
+        if (state.width < 360) {
+            // about window width가 360 이하일때 style
+
+        } else if (state.width < 420) {
+            // about window width가 420 이하일때 style
+        } else {
+            // 적용되고 났을때 냅두면 안되니까
+            // 혹시모를 css classList 삭제
         }
     }, [state.width])
 
+    //**style inline style={{ zIndex: aboutZNum, display: 'none' }}
     return (
         <div className={`${about ? "display-block" : "display-none"}`} onClick={zIndexUp}>
             <Rnd className={`${maxMenu ? "max-menu" : ""}`}
@@ -91,6 +103,7 @@ function About({ name }: Own) {
                 ref={refDiv}
                 style={{ zIndex: aboutZNum }}
             >
+                <p className='positionTitle'>ABOUT_ME</p>
                 <div className="about_me main-sec-cont">
                     <Menubg name={name} />
                     <AboutContent />
