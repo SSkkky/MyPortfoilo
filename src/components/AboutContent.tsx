@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { MeIcon, TitleIcon } from '../assets/icons/icons';
 
 function AboutContent() {
+    //https://velog.io/@rkio/Typescript-React%EC%97%90%EC%84%9C-useRef-%EC%97%AC%EB%9F%AC-%EA%B0%9C-%ED%95%9C%EB%B2%88%EC%97%90-%EC%84%A0%EC%96%B8%ED%95%98%EA%B8%B0useRef-%EB%B0%B0%EC%97%B4-%EB%A7%8C%EB%93%A4%EA%B8%B0
     const pRefs = useRef<null[] | HTMLParagraphElement[]>([]);
 
     return (
