@@ -12,10 +12,10 @@ function Portfolio({ name }: Own) {
     const { portfolio, maxMenu, nowMenu, portfolioZNum, setAboutZNum, setPortfolioZNum, setContactZNum, onClickMenu, setOnClickMenu } = useStore();
 
     const [state, setState] = React.useState<State>({
-        width: window.innerWidth * 0.8,
+        width: window.innerWidth * 0.6,
         height: window.innerHeight * 0.7,
-        x: 0,
-        y: 0
+        x: 60,
+        y: 30
     });
 
     const updateWindowDimensions = () => {

@@ -13,10 +13,10 @@ function Contact({ name }: Own) {
     const { menuActive, maxMenu, nowMenu, contactZNum, setAboutZNum, setPortfolioZNum, setContactZNum, onClickMenu, setOnClickMenu } = useStore();
 
     const [state, setState] = React.useState<State>({
-        width: window.innerWidth * 0.8,
-        height: window.innerHeight * 0.7,
-        x: 0,
-        y: 0
+        width: window.innerWidth * 0.5,
+        height: window.innerHeight * 0.5,
+        x: 50,
+        y: 60
     });
 
     const updateWindowDimensions = () => {
