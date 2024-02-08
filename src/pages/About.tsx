@@ -8,7 +8,7 @@ import { useStore, zIndex } from '../store';
 interface Own { name: string }
 function About({ name }: Own) {
     const refDiv = useRef<Rnd>(null);
-    const [zIdx, setZidx] = useState(0)
+    const [zIdx, setZidx] = useState(0);
 
     //store
     const { about } = useStore();
