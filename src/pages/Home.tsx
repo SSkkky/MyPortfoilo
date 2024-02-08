@@ -63,12 +63,12 @@ function Home() {
     }
 
     const onClickTrash = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-        const pparant = e.currentTarget.parentElement?.parentElement;
-        if (pparant) { pparant.style.transform = 'translateY(-3.15rem)' }
+        const icon = e.currentTarget.parentElement;
+        if (icon) { icon.style.transform = 'translateY(-0.5rem)' }
         setTrashSrc('/img/trashClick.gif')
 
         const setTime = setTimeout(() => {
-            if (pparant) { pparant.style.transform = 'translateY(-0.8rem)' }
+            if (icon) { icon.style.transform = 'translateY(0)' }
             setTrashSrc('/img/trash.svg')
         }, 1000);
     }
