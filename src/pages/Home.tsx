@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useStore } from '../store';
 
-import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, TrIcon, Resume } from '../assets/icons/icons';
+import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, Resume } from '../assets/icons/icons';
 import '../styles/main.scss';
 
 import dayjs from 'dayjs';
@@ -10,10 +10,10 @@ import About from './About';
 import Contact from './Contact';
 import Portfolio from './Portfolio';
 
-
 function Home() {
     dayjs.locale('ko');
     const [time, setTime] = useState(dayjs());
+    const [trashSrc, setTrashSrc] = useState('/img/trash.svg');
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -62,6 +62,17 @@ function Home() {
         }
     }
 
+    const onClickTrash = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
+        const pparant = e.currentTarget.parentElement?.parentElement;
+        if (pparant) { pparant.style.transform = 'translateY(-3.15rem)' }
+        setTrashSrc('/img/trashClick.gif')
+
+        const setTime = setTimeout(() => {
+            if (pparant) { pparant.style.transform = 'translateY(-0.8rem)' }
+            setTrashSrc('/img/trash.svg')
+        }, 1000);
+    }
+
     return (
         <>
             <header>
@@ -97,11 +108,11 @@ function Home() {
                 </div>
             </section>
             <aside>
-                <div className="main-side-icons">
+                <div className="main-side-icons" >
                     <a href="https://github.com/SSkkky" target='_blank'><GitIcon /></a>
                     <a href="https://velog.io/@worte5633/posts" target='_blank'><VelogIcon /></a>
                     <a href="./resume.pdf" download="프론트엔드_손하늘"><Resume /></a>
-                    <TrIcon />
+                    <p><img src={process.env.PUBLIC_URL + trashSrc} onClick={onClickTrash} id="TrIcon" /></p>
                 </div>
             </aside>
             <footer>
