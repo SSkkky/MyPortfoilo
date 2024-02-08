@@ -11,10 +11,9 @@ import Contact from './Contact';
 import Portfolio from './Portfolio';
 
 function Home() {
+    // 실시간 날짜
     dayjs.locale('ko');
     const [time, setTime] = useState(dayjs());
-    const [trashSrc, setTrashSrc] = useState('/img/trash.svg');
-
     useEffect(() => {
         const interval = setInterval(() => {
             setTime(dayjs());
@@ -23,6 +22,7 @@ function Home() {
     }, []);
 
 
+    // 타이핑 애니메이션
     const content = "프론트엔드 개발을 합니다 :)";
     const [txtAni, setTxtAni] = useState<string>(content[0]);
     let i = 0;
@@ -45,7 +45,7 @@ function Home() {
         return () => clearTimeout(timeout);
     }, []);
 
-    // menu open
+    // 메뉴 오픈
     const { setNowMenu, setAbout, setPortfolio, setContact } = useStore();
     const handleClick = (e: string) => {
         if (e == 'About') {
@@ -62,6 +62,8 @@ function Home() {
         }
     }
 
+    // 휴지통 애니메이션
+    const [trashSrc, setTrashSrc] = useState('/img/trash.svg');
     const onClickTrash = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
         const icon = e.currentTarget.parentElement;
         if (icon) { icon.style.transform = 'translateY(-0.5rem)' }

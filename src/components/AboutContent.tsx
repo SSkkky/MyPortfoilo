@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import { TitleIcon } from '../assets/icons/icons';
 
 function AboutContent() {
     //https://velog.io/@rkio/Typescript-React%EC%97%90%EC%84%9C-useRef-%EC%97%AC%EB%9F%AC-%EA%B0%9C-%ED%95%9C%EB%B2%88%EC%97%90-%EC%84%A0%EC%96%B8%ED%95%98%EA%B8%B0useRef-%EB%B0%B0%EC%97%B4-%EB%A7%8C%EB%93%A4%EA%B8%B0
@@ -19,19 +18,15 @@ function AboutContent() {
             </section>
             <section className='about-introduce dot-bg'>
                 <div className='introduce-cont dot-bg-inner'>
-                    <div className="content-bg-title">
-                        <TitleIcon />
-                        <p className="about-title mobile" ref={(ref) => { pRefs.current[0] = ref }}>About ME</p>
-                    </div>
+                    <div className="titleBG content-bg-title"><p>About ME</p></div>
                     <div className="content-bg-text content-bg-s">
-                        빡세게 열심히하는 신입 프론트엔드 <br></br>개발자 손하늘입니다!
+                        빡세게 열심히하는 신입 프론트엔드 개발자 손하늘입니다!
                     </div>
                 </div>
             </section>
             <section className='about-introduce dot-bg about-skill'>
                 <div className='introduce-cont dot-bg-inner'>
                     <div className="content-bg-title">
-                        <TitleIcon />
                         <p className="about-title" ref={(ref) => { pRefs.current[1] = ref }}>사용 기술</p>
                     </div>
                     <div className="content-bg-text content-bg-l skills-cont">
@@ -59,7 +54,6 @@ function AboutContent() {
             <section className='about-introduce dot-bg about-edu'>
                 <div className='introduce-cont dot-bg-inner'>
                     <div className="content-bg-title">
-                        <TitleIcon />
                         <p className="about-title" ref={(ref) => { pRefs.current[2] = ref }}>교육 이력</p>
                     </div>
                     <div className="content-bg-text content-bg-m">
