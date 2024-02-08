@@ -90,6 +90,7 @@ function About({ name }: Own) {
                 bounds="body"
                 ref={refDiv}
                 style={{ zIndex: zIdx }}
+                dragHandleClassName='drag-handle1'
             >
                 <p className='positionTitle'>ABOUT_ME</p>
                 <div className="about_me main-sec-cont">

@@ -108,3 +108,50 @@ footer {
         color: #fff;
     }
 }
+
+// 모바일
+@media (max-width: 555px) {
+    header {
+        nav {
+            ul {
+                display: none;
+            }
+        }
+    }
+
+    #main-section {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        gap: 20svh;
+
+        #main-left-cont {
+            .text {
+                font-size: 3rem;
+                margin: 0 2rem;
+            }
+        }
+
+        #main-right-cont {
+            ul {
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+                gap: 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 100px) and (max-width: 1023px) {
+    /* 브라우저 사이즈 768px이상, 1023px이하 일때,*/
+}
+
+// 포인터가 없는(휴대폰) 일때
+@media (pointer:coarse) and (max-width: 555px) {
+    .react-draggable {
+        user-select: none;
+        transform: translate(0, 28px) !important;
+        width: 100svw !important;
+        height: calc(100svh - 55.5px) !important;
+    }
+}

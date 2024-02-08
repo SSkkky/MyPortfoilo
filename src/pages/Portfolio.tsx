@@ -69,6 +69,7 @@ function Portfolio({ name }: Own) {
                 bounds="body"
                 ref={refDiv}
                 style={{ zIndex: zIdx }}
+                dragHandleClassName='drag-handle2'
             >
                 <p className='positionTitle'>PORTFOLIO</p>
                 <div className="portfolio main-sec-cont">

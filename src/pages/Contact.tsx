@@ -70,7 +70,6 @@ function Contact({ name }: Own) {
     return (
         <div className={`${contact ? "display-block" : "display-none"}`} onClick={zIndexUp}>
             <Rnd className={`${maxMenu ? "max-menu" : ""}`}
-                dragHandleClassName="drag-handle"
                 size={{ width: state.width, height: state.height }}
                 position={{ x: state.x, y: state.y }}
                 onDragStop={handleDragStop}
@@ -78,6 +77,7 @@ function Contact({ name }: Own) {
                 bounds="body"
                 ref={refDiv}
                 style={{ zIndex: zIdx }}
+                dragHandleClassName='drag-handle3'
             >
                 <p className='positionTitle'>CONTACT</p>
                 <div className="contact main-sec-cont">

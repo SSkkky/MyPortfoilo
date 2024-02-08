@@ -25,15 +25,17 @@ function Menubg({ name }: Own) {
     }
 
     return (
-        <div className='main-cont-bg drag-handle'>
+        <div className='main-cont-bg'>
             <div className='btns'>
                 <button className='close-btn' onClick={handleClickClose}></button>
                 <button className='mini-btn' onClick={handleClickMin}></button>
                 <button className='max-btn' onClick={handleClickMax}></button>
             </div>
-            <div className="bg-box-1"></div>
-            <div className="bg-box-2"></div>
-            <div className="bg-box-3"></div>
+            <div className='boxs drag-handle1 drag-handle2 drag-handle3'>
+                <div className="bg-box-1"></div>
+                <div className="bg-box-2"></div>
+                <div className="bg-box-3"></div>
+            </div>
         </div>
     );
 }
