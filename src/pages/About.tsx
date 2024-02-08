@@ -4,14 +4,17 @@ import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
 import AboutContent from '../components/AboutContent';
 
-import { useStore } from '../store';
+import { useStore, zIndex } from '../store';
 interface Own { name: string }
 function About({ name }: Own) {
-
-    const { about } = useStore();
     const refDiv = useRef<Rnd>(null);
+    const [zIdx, setZidx] = useState(0)
 
-    const { setNowMenu, maxMenu, aboutZNum, setAboutZNum, setPortfolioZNum, setContactZNum, onClickMenu, setOnClickMenu } = useStore();
+    //store
+    const { about } = useStore();
+    const { maxMenu } = useStore();
+    const { zNum, setZNum } = zIndex();
+
 
     const [state, setState] = React.useState<State>({
         width: window.innerWidth * 0.5,
@@ -44,26 +47,6 @@ function About({ name }: Own) {
         };
     }, []);
 
-    // z-index
-    const zIndexUp = () => {
-        setNowMenu('About')
-        let div = refDiv.current;
-        if (div) {
-            if (onClickMenu !== 'About') {
-                setOnClickMenu('About');
-            }
-        }
-    }
-
-    useEffect(() => {
-        if (onClickMenu == 'About') {
-            setAboutZNum(1);
-            setPortfolioZNum(0);
-            setContactZNum(0);
-        }
-    }, [onClickMenu]);
-
-
     const handleResizeStop = (e: any, direction: string, ref: HTMLElement, delta: ResizableDelta, position: { x: number, y: number }) => {
         setState(prevState => ({
             ...prevState,
@@ -91,6 +74,11 @@ function About({ name }: Own) {
         }
     }, [state.width])
 
+    const zIndexUp = () => {
+        setZidx(zNum + 1);
+        setZNum(zNum + 1)
+    }
+
     //**style inline style={{ zIndex: aboutZNum, display: 'none' }}
     return (
         <div className={`${about ? "display-block" : "display-none"}`} onClick={zIndexUp}>
@@ -101,7 +89,7 @@ function About({ name }: Own) {
                 onResizeStop={handleResizeStop}
                 bounds="body"
                 ref={refDiv}
-                style={{ zIndex: aboutZNum }}
+                style={{ zIndex: zIdx }}
             >
                 <p className='positionTitle'>ABOUT_ME</p>
                 <div className="about_me main-sec-cont">

@@ -3,13 +3,15 @@ import { Rnd, DraggableData, ResizableDelta } from 'react-rnd';
 import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
 import PortfolioContent from '../components/PortfolioContent';
+import { useStore, zIndex } from '../store';
 
-import { useStore } from '../store';
 interface Own { name: string }
 function Portfolio({ name }: Own) {
     const refDiv = useRef<Rnd>(null);
+    const [zIdx, setZidx] = useState(0)
 
-    const { portfolio, maxMenu, nowMenu, portfolioZNum, setAboutZNum, setPortfolioZNum, setContactZNum, onClickMenu, setOnClickMenu } = useStore();
+    const { portfolio, maxMenu, nowMenu, onClickMenu, setOnClickMenu } = useStore();
+    const { zNum, setZNum } = zIndex();
 
     const [state, setState] = React.useState<State>({
         width: window.innerWidth * 0.6,
@@ -52,23 +54,10 @@ function Portfolio({ name }: Own) {
         }));
     };
 
-    // z-index
     const zIndexUp = () => {
-        let div = refDiv.current;
-        if (div) {
-            if (onClickMenu !== 'Portfolio') {
-                setOnClickMenu('Portfolio');
-            }
-        }
+        setZidx(zNum + 1);
+        setZNum(zNum + 1)
     }
-
-    useEffect(() => {
-        if (onClickMenu == 'Portfolio') {
-            setAboutZNum(0);
-            setPortfolioZNum(1);
-            setContactZNum(0);
-        }
-    }, [onClickMenu]);
 
     return (
         <div className={`${portfolio ? "display-block" : "display-none"}`} onClick={zIndexUp}>
@@ -79,7 +68,7 @@ function Portfolio({ name }: Own) {
                 onResizeStop={handleResizeStop}
                 bounds="body"
                 ref={refDiv}
-                style={{ zIndex: portfolioZNum }}
+                style={{ zIndex: zIdx }}
             >
                 <p className='positionTitle'>PORTFOLIO</p>
                 <div className="portfolio main-sec-cont">

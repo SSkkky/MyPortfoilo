@@ -46,7 +46,7 @@ function Home() {
     }, []);
 
     // menu open
-    const { menuActive, setMenuActive, nowMenu, setNowMenu, setAbout, about, portfolio, setPortfolio, contact, setContact } = useStore();
+    const { setNowMenu, setAbout, setPortfolio, setContact } = useStore();
     const handleClick = (e: string) => {
         if (e == 'About') {
             setAbout(true); // display:block

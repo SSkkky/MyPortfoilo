@@ -3,14 +3,16 @@ import { Rnd, DraggableData, ResizableDelta } from 'react-rnd';
 import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
 import ContactContent from '../components/ContactContent';
+import { useStore, zIndex } from '../store';
 
-import { useStore } from '../store';
 interface Own { name: string }
 function Contact({ name }: Own) {
     const { contact } = useStore();
     const refDiv = useRef<Rnd>(null);
+    const [zIdx, setZidx] = useState(0)
 
-    const { menuActive, maxMenu, nowMenu, contactZNum, setAboutZNum, setPortfolioZNum, setContactZNum, onClickMenu, setOnClickMenu } = useStore();
+    const { maxMenu, onClickMenu } = useStore();
+    const { zNum, setZNum } = zIndex();
 
     const [state, setState] = React.useState<State>({
         width: window.innerWidth * 0.5,
@@ -55,19 +57,13 @@ function Contact({ name }: Own) {
 
     // z-index
     const zIndexUp = () => {
-        let div = refDiv.current;
-        if (div) {
-            if (onClickMenu !== 'Contact') {
-                setOnClickMenu('Contact');
-            }
-        }
+        setZidx(zNum + 1);
+        setZNum(zNum + 1)
     }
 
     useEffect(() => {
         if (onClickMenu == 'Contact') {
-            setAboutZNum(0);
-            setPortfolioZNum(0);
-            setContactZNum(1);
+
         }
     }, [onClickMenu]);
 
@@ -81,7 +77,7 @@ function Contact({ name }: Own) {
                 onResizeStop={handleResizeStop}
                 bounds="body"
                 ref={refDiv}
-                style={{ zIndex: contactZNum }}
+                style={{ zIndex: zIdx }}
             >
                 <p className='positionTitle'>CONTACT</p>
                 <div className="contact main-sec-cont">

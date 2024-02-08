@@ -31,15 +31,6 @@ interface useStoreState {
     isOnTrue: boolean;
     setIsOnTrue: (isOnTrue: boolean) => void;
 
-    aboutZNum: number;
-    setAboutZNum: (index: number) => void;
-
-    portfolioZNum: number;
-    setPortfolioZNum: (index: number) => void;
-
-    contactZNum: number;
-    setContactZNum: (index: number) => void;
-
     onClickMenu: string;
     setOnClickMenu: (onClickMenu: string) => void;
 }
@@ -75,15 +66,16 @@ export const useStore = create<useStoreState>((set) => ({
     isOnTrue: false,
     setIsOnTrue: (isOnTrue) => set({ isOnTrue }),
 
-    aboutZNum: 0,
-    setAboutZNum: (aboutZNum) => set({ aboutZNum }),
-
-    portfolioZNum: 0,
-    setPortfolioZNum: (portfolioZNum) => set({ portfolioZNum }),
-
-    contactZNum: 0,
-    setContactZNum: (contactZNum) => set({ contactZNum }),
-
     onClickMenu: '',
     setOnClickMenu: (onClickMenu) => set({ onClickMenu }),
+}));
+
+interface zIndexState {
+    zNum: number;
+    setZNum: (zNum: number) => void;
+}
+
+export const zIndex = create<zIndexState>((set) => ({
+    zNum: 0,
+    setZNum: (zNum) => set({ zNum })
 }));
