@@ -19,8 +19,20 @@ interface useStoreState {
     index: number;
     setIndex: (index: number) => void;
 
+    about: boolean;
+    setAbout: (about: boolean) => void;
+
+    portfolio: boolean;
+    setPortfolio: (portfolio: boolean) => void;
+
+    contact: boolean;
+    setContact: (contact: boolean) => void;
+
     isOnTrue: boolean;
     setIsOnTrue: (isOnTrue: boolean) => void;
+
+    onClickMenu: string;
+    setOnClickMenu: (onClickMenu: string) => void;
 }
 
 export const useStore = create<useStoreState>((set) => ({
@@ -33,6 +45,15 @@ export const useStore = create<useStoreState>((set) => ({
     nowMenu: '',
     setNowMenu: (nowMenu) => set({ nowMenu }),
 
+    about: false,
+    setAbout: (about) => set({ about }),
+
+    portfolio: false,
+    setPortfolio: (portfolio) => set({ portfolio }),
+
+    contact: false,
+    setContact: (contact) => set({ contact }),
+
     loading: false,
     setLoading: (loading) => set({ loading }),
 
@@ -44,4 +65,17 @@ export const useStore = create<useStoreState>((set) => ({
 
     isOnTrue: false,
     setIsOnTrue: (isOnTrue) => set({ isOnTrue }),
+
+    onClickMenu: '',
+    setOnClickMenu: (onClickMenu) => set({ onClickMenu }),
+}));
+
+interface zIndexState {
+    zNum: number;
+    setZNum: (zNum: number) => void;
+}
+
+export const zIndex = create<zIndexState>((set) => ({
+    zNum: 0,
+    setZNum: (zNum) => set({ zNum })
 }));

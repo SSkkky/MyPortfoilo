@@ -52,7 +52,6 @@ function PortfolioContent() {
             <section className='dot-bg portfolio-section' key={item.id}>
               <div className='dot-bg-inner'>
                 <div className="content-bg-title">
-                  <TitleIcon />
                   <p>{item.name}</p>
                 </div>
                 <div className="content-bg-text pf-content-bg" onClick={() => { clickThumbHandler(i) }}>

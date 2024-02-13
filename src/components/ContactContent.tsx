@@ -1,7 +1,7 @@
 import React from 'react'
 import { Tel2, Email } from '../assets/icons/icons';
 
-function ContectContent() {
+function ContactContent() {
   return (
     <div className='content contect'>
       <div className='contect-top'>
@@ -10,11 +10,11 @@ function ContectContent() {
       </div>
       <div className='contect-cont'>
         <div className='contect-email'>
-          <Email height="60"/>
+          <Email height="60" />
           <p>worte5633@gmail.com</p>
         </div>
         <div className='contect-phone'>
-          <Tel2 height="60"/>
+          <Tel2 height="60" />
           <p>010-7569-1925</p>
         </div>
       </div>
@@ -22,4 +22,4 @@ function ContectContent() {
   )
 }
 
-export default ContectContent
+export default ContactContent

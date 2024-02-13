@@ -56,19 +56,27 @@
             background-color: #000;
         }
 
-        .bg-box-1,
-        .bg-box-3 {
-            width: 5px;
-            height: calc(100% - 10px);
-            margin: 5px 0;
-        }
+        .boxs {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
 
-        .bg-box-2 {
-            width: calc(100% - 10px);
-            border-top: 40px solid #000;
-            border-bottom: 5px solid #000;
-            background-color: #fff !important;
-            padding: 2rem;
+            .bg-box-1,
+            .bg-box-3 {
+                width: 5px;
+                height: calc(100% - 10px);
+                margin: 5px 0;
+            }
+
+            .bg-box-2 {
+                width: calc(100% - 10px);
+                border-top: 40px solid #000;
+                border-bottom: 5px solid #000;
+                background-color: #fff !important;
+                padding: 2rem;
+            }
         }
     }
 
@@ -106,10 +114,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 95%;
+    width: 100%;
     position: relative;
     top: 1.5rem;
-    left: 1.5rem;
     padding: 4rem 1rem;
     text-align: center;
     line-height: 1.8;
@@ -117,16 +124,28 @@
 
 
 // rnd Menu.tsx
-.display-block{
+.display-block {
     display: inline-block !important;
 }
 
-.display-none{
+.display-none {
     display: none !important;
 }
 
-.max-menu{
+.max-menu {
     width: 100svw !important;
     height: 100svh !important;
     transform: translate(0) !important;
+}
+
+.zIndex {
+    z-index: 10;
+}
+
+.positionTitle {
+    position: absolute;
+    color: #fff;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
 }

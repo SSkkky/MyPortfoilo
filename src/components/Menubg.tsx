@@ -1,21 +1,27 @@
+import { useEffect } from 'react';
 import { useStore } from '../store';
-
-function Menubg() {
-    const { setMenuActive, menuActive, setMaxMenu, nowMenu, setIsOnTrue } = useStore();
+interface Own { name: string }
+function Menubg({ name }: Own) {
+    const { setAbout, setPortfolio, setContact, maxMenu, setMaxMenu } = useStore();
 
     //event: React.MouseEvent<HTMLButtonElement>
     const handleClickClose = () => {
-        setMenuActive(!menuActive);
-        setIsOnTrue(false);
-        console.log(menuActive, '<--close maxMenu')
+        console.log(name)
+        if (name == 'about') {
+            setAbout(false);
+        } else if (name == 'portfolio') {
+            setPortfolio(false)
+        } else {
+            setContact(false)
+        }
     }
 
     const handleClickMax = () => {
-        setMaxMenu(true);
+        setMaxMenu(!maxMenu);
     }
 
-    const handleClickMin = () => {
-        setMaxMenu(false);
+    const handleClickMin = () => { // 축소버튼
+        //도크로 쏙 들어가야해용
     }
 
     return (
@@ -25,11 +31,11 @@ function Menubg() {
                 <button className='mini-btn' onClick={handleClickMin}></button>
                 <button className='max-btn' onClick={handleClickMax}></button>
             </div>
-            <div className="bg-box-1"></div>
-            <div className="bg-box-2">
-                <p className='title'>{nowMenu}</p>
+            <div className='boxs drag-handle1 drag-handle2 drag-handle3'>
+                <div className="bg-box-1"></div>
+                <div className="bg-box-2"></div>
+                <div className="bg-box-3"></div>
             </div>
-            <div className="bg-box-3"></div>
         </div>
     );
 }
