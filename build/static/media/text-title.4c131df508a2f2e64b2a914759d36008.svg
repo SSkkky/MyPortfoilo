@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="text-title" xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	viewBox="0 0 237.54 50.44" style="enable-background:new 0 0 237.54 50.44;" xml:space="preserve">
+<style type="text/css">
+	.text-title{fill:#FFFFFF;}
+	.text-title1{fill:#231F20;}
+</style>
+<g>
+	<g>
+		<polygon class="text-title" points="6.64,48.02 6.64,43.8 2.41,43.8 2.41,6.64 6.64,6.64 6.64,2.41 230.9,2.41 230.9,6.64 235.12,6.64 
+			235.12,43.8 230.9,43.8 230.9,48.02 		"/>
+		<path class="text-title" d="M228.48,4.83v4.22h4.22v32.33h-4.22v4.22H9.05v-4.22H4.83V9.05h4.22V4.83H228.48 M233.31,0h-4.83H9.05H4.22
+			v4.22H0v4.83v32.33v4.83h4.22v4.22h4.83h219.43h4.83v-4.22h4.22v-4.83V9.05V4.22h-4.22V0L233.31,0z"/>
+	</g>
+	<g>
+		<rect x="4.83" y="9.05" class="text-title1" width="4.22" height="32.33"/>
+		<rect x="228.48" y="9.05" class="text-title1" width="4.22" height="32.33"/>
+		<rect x="9.05" y="4.83" class="text-title1" width="219.43" height="4.22"/>
+		<rect x="9.05" y="41.38" class="text-title1" width="219.43" height="4.22"/>
+	</g>
+</g>
+</svg>

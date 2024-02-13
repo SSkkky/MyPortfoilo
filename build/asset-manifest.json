@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/MyPortfoilo/static/css/main.6d8466c1.css",
+    "main.js": "/MyPortfoilo/static/js/main.20103f2c.js",
+    "static/media/bg.png": "/MyPortfoilo/static/media/bg.ecfb7f5eddfe19684915.png",
+    "static/media/text-description-L.svg": "/MyPortfoilo/static/media/text-description-L.f59c4392fcbb28af955a6ad9b46c8b3c.svg",
+    "static/media/text-description-M.svg": "/MyPortfoilo/static/media/text-description-M.3240b0fc9caa658179322fa7e796744f.svg",
+    "static/media/text-description-S.svg": "/MyPortfoilo/static/media/text-description-S.0dc799a997ccdd9207d7a3cd18f40166.svg",
+    "static/media/text-box.svg": "/MyPortfoilo/static/media/text-box.c98dd24e7c0f354a7b78c9316a300dda.svg",
+    "static/media/bg-dot.svg": "/MyPortfoilo/static/media/bg-dot.2f64ab7d733afa8ed1e631d8dbb39956.svg",
+    "static/media/icon-box.svg": "/MyPortfoilo/static/media/icon-box.e8600f46a448b4edfff3.svg",
+    "static/media/tel.svg": "/MyPortfoilo/static/media/tel.b817d4a18dff58146f4a9e887c9d94e7.svg",
+    "static/media/tel2.svg": "/MyPortfoilo/static/media/tel2.7aaa12b85e0121cdcb30e6b3986195c1.svg",
+    "static/media/contect.svg": "/MyPortfoilo/static/media/contect.0976bb28d1b8acfb4714b8acfac0b8e7.svg",
+    "static/media/velog.svg": "/MyPortfoilo/static/media/velog.3fb3e93091d12f245f1e08eb9f99e065.svg",
+    "static/media/me.svg": "/MyPortfoilo/static/media/me.1b9a0f650d8092ade153cfb3e57d38c5.svg",
+    "static/media/resume.svg": "/MyPortfoilo/static/media/resume.a0398fac8331ba53e97d0af96b975777.svg",
+    "static/media/git.svg": "/MyPortfoilo/static/media/git.8ad304abc648378743304a087935dcaa.svg",
+    "static/media/folder.svg": "/MyPortfoilo/static/media/folder.2bfe2f3b1782839e9671752946681c10.svg",
+    "static/media/cursor.svg": "/MyPortfoilo/static/media/cursor.5d7e012c256ae6306128.svg",
+    "static/media/Email.svg": "/MyPortfoilo/static/media/Email.c1427263598309538caa28072f3d1ee1.svg",
+    "static/media/text-title.svg": "/MyPortfoilo/static/media/text-title.4c131df508a2f2e64b2a914759d36008.svg",
+    "static/media/cloud-fill.svg": "/MyPortfoilo/static/media/cloud-fill.91960feacbf90b45132a9bfd36e85577.svg",
+    "static/media/wifi.svg": "/MyPortfoilo/static/media/wifi.51996114163deb675a20e7f89a6aa7c3.svg",
+    "static/media/han.svg": "/MyPortfoilo/static/media/han.80f305d0a93992d40a716ae1ff992a7c.svg",
+    "index.html": "/MyPortfoilo/index.html",
+    "static/media/bettery.svg": "/MyPortfoilo/static/media/bettery.d4473f1b4063c84f95658e4cf53fbf25.svg",
+    "main.6d8466c1.css.map": "/MyPortfoilo/static/css/main.6d8466c1.css.map",
+    "main.20103f2c.js.map": "/MyPortfoilo/static/js/main.20103f2c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6d8466c1.css",
+    "static/js/main.20103f2c.js"
+  ]
+}
