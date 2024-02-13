@@ -62,7 +62,6 @@ function About({ name }: Own) {
         setZNum(zNum + 1)
     }
 
-    //**style inline style={{ zIndex: aboutZNum, display: 'none' }}
     return (
         <div className={`${about ? "display-block" : "display-none"}`} onClick={zIndexUp}>
             <Rnd className={`${maxMenu ? "max-menu" : ""}`}
