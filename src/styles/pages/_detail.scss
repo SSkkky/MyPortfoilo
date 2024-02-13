@@ -1,0 +1,133 @@
+.portfolio-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    .pdIndex {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        background-color: transparent;
+    }
+
+    .detail-title {
+        text-align: center;
+        margin: 2rem 0;
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        span {
+            color: #aaa;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .detail-introduce {
+        margin-top: 1rem;
+        width: 100%;
+        display: flex;
+        gap: 2rem;
+        position: sticky;
+
+        * {
+            font-family: 'Noto Sans KR';
+            color: #555;
+            line-height: 1.8;
+        }
+
+
+        div {
+            margin-bottom: 2rem;
+        }
+
+        .title {
+            margin-bottom: 0.5rem;
+            color: #000;
+        }
+
+        ul {
+            li {
+                list-style: inside;
+                list-style-type: "- ";
+            }
+        }
+
+        .detail-left {
+            width: 30%;
+            height: 100%;
+            overflow: auto;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+
+            .develop-goal {}
+
+            .develop-link {
+                a:hover {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .detail-right {
+            width: 70%;
+
+            .develop-skill {
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            .develop-trouble {
+                li {
+                    margin-bottom: 1rem;
+                    list-style: none;
+
+                    span {
+                        padding: 0.2rem 0.5rem;
+                        background-color: #ddd;
+                        color: #000;
+                        font-size: 0.7rem;
+                    }
+                }
+
+                .troubleAccordion {
+                    border-bottom: 1px solid #aaa;
+                    transition: 0.3s;
+
+                    .title {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        h4 {
+                            padding: 1rem 0;
+                        }
+
+                        p {
+                            font-size: 2rem;
+                            color: #aaa;
+                        }
+                    }
+
+                    .troubleText {
+                        overflow: hidden;
+                        max-height: 0;
+                        transition: 0.3s ease;
+                    }
+
+                    .active {
+                        max-height: 300px;
+                    }
+                }
+            }
+        }
+    }
+}
