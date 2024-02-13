@@ -57,23 +57,6 @@ function About({ name }: Own) {
         }));
     };
 
-    useEffect(() => {
-        console.log('setState값', state.x, state.y)
-    }, [state])
-
-    useEffect(() => {
-        console.log(state.width, '<-- state.width')
-        if (state.width < 360) {
-            // about window width가 360 이하일때 style
-
-        } else if (state.width < 420) {
-            // about window width가 420 이하일때 style
-        } else {
-            // 적용되고 났을때 냅두면 안되니까
-            // 혹시모를 css classList 삭제
-        }
-    }, [state.width])
-
     const zIndexUp = () => {
         setZidx(zNum + 1);
         setZNum(zNum + 1)
