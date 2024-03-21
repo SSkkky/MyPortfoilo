@@ -80,11 +80,7 @@ function Home() {
             <header>
                 <nav>
                     <h1><Logo /></h1>
-                    <ul>
-                        <li>ABOUT_ME</li>
-                        <li>PORTFOLIO</li>
-                        <li>CONTECT_ME</li>
-                    </ul>
+                    <p>손하늘 포트폴리오</p>
                 </nav>
                 <div className="side">
                     <WifiIcon width="20" fill="#000" />

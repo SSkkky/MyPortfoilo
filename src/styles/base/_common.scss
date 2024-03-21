@@ -37,3 +37,8 @@ body {
     align-items: center;
     font-size: 2rem;
 }
+
+a,
+button {
+    cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
+}
