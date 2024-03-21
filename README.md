@@ -1,7 +1,7 @@
 # MyPortfoilo
 ![image](https://github.com/SSkkky/MyPortfoilo/assets/125051373/24996f1a-278e-4f2c-8ffa-d83ccbecfd0c)
 
-<a href="https://sskkky.github.io/">**💡프로젝트 바로가기**</a>
+<a href="https://skyportfoilo.vercel.app/">**💡프로젝트 바로가기**</a>
 
 
 ## 📖 목차
@@ -15,7 +15,7 @@
 <br/>
 
 ## 🎈 개요
-프론트엔드 개발자 손하늘과 지금까지 개발한 프로젝트를 소개하는 웹페이지입니다.
+지금까지 개발한 프론트엔드 프로젝트를 소개하는 웹 페이지입니다.
 
 <br/>
 
