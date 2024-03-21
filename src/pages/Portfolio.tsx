@@ -10,7 +10,7 @@ function Portfolio({ name }: Own) {
     const refDiv = useRef<Rnd>(null);
     const [zIdx, setZidx] = useState(0)
 
-    const { portfolio, maxMenu, nowMenu, onClickMenu, setOnClickMenu } = useStore();
+    const { portfolio, maxMenu } = useStore();
     const { zNum, setZNum } = zIndex();
 
     const [state, setState] = React.useState<State>({
