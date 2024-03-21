@@ -29,10 +29,12 @@
     }
 
     #main-right-cont {
+
         ul {
             display: flex;
             gap: 3rem;
             flex-direction: column;
+            cursor: url(../../assets/icons/cursorFull.svg), auto !important;
 
             li {
                 display: flex;
@@ -40,10 +42,16 @@
                 align-items: center;
                 gap: 0.5rem;
 
+
+
                 #MeIcon,
                 #PfIcon,
                 #CtIcon {
                     width: 5rem;
+
+                    * {
+                        cursor: url(../../assets/icons/cursorFull.svg), auto !important;
+                    }
                 }
 
                 p {
@@ -77,6 +85,10 @@ aside {
         max-width: 340px;
         gap: 1rem;
 
+        a {
+            cursor: url(../../assets/icons/cursorFull.svg), auto !important;
+        }
+
         svg {
             height: 55px;
         }
@@ -86,6 +98,10 @@ aside {
             align-items: center;
             justify-content: flex-end;
             width: 83px;
+
+            img {
+                cursor: url(../../assets/icons/cursorFull.svg), auto !important;
+            }
         }
     }
 

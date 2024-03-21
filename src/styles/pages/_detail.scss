@@ -4,12 +4,36 @@
     align-items: center;
     gap: 3rem;
 
-    .pdIndex {
+    .detail-header {
+        width: 100%;
         display: flex;
-        justify-content: center;
-        gap: 1rem;
-        background-color: transparent;
+        justify-content: space-between;
+
+        .pdBack {
+            svg {
+                cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
+            }
+        }
+
+        button {
+            background-color: transparent;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+
+            ;
+        }
+
+        .pdIndex {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            background-color: transparent;
+        }
     }
+
 
     .detail-title {
         text-align: center;
@@ -25,9 +49,55 @@
         }
     }
 
-    img {
-        width: 100%;
+    .detail-image {
+        transition: 0.3s ease;
+        position: relative;
+        z-index: 0;
+        cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
+
+        * {
+            cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: '';
+            color: #fff;
+            width: 0;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: 10;
+            transition: 0.3s ease;
+        }
+
+        &:hover {
+            &::after {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                content: '바로가기';
+                color: #fff;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 10;
+                transition: 0.3s ease;
+            }
+        }
     }
+
 
     .detail-introduce {
         margin-top: 1rem;
@@ -70,6 +140,10 @@
             .develop-goal {}
 
             .develop-link {
+                a {
+                    display: block;
+                }
+
                 a:hover {
                     font-weight: 700;
                 }
@@ -108,6 +182,7 @@
                         justify-content: space-between;
 
                         h4 {
+                            cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
                             padding: 1rem 0;
                         }
 
@@ -124,10 +199,27 @@
                     }
 
                     .active {
-                        max-height: 300px;
+                        max-height: 9999px;
                     }
                 }
             }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-detail .detail-introduce {
+        flex-direction: column;
+        gap: 0;
+        position: static;
+
+        .detail-left {
+            position: static;
+            width: 100%;
+        }
+
+        .detail-right {
+            width: 100%;
         }
     }
 }

@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { useStore } from '../store';
 import { ListType, goal, fn, skill, trouble } from '../models/dataTypes';
+import { Back } from '../assets/icons/icons';
 
 function Detail() {
-    const { data, setData, loading, setLoading, index, setIndex, isOnTrue } = useStore();
+    const { data, setData, loading, setLoading, index, setIndex, isOnTrue, setIsOnTrue } = useStore();
     const accoRef = useRef<HTMLUListElement>(null);
 
 
@@ -18,8 +19,12 @@ function Detail() {
         }
     }
 
-    if (index < 0) { setIndex(0); }
-    if (index > 3) { setIndex(3); }
+    if (index < 0) { setIndex(4); }
+    if (index > 4) { setIndex(0); }
+
+    const backFn = () => {
+        setIsOnTrue(!isOnTrue)
+    }
 
     return (
         <>
@@ -27,16 +32,23 @@ function Detail() {
                 data.map((obj: ListType, i: number) => {
                     if (i === index) {
                         return <div key={i} className={`content portfolio-detail ${isOnTrue ? "display-block" : "display-none"}`}>
-                            <div className='pdIndex'>
-                                <button className='leftBtn' onClick={() => { setIndex(i - 1) }}>←</button>
-                                <p>{i + 1}/4</p>
-                                <button className='rightBtn' onClick={() => { setIndex(i + 1) }}>→</button>
+                            <div className='detail-header'>
+                                <button className='pdBack' onClick={backFn}><Back /></button>
+                                <div className='pdIndex'>
+                                    <button className='leftBtn' onClick={() => { setIndex(i - 1) }}>←</button>
+                                    <p>{i + 1}/5</p>
+                                    <button className='rightBtn' onClick={() => { setIndex(i + 1) }}>→</button>
+                                </div>
                             </div>
                             <div className='detail-title'>
                                 <h3>{obj.name}</h3>
                                 <span>{obj.dateteam}</span>
                             </div>
-                            <img src={obj.imageurl} alt="썸네일이미지"></img>
+                            <div className='detail-image'>
+                                <a href={obj.deployurl} target="_blank" >
+                                    <img src={obj.imageurl} alt="썸네일이미지" ></img>
+                                </a>
+                            </div>
                             <div className='detail-introduce'>
                                 <div className='detail-left'>
                                     <div className='develop-goal'>
@@ -51,6 +63,7 @@ function Detail() {
                                     </div>
                                     <div className='develop-link'>
                                         <h4 className='title'>⛪ 링크</h4>
+                                        <a href={obj.deployurl} target='_blank'>배포 주소</a>
                                         <a href={obj.link} target='_blank'>Github</a>
                                     </div>
                                 </div>

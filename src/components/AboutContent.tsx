@@ -32,21 +32,21 @@ function AboutContent() {
                     <div className="content-bg-text content-bg-l skills-cont">
                         <ul className='skills'>
                             <li>HTML</li>
-                            <li>CSS3</li>
                             <li>SASS</li>
                             <li>JavaScript</li>
                             <li>TypeScript</li>
+                            <li>Next.js</li>
                             <li>REACT</li>
-                            <li>Express</li>
+                            <li>Git</li>
                         </ul>
                         <ul className='skills-level'>
                             <li className="HTML"></li>
-                            <li className="CSS3"></li>
                             <li className="SASS"></li>
                             <li className="JavaScript"></li>
                             <li className="TypeScript"></li>
+                            <li className="Next.js"></li>
                             <li className="REACT"></li>
-                            <li className="Express"></li>
+                            <li className="CSS3"></li>
                         </ul>
                     </div>
                 </div>

@@ -17,3 +17,4 @@ export { ReactComponent as Tel } from './tel.svg';
 export { ReactComponent as Tel2 } from './tel2.svg';
 export { ReactComponent as Email } from './Email.svg';
 export { ReactComponent as Resume } from './resume.svg';
+export { ReactComponent as Back } from './back.svg';
