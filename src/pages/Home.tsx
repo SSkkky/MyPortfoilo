@@ -24,7 +24,7 @@ function Home() {
 
 
     // 메뉴 오픈
-    const { about, setNowMenu, setAbout, setPortfolio, setContact } = useStore();
+    const { about, nowMenu, setNowMenu, setAbout, setPortfolio, setContact } = useStore();
     const handleClick = (e: string) => {
         if (e == 'About') {
             setAbout(true); // display:block
@@ -58,6 +58,7 @@ function Home() {
             <header>
                 <nav>
                     <h1><Logo /></h1>
+                    <p>{nowMenu}</p>
                     {/* <p>손하늘 포트폴리오</p> */}
                 </nav>
                 <div className="side">

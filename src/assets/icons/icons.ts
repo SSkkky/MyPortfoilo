@@ -1,4 +1,5 @@
 export { ReactComponent as Logo } from './cloud-fill.svg';
+export { ReactComponent as LogoWhite } from './cloud.svg';
 export { ReactComponent as WifiIcon } from './wifi.svg';
 export { ReactComponent as BetteryIcon } from './bettery.svg';
 export { ReactComponent as HanIcon } from './han.svg';
