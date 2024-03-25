@@ -4,6 +4,7 @@ import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
 import PortfolioContent from '../components/PortfolioContent';
 import { useStore, zIndex } from '../store';
+import '../styles/pages/portfolio.scss';
 
 interface Own { name: string }
 function Portfolio({ name }: Own) {

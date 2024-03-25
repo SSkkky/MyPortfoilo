@@ -4,8 +4,7 @@
 
 #main-section {
     height: 80svh;
-    display: flex;
-    justify-content: space-between;
+    @include flexbox(sb);
     padding: 2rem;
 
     #main-left-cont {

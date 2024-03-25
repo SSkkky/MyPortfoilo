@@ -10,6 +10,7 @@ import About from './About';
 import Contact from './Contact';
 import Portfolio from './Portfolio';
 import TextAnimation from '../components/TextAnimation';
+import Widget from '../components/Widget';
 
 function Home() {
     // 실시간 날짜
@@ -74,6 +75,7 @@ function Home() {
             </header>
             <section id="main-section">
                 <TextAnimation />
+                <Widget />
                 <div id="main-right-cont">
                     <ul>
                         <li onClick={() => { handleClick('About') }}><MeIcon /><p>ABOUT_ME</p></li>

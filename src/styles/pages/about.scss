@@ -1,8 +1,7 @@
 @import '../main.scss';
 
 .about {
-    display: flex;
-    flex-direction: column;
+    @include column-flexbox;
     gap: 4rem;
 
     .about-top {
@@ -13,9 +12,7 @@
             position: absolute;
             top: 3rem;
             z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include column-flexbox(s, c);
 
             img {
                 max-width: 20rem;
@@ -49,9 +46,7 @@
             overflow: hidden;
             white-space: nowrap;
             padding-top: 3rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include column-flexbox(s, c);
 
             p {
                 font-weight: bold;
@@ -103,9 +98,19 @@
 
     .about-introduce {
         .self {
-            @include column-flexbox(c, c);
+            @include column-flexbox;
             gap: 1rem;
             box-sizing: border-box;
+
+            .arrowUp {
+                width: 73px;
+                height: 43px;
+                background: url('../../assets/images/arrowUp.png');
+                position: absolute;
+                top: -43px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
 
             h3 {
                 font-size: 1.2rem;
@@ -132,7 +137,7 @@
             ul {
                 padding: 2rem;
                 text-align: left;
-                @include flexbox;
+                @include flexbox(c);
                 flex-wrap: wrap;
                 gap: 1rem;
 

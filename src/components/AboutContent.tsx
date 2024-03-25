@@ -54,9 +54,9 @@ function AboutContent() {
             </section>
             <section className='about-introduce dot-bg'>
                 <div className='introduce-cont dot-bg-inner'>
-                    <div className="titleBG content-bg-title"><p>저를 소개합니다</p></div>
                     <div className="content-bg-text content-bg-s self">
-                        <h3>안녕하세요!<br />깔끔한 코드를 고민하고 추구하는<br /><span className='color'>프론트엔드 개발자 손하늘</span>입니다.</h3>
+                        <div className='arrowUp'></div>
+                        <h3>안녕하세요!<br />깔끔한 코드를 고민하고 추구하는 <span className='color'>프론트엔드 개발자 손하늘</span>입니다.</h3>
                         <ul>
                             <li>#근면성실한_ISTJ</li>
                             <li>#변수이름_하나하나_고심</li>

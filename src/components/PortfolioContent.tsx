@@ -4,6 +4,7 @@ import axios from 'axios';
 import Detail from '../pages/Detail';
 import { ListType } from '../models/dataTypes';
 import { useStore } from '../store';
+import '../styles/pages/detail.scss';
 
 function PortfolioContent() {
   const { data, setData, loading, setLoading, index, setIndex, isOnTrue, setIsOnTrue } = useStore();

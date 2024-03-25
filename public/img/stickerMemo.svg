@@ -1,0 +1,34 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 430" width="430" height="430">
+	<title>새 프로젝트</title>
+	<defs>
+		<image  width="410" height="410" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZoAAAGaAgMAAABLaG3wAAAAAXNSR0IB2cksfwAAAAlQTFRFAAAAAAAA////g93P0gAAAAN0Uk5TAP//RFDWIQAAAOVJREFUeJzt1LsNgEAMREET0B/JVXkJ/ZFgPhIVWMLSvGTDyXaJp3WLkua7C4fDaeKMQufYORxOGyeJUYPcpTM5HE4Lp+5yvvJ8OBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6Hw+FwOBwOh8PhcDgcDofD4XA4HA6nnROXMwqRY08nOBxOCyerO595OcHhcPo4Ueg8cTic/zsnFOC3KNJ/m0MAAAAASUVORK5CYII="/>
+		<image  width="390" height="68" id="img2" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYYAAABEAQMAAAC/GQCtAAAAAXNSR0IB2cksfwAAAAZQTFRF/ccC/ccCKv6PbgAAAAJ0Uk5TAP9bkSK1AAAAPklEQVR4nO3LwQ0AEBAF0b8V0BGl0xEFCCqQddxk5jzPpDTkrlcZIrwozQ+kmRHhxf75bwuBQCAQCAQC8RIHmcOHhawPlLMAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { fill: #000000 } 
+		.s1 { fill: #e9e9e9 } 
+	</style>
+	<path id="모양 1 copy 2" class="s0" d="m10 40h10v10h-10zm10-10h10v10h-10zm10-10h10v10h-10zm10-10h175v10h-175zm-30 205v-175h10v175zm380-205v10h-10v-10zm10 10v10h-10v-10zm10 10v10h-10v-10zm10 10v175h-10v-175zm-205-30h175v10h-175zm205 380h-10v-10h10zm-10 10h-10v-10h10zm-10 10h-10v-10h10zm-10 10h-175v-10h175zm30-205v175h-10v-175zm-380 205v-10h10v10zm-10-10v-10h10v10zm-10-10v-10h10v10zm-10-10v-175h10v175zm205 30h-175v-10h175z"/>
+	<use id="모양 1 copy 3" href="#img1" x="10" y="10"/>
+	<use id="레이어 1" href="#img2" x="20" y="20"/>
+	<path id="모양 1" class="s1" d="m30 108h-10v-10h10z"/>
+	<path id="모양 1 copy" class="s1" d="m50 108h-10v-10h10z"/>
+	<path id="모양 1 copy 4" class="s1" d="m70 108h-10v-10h10z"/>
+	<path id="모양 1 copy 5" class="s1" d="m90 108h-10v-10h10z"/>
+	<path id="모양 1 copy 6" class="s1" d="m110 108h-10v-10h10z"/>
+	<path id="모양 1 copy 7" class="s1" d="m130 108h-10v-10h10z"/>
+	<path id="모양 1 copy 8" class="s1" d="m150 108h-10v-10h10z"/>
+	<path id="모양 1 copy 9" class="s1" d="m170 108h-10v-10h10z"/>
+	<path id="모양 1 copy 10" class="s1" d="m190 108h-10v-10h10z"/>
+	<path id="모양 1 copy 11" class="s1" d="m210 108h-10v-10h10z"/>
+	<path id="모양 1 copy 12" class="s1" d="m230 108h-10v-10h10z"/>
+	<path id="모양 1 copy 13" class="s1" d="m250 108h-10v-10h10z"/>
+	<path id="모양 1 copy 14" class="s1" d="m270 108h-10v-10h10z"/>
+	<path id="모양 1 copy 15" class="s1" d="m290 108h-10v-10h10z"/>
+	<path id="모양 1 copy 16" class="s1" d="m310 108h-10v-10h10z"/>
+	<path id="모양 1 copy 17" class="s1" d="m330 108h-10v-10h10z"/>
+	<path id="모양 1 copy 18" class="s1" d="m350 108h-10v-10h10z"/>
+	<path id="모양 1 copy 19" class="s1" d="m370 108h-10v-10h10z"/>
+	<path id="모양 1 copy 20" class="s1" d="m390 108h-10v-10h10z"/>
+	<path id="모양 1 copy 21" class="s1" d="m410 108h-10v-10h10z"/>
+</svg>
