@@ -80,7 +80,7 @@ function Contact({ name }: Own) {
                 style={{ zIndex: zIdx }}
                 dragHandleClassName='drag-handle3'
             >
-                <p className='positionTitle'>CONTACT</p>
+                <p className='positionTitle'>CONTECT</p>
                 <div className="contact main-sec-cont">
                     <Menubg name={name} />
                     <ContactContent />
