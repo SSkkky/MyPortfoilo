@@ -1,3 +1,5 @@
+@import '../main.scss';
+
 .about {
     display: flex;
     flex-direction: column;
@@ -17,6 +19,29 @@
 
             img {
                 max-width: 20rem;
+            }
+
+            .sparkles {
+                display: none;
+
+                &.active {
+                    display: block;
+                    position: absolute;
+                    right: 6rem;
+                }
+            }
+
+            .sparklesLeft {
+                top: 10rem;
+                left: 3rem;
+            }
+
+            &.active {
+                color: rgb(255, 123, 0);
+
+                span {
+                    color: orange;
+                }
             }
         }
 
@@ -64,6 +89,71 @@
 
             .ani2 {
                 animation-name: slideout;
+            }
+        }
+
+        .about-ani.active {
+
+            // level 100
+            p {
+                color: orangered;
+            }
+        }
+    }
+
+    .about-introduce {
+        .self {
+            @include column-flexbox(c, c);
+            gap: 1rem;
+            box-sizing: border-box;
+
+            h3 {
+                font-size: 1.2rem;
+
+                .color {
+                    display: inline-block;
+                    position: relative;
+                    z-index: 0;
+
+                    &::after {
+                        transition: 0.3s ease;
+                        content: '';
+                        position: absolute;
+                        z-index: -1;
+                        height: 1.4rem;
+                        width: 0%;
+                        top: 0.4rem;
+                        left: 0;
+                        background-color: orange;
+                    }
+                }
+            }
+
+            ul {
+                padding: 2rem;
+                text-align: left;
+                @include flexbox;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                li {
+                    transition: 0.2s ease;
+                    padding: 0.5rem 1rem;
+                    border-radius: 10rem;
+                    background-color: #000;
+                    color: #fff;
+                    white-space: nowrap;
+                }
+
+                li:hover {
+                    background-color: orange;
+                }
+            }
+
+            &:hover {
+                .color::after {
+                    width: 100%;
+                }
             }
         }
     }

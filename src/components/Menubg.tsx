@@ -6,7 +6,6 @@ function Menubg({ name }: Own) {
 
     //event: React.MouseEvent<HTMLButtonElement>
     const handleClickClose = () => {
-        console.log(name)
         if (name == 'about') {
             setAbout(false);
         } else if (name == 'portfolio') {

@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useStore } from '../store';
 
 import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, Resume } from '../assets/icons/icons';
-import '../styles/main.scss';
+import '../styles/pages/home.scss';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
 import About from './About';
 import Contact from './Contact';
 import Portfolio from './Portfolio';
+import TextAnimation from '../components/TextAnimation';
 
 function Home() {
     // 실시간 날짜
@@ -22,31 +23,8 @@ function Home() {
     }, []);
 
 
-    // 타이핑 애니메이션
-    const content = "프론트엔드 개발을 합니다 :)";
-    const [txtAni, setTxtAni] = useState<string>(content[0]);
-    let i = 0;
-
-    const typing = () => {
-        if (i < content.length - 1) {
-            i++;
-            setTxtAni((prevTxt) => prevTxt + content[i]);
-        } else {
-            setTxtAni(content[0]);
-            i = 0;
-        }
-    };
-
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            const interval = setInterval(typing, 300);
-            return () => clearInterval(interval);
-        }, 500);
-        return () => clearTimeout(timeout);
-    }, []);
-
     // 메뉴 오픈
-    const { setNowMenu, setAbout, setPortfolio, setContact } = useStore();
+    const { about, setNowMenu, setAbout, setPortfolio, setContact } = useStore();
     const handleClick = (e: string) => {
         if (e == 'About') {
             setAbout(true); // display:block
@@ -80,7 +58,7 @@ function Home() {
             <header>
                 <nav>
                     <h1><Logo /></h1>
-                    <p>손하늘 포트폴리오</p>
+                    {/* <p>손하늘 포트폴리오</p> */}
                 </nav>
                 <div className="side">
                     <WifiIcon width="20" fill="#000" />
@@ -94,9 +72,7 @@ function Home() {
                 </div>
             </header>
             <section id="main-section">
-                <div id="main-left-cont">
-                    <span className="text">{txtAni}</span>
-                </div>
+                <TextAnimation />
                 <div id="main-right-cont">
                     <ul>
                         <li onClick={() => { handleClick('About') }}><MeIcon /><p>ABOUT_ME</p></li>

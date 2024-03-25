@@ -3,6 +3,7 @@ import { Rnd, DraggableData, ResizableDelta } from 'react-rnd';
 import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
 import AboutContent from '../components/AboutContent';
+import '../styles/pages/about.scss';
 
 import { useStore, zIndex } from '../store';
 interface Own { name: string }
@@ -11,8 +12,7 @@ function About({ name }: Own) {
     const [zIdx, setZidx] = useState(0);
 
     //store
-    const { about } = useStore();
-    const { maxMenu } = useStore();
+    const { about, maxMenu } = useStore();
     const { zNum, setZNum } = zIndex();
 
 

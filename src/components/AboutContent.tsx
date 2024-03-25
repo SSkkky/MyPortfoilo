@@ -1,26 +1,68 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useStore } from '../store';
 
 function AboutContent() {
-    //https://velog.io/@rkio/Typescript-React%EC%97%90%EC%84%9C-useRef-%EC%97%AC%EB%9F%AC-%EA%B0%9C-%ED%95%9C%EB%B2%88%EC%97%90-%EC%84%A0%EC%96%B8%ED%95%98%EA%B8%B0useRef-%EB%B0%B0%EC%97%B4-%EB%A7%8C%EB%93%A4%EA%B8%B0
     const pRefs = useRef<null[] | HTMLParagraphElement[]>([]);
+    const [level, setLevel] = useState<number>(0);
+    const [active, setActive] = useState(false);
+    const { about } = useStore();
+
+    const textAnimation = () => {
+        let i = 0;
+        let delay = 1000;
+
+        const levelUp = () => {
+            setLevel(++i);
+            if (7 > i && i > 2) { delay /= 2; }
+            else if (15 > i && i >= 7) { delay /= 5; }
+            else if (i > 15) { delay /= 100; }
+            const timeoutId = setTimeout(levelUp, delay);
+            if (i === 100) {
+                clearTimeout(timeoutId);
+                setActive(true);
+            }
+            return () => clearTimeout(timeoutId);
+        };
+        const timeoutId = setTimeout(levelUp, delay);
+        return () => clearTimeout(timeoutId);
+    }
+
+    useEffect(() => {
+        if (about === false) { // 창 닫으면 애니메이션 reset
+            setActive(false)
+            setLevel(0)
+        } else {
+            textAnimation();
+        }
+    }, [about])
 
     return (
         <div className='content about'>
             <section className='about-top'>
-                <div className="about-ani">
-                    <p className="ani1">FRONT_END DEVELOPER</p>
-                    <p className="ani2">FRONT_END DEVELOPER</p>
+                <div className={active ? 'about-ani active' : 'about-ani'}>
+                    <p className="ani1">프론트엔드 개발자 손하늘</p>
+                    <p className="ani2">프론트엔드 개발자 손하늘</p>
                 </div>
-                <div className="about-chara">
-                    <span>LV.1</span>
-                    <img src={process.env.PUBLIC_URL + '/img/about.gif'} />
+                <div className={active ? 'about-chara active' : 'about-chara'}>
+                    <p>LV.<span>{level}</span> 하늘하늘</p>
+                    <img src={active ? process.env.PUBLIC_URL + '/img/about.gif' : process.env.PUBLIC_URL + '/img/aboutGray.gif'} />
+                    <img className={active ? 'active sparkles' : 'sparkles'}
+                        src={process.env.PUBLIC_URL + '/img/sparkles.gif'} />
+                    <img className={active ? 'active sparkles sparklesLeft' : 'sparkles'}
+                        src={process.env.PUBLIC_URL + '/img/sparkles.gif'} />
                 </div>
             </section>
             <section className='about-introduce dot-bg'>
                 <div className='introduce-cont dot-bg-inner'>
-                    <div className="titleBG content-bg-title"><p>About ME</p></div>
-                    <div className="content-bg-text content-bg-s">
-                        빡세게 열심히하는 신입 프론트엔드 개발자 손하늘입니다!
+                    <div className="titleBG content-bg-title"><p>저를 소개합니다</p></div>
+                    <div className="content-bg-text content-bg-s self">
+                        <h3>안녕하세요!<br />깔끔한 코드를 고민하고 추구하는<br /><span className='color'>프론트엔드 개발자 손하늘</span>입니다.</h3>
+                        <ul>
+                            <li>#근면성실한_ISTJ</li>
+                            <li>#변수이름_하나하나_고심</li>
+                            <li>#컴포넌트재사용?_완전가능</li>
+                            <li>#커뮤니케이션_좋아용</li>
+                        </ul>
                     </div>
                 </div>
             </section>
