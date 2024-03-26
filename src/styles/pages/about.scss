@@ -144,13 +144,13 @@
                     transition: 0.2s ease;
                     padding: 0.5rem 1rem;
                     border-radius: 10rem;
-                    background-color: #000;
-                    color: #fff;
                     white-space: nowrap;
+                    background-color: #ddd;
                 }
 
                 li:hover {
-                    background-color: orange;
+                    color: #fff;
+                    background-color: #000;
                 }
             }
 
@@ -233,30 +233,81 @@
 .about-edu {
     .edus {
         width: 100%;
+        max-width: 880px;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0 2rem;
 
         ul {
+            width: 100%;
             display: flex;
-            gap: 2rem;
-            flex-direction: column;
+            align-items: flex-start;
+            gap: 3rem;
 
             li {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 gap: 1rem;
                 text-align: left;
+                position: relative;
+                z-index: 0;
+                width: 100%;
+
+                .title {}
 
                 span {
-                    width: 30%;
-                    opacity: 0.3;
-                }
-
-                p {
-                    width: 100%;
+                    color: #aaa;
                 }
             }
+
+            // .first::before {
+            //     content: '01';
+            //     width: 30px;
+            //     height: 30px;
+            //     color: #fff;
+            //     text-align: center;
+            //     background-color: #000;
+            // }
+
+            // .second::before {
+            //     content: '02';
+            // }
         }
+    }
+}
+
+// ------------- 반응형
+.down880 {
+    .about-skill .introduce-cont .skills-cont .skills li {
+        width: calc((100% - 1rem) / 2);
+        height: 140px;
+    }
+
+    .about-edu .edus {
+        margin: 0 1rem;
+
+        ul {
+            gap: 2rem;
+        }
+    }
+}
+
+.down600 {
+    .content-bg-text .content-bg-l .skills-cont {
+        padding: 4rem 0;
+    }
+
+    .about-skill .introduce-cont .skills-cont .skills {
+        margin: 0;
+    }
+
+    .about-skill .introduce-cont .skills-cont .skills li {
+        width: calc((100% - 1rem) / 2);
+    }
+
+    .about-edu .edus ul {
+        flex-direction: column;
     }
 }

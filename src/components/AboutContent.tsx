@@ -1,7 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useStore } from '../store';
 
-function AboutContent() {
+interface contentType {
+  down880: boolean;
+  down600: boolean;
+}
+
+function AboutContent({ down880, down600 }: contentType) {
     const pRefs = useRef<null[] | HTMLParagraphElement[]>([]);
     const [level, setLevel] = useState<number>(1);
     const [active, setActive] = useState(false);
@@ -37,7 +42,7 @@ function AboutContent() {
     }, [about])
 
     return (
-        <div className='content about'>
+        <div className={'content about' + (down880 ? ' down880' : '') + (down600 ? ' down600' : '')}>
             <section className='about-top'>
                 <div className={active ? 'about-ani active' : 'about-ani'}>
                     <p className="ani1">{active ? '프론트엔드 개발자 손하늘' : '레벨업중....레벨업중....'}</p>
@@ -45,11 +50,11 @@ function AboutContent() {
                 </div>
                 <div className={active ? 'about-chara active' : 'about-chara'}>
                     <p>LV.<span>{level}</span> 하늘하늘</p>
-                    <img src={active ? process.env.PUBLIC_URL + '/img/about.gif' : process.env.PUBLIC_URL + '/img/aboutGray.gif'} />
+                    <img src={active ? process.env.PUBLIC_URL + '/img/about.gif' : process.env.PUBLIC_URL + '/img/aboutGray.gif'} alt='아바타'/>
                     <img className={active ? 'active sparkles' : 'sparkles'}
-                        src={process.env.PUBLIC_URL + '/img/sparkles.gif'} />
+                        src={process.env.PUBLIC_URL + '/img/sparkles.gif'} alt='스파클'/>
                     <img className={active ? 'active sparkles sparklesLeft' : 'sparkles'}
-                        src={process.env.PUBLIC_URL + '/img/sparkles.gif'} />
+                        src={process.env.PUBLIC_URL + '/img/sparkles.gif'} alt='스파클'/>
                 </div>
             </section>
             <section className='about-introduce dot-bg'>
@@ -110,13 +115,11 @@ function AboutContent() {
                     <div className="content-bg-text content-bg-m">
                         <div className='edus'>
                             <ul>
-                                <li>
-                                    <b className='title'>01.</b>
+                                <li className='first'>
                                     <span>2023.10 ~ 2024.04</span>
                                     <p>강남 그린컴퓨터 아카데미<br></br>프론트엔드(React&Vue) 웹&앱 SW개발자 양성과정</p>
                                 </li>
-                                <li>
-                                    <b className='title'>02.</b>
+                                <li className='second'>
                                     <span>2022.06 ~ 2022.08</span>
                                     <p>인프런<br></br>풀스택을 위한 탄탄한 프런트엔드 부트캠프</p>
                                 </li>

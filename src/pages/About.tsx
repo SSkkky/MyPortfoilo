@@ -10,6 +10,8 @@ interface Own { name: string }
 function About({ name }: Own) {
     const refDiv = useRef<Rnd>(null);
     const [zIdx, setZidx] = useState(0);
+    const [down880, setDown880] = useState(false);
+    const [down600, setDown600] = useState(false);
 
     //store
     const { about, maxMenu } = useStore();
@@ -62,6 +64,29 @@ function About({ name }: Own) {
         setZNum(zNum + 1)
     }
 
+        // ---------------------------------------반응형
+    useEffect(() => {
+        if (600 < state.width && state.width < 880) {
+            if (down880 === true) {
+                return
+            } else {
+                setDown880(true)
+                setDown600(false)
+            }
+            setDown880(true)
+        } else if (state.width < 600) {
+            if (down600 === true) {
+                return
+            } else {
+                setDown880(false)
+                setDown600(true)
+            }
+        } else if (state.width >= 880) {
+            setDown880(false)
+            setDown600(false)
+        } // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [state.width]);
+
     return (
         <div className={`${about ? "display-block" : "display-none"}`} onClick={zIndexUp}>
             <Rnd className={`${maxMenu ? "max-menu" : ""}`}
@@ -77,7 +102,10 @@ function About({ name }: Own) {
                 <p className='positionTitle'>ABOUT_ME</p>
                 <div className="about_me main-sec-cont">
                     <Menubg name={name} />
-                    <AboutContent />
+                    <AboutContent 
+                        down880={down880}
+                        down600={down600}
+                    />
                 </div>
             </Rnd>
         </div>
