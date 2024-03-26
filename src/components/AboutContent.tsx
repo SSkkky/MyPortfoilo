@@ -59,9 +59,9 @@ function AboutContent() {
                         <h3>안녕하세요!<br />깔끔한 코드를 고민하고 추구하는 <span className='color'>프론트엔드 개발자 손하늘</span>입니다.</h3>
                         <ul>
                             <li>#근면성실한_ISTJ</li>
-                            <li>#변수이름_하나하나_고심</li>
-                            <li>#컴포넌트재사용?_완전가능</li>
-                            <li>#커뮤니케이션_좋아용</li>
+                            <li>#변수이름_하나하나_신중하게</li>
+                            <li>#고민_또_고민</li>
+                            <li>#커뮤니케이션_좋아용👍</li>
                         </ul>
                     </div>
                 </div>
