@@ -1,28 +1,18 @@
 # MyPortfoilo
+<a href="https://skyportfoilo.vercel.app/">**🎊 배포 링크**</a>
 ![image](https://github.com/SSkkky/MyPortfoilo/assets/125051373/24996f1a-278e-4f2c-8ffa-d83ccbecfd0c)
 
-<a href="https://skyportfoilo.vercel.app/">**💡프로젝트 바로가기**</a>
-
-
-## 📖 목차
-<ul>
-  <li>개요</li>
-  <li>개발 기간</li>
-  <li>기술 스택</li>
-  <li>프로젝트 상세</li>
-</ul>
-
-<br/>
+---
 
 ## 🎈 개요
 지금까지 개발한 프론트엔드 프로젝트를 소개하는 웹 페이지입니다.
 
-<br/>
+---
 
 ## 🎬 개발 기간
 240131 ~ 0208 (10일)
 
-<br/>
+---
 
 ## 💼 기술 스택
 <ul>
