@@ -45,4 +45,14 @@
             align-items: center;
         }
     }
+
+    // width 880px 이하
+    .down880 {
+        width: calc((100% - 1rem) / 2);
+    }
+
+    // width 600px 이하
+    .down600 {
+        width: 100%;
+    }
 }

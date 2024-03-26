@@ -6,7 +6,12 @@ import { ListType } from '../models/dataTypes';
 import { useStore } from '../store';
 import '../styles/pages/detail.scss';
 
-function PortfolioContent() {
+interface contentType {
+  down880: boolean;
+  down600: boolean;
+}
+
+function PortfolioContent({ down880, down600 }: contentType) {
   const { data, setData, loading, setLoading, index, setIndex, isOnTrue, setIsOnTrue } = useStore();
   const refPF = useRef<HTMLDivElement>(null);
   // 데이터 로딩 함수
@@ -50,7 +55,7 @@ function PortfolioContent() {
       <div className={`content portfolio ${isOnTrue ? "display-none" : "display-block"}`} ref={refPF}>
         {
           data?.map((item: ListType, i: number) =>
-            <section className='dot-bg portfolio-section' key={item.id}>
+            <section className={'dot-bg portfolio-section' + (down880 ? ' down880' : '') + (down600 ? ' down600' : '')} key={item.id}>
               <div className='dot-bg-inner'>
                 <div className="content-bg-title">
                   <p>{item.name}</p>
@@ -63,7 +68,9 @@ function PortfolioContent() {
           )
         }
       </div>
-      <Detail />
+      <Detail
+        down880={down880}
+        down600={down600} />
     </>
   )
 }

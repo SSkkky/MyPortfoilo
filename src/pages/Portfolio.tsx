@@ -9,9 +9,12 @@ import '../styles/pages/portfolio.scss';
 interface Own { name: string }
 function Portfolio({ name }: Own) {
     const refDiv = useRef<Rnd>(null);
-    const [zIdx, setZidx] = useState(0)
+    const [zIdx, setZidx] = useState(0);
+    const [down880, setDown880] = useState(false);
+    const [down600, setDown600] = useState(false);
+    const [zIndexUp, setZIndexUp] = useState(false);
 
-    const { portfolio, maxMenu } = useStore();
+    const { portfolio, maxMenu, setIsOnTrue } = useStore();
     const { zNum, setZNum } = zIndex();
 
     const [state, setState] = React.useState<State>({
@@ -55,13 +58,44 @@ function Portfolio({ name }: Own) {
         }));
     };
 
-    const zIndexUp = () => {
+    useEffect(() => {
         setZidx(zNum + 1);
-        setZNum(zNum + 1)
-    }
+        setZNum(zNum + 1) // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [zIndexUp])
+
+
+    // ---------------------------------------반응형
+    useEffect(() => {
+        if (600 < state.width && state.width < 880) {
+            if (down880 === true) {
+                return
+            } else {
+                setDown880(true)
+                setDown600(false)
+            }
+            setDown880(true)
+        } else if (state.width < 600) {
+            if (down600 === true) {
+                return
+            } else {
+                setDown880(false)
+                setDown600(true)
+            }
+        } else if (state.width >= 880) {
+            setDown880(false)
+            setDown600(false)
+        } // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [state.width]);
+
+    useEffect(() => {
+        if (portfolio === false) {
+            // 포트폴리오 창 닫으면 디테일 닫음(초기화)
+            setIsOnTrue(false)
+        }  // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [portfolio])
 
     return (
-        <div className={`${portfolio ? "display-block" : "display-none"}`} onClick={zIndexUp}>
+        <div className={`${portfolio ? "display-block" : "display-none"}`} onClick={() => { setZIndexUp(!zIndexUp) }}>
             <Rnd className={`${maxMenu ? "max-menu" : ""}`}
                 size={{ width: state.width, height: state.height }}
                 position={{ x: state.x, y: state.y }}
@@ -75,7 +109,9 @@ function Portfolio({ name }: Own) {
                 <p className='positionTitle'>PORTFOLIO</p>
                 <div className="portfolio main-sec-cont">
                     <Menubg name={name} />
-                    <PortfolioContent />
+                    <PortfolioContent
+                        down880={down880}
+                        down600={down600} />
                 </div>
             </Rnd>
         </div>

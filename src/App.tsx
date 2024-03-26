@@ -24,15 +24,9 @@ function App() {
 
   useEffect(() => {
     // 모든 소스가 로드되고 최소 2초가 지난 상황에 홈을 보여주기!
-    if (hasLoaded && timePassed) {
+    if (timePassed) {
       setIsLoading(false);
     }
-    // else {
-    //   const timer = setTimeout(() => {
-    //     setIsLoading(false);
-    //   }, 5000);
-    //   return () => clearTimeout(timer);
-    // }
   }, [hasLoaded, timePassed]);
 
 

@@ -3,7 +3,12 @@ import { useStore } from '../store';
 import { ListType, goal, fn, skill, trouble } from '../models/dataTypes';
 import { Back } from '../assets/icons/icons';
 
-function Detail() {
+interface contentType {
+    down880: boolean;
+    down600: boolean;
+}
+
+function Detail({ down880, down600 }: contentType) {
     const { data, setData, loading, setLoading, index, setIndex, isOnTrue, setIsOnTrue } = useStore();
     const accoRef = useRef<HTMLUListElement>(null);
 
@@ -33,7 +38,7 @@ function Detail() {
             {
                 data.map((obj: ListType, i: number) => {
                     if (i === index) {
-                        return <div key={i} className={`content portfolio-detail ${isOnTrue ? "display-block" : "display-none"}`}>
+                        return <div key={i} className={`content portfolio-detail ${isOnTrue ? "display-block" : "display-none"}` + (down880 ? ' down880' : '') + (down600 ? ' down600' : '')}>
                             <div className='detail-header'>
                                 <button className='pdBack' onClick={backFn}><Back />뒤로가기</button>
                                 <div className='pdIndex'>
