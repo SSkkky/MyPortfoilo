@@ -12,7 +12,7 @@ function AboutContent() {
         let delay = 1000;
 
         const levelUp = () => {
-            setLevel(i++);
+            setLevel(++i);
             if (7 > i && i > 2) { delay /= 5; }
             else if (15 > i && i >= 7) { delay /= 10; }
             else if (i > 15) { delay /= 100; }
@@ -30,7 +30,7 @@ function AboutContent() {
     useEffect(() => {
         if (about === false) { // 창 닫으면 애니메이션 reset
             setActive(false)
-            setLevel(0)
+            setLevel(1)
         } else {
             textAnimation();
         }
