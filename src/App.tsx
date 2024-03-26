@@ -27,6 +27,12 @@ function App() {
     if (hasLoaded && timePassed) {
       setIsLoading(false);
     }
+    // else {
+    //   const timer = setTimeout(() => {
+    //     setIsLoading(false);
+    //   }, 5000);
+    //   return () => clearTimeout(timer);
+    // }
   }, [hasLoaded, timePassed]);
 
 

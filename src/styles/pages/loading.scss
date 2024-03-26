@@ -4,6 +4,7 @@
     width: 100%;
     height: 100vh;
     @include column-flexbox(c, c);
+    background-color: #000;
     gap: 6rem;
 
     svg {

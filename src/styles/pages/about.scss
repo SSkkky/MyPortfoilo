@@ -34,10 +34,9 @@
             }
 
             &.active {
-                color: rgb(255, 123, 0);
-
                 span {
-                    color: orange;
+                    // LV100
+                    font-weight: 700;
                 }
             }
         }
@@ -90,9 +89,9 @@
         .about-ani.active {
 
             // level 100
-            p {
-                color: orangered;
-            }
+            // p {
+            //     color: orangered;
+            // }
         }
     }
 
