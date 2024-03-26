@@ -90,8 +90,8 @@
         "keyword": "sflix",
         "imageurl": "https://velog.velcdn.com/images/worte5633/post/a5b789cf-014a-4b46-8e64-b4115daa7409/image.png",
         "videourl": "dd",
-        "deployurl": "dd",
-        "dateteam": "2024.01 (1인)",
+        "deployurl": "https://skyflix-ten.vercel.app/",
+        "dateteam": "2024.01 (개인)",
         "goal": [
             {
                 "goal": "MOVIE API 활용"
@@ -112,7 +112,7 @@
                 "goal": "Swiper JS 응용"
             }
         ],
-        "link": "https://github.com/SSkkky/React-study/tree/main/240115-movie",
+        "link": "https://github.com/SSkkky/SFLIX",
         "overview": "<SFLIX>는 사용자가 영화와 TV 프로그램에 대한 정보를 확인할 수 있는 웹 서비스입니다. 이 서비스는 themoviedb API를 활용하여 개발되었습니다. 메인 페이지에서는 실시간 박스오피스 순위 정보를 슬라이드 형식으로 제공하며, 인기순/신규순으로 정렬된 미디어 정보를 리스트로 확인할 수 있습니다. UI 디자인은 넷플릭스를 참고하여 사용자 친화적이고 직관적인 스타일로 구성하였습니다.",
         "function": [
             {
@@ -160,7 +160,7 @@
         "imageurl": "https://velog.velcdn.com/images/worte5633/post/db701b1a-10ea-4c21-82cd-3fb88e28b613/image.png",
         "videourl": "dd",
         "deployurl": "https://alclsrkawk.github.io/bottle/",
-        "dateteam": "2023.12~2024.01 (5인)",
+        "dateteam": "2023.12~2024.01 (5명)",
         "goal": [
             {
                 "goal": "JSON fetch 활용 데이터 관리"
@@ -261,7 +261,7 @@
         "imageurl": "https://velog.velcdn.com/images/worte5633/post/a2beecc6-9e4b-4a6e-9b83-878eaec907e5/image.png",
         "videourl": "dd",
         "deployurl": "https://sskkky.github.io/NIKE-WOMAN/",
-        "dateteam": "2023.12 (1인)",
+        "dateteam": "2023.12 (개인)",
         "goal": [
             {
                 "goal": "데스크탑, 태블릿, 모바일 반응형 대응"
@@ -324,7 +324,7 @@
         "imageurl": "https://velog.velcdn.com/images/worte5633/post/14bcbcdf-8898-4ffe-8f4b-d22cc5c5cdf2/image.png",
         "videourl": "dd",
         "deployurl": "https://sskkky.github.io/bucket-list/",
-        "dateteam": "2024.01 (1인)",
+        "dateteam": "2024.01 (개인)",
         "goal": [
             {
                 "goal": "Typescript의 데이터 타입 활용"
