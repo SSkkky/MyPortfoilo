@@ -8,6 +8,7 @@ function Detail() {
     const accoRef = useRef<HTMLUListElement>(null);
 
 
+    // 트러블슈팅 - 메뉴
     const clickAccHandler = (i: number) => {
         accoRef.current?.children[i].children[1].classList.toggle('active');
         let currentIcon: ChildNode | undefined = accoRef?.current?.childNodes[i].childNodes[0].childNodes[1];
@@ -22,6 +23,7 @@ function Detail() {
     if (index < 0) { setIndex(4); }
     if (index > 4) { setIndex(0); }
 
+    // 뒤로가기
     const backFn = () => {
         setIsOnTrue(!isOnTrue)
     }
@@ -33,33 +35,21 @@ function Detail() {
                     if (i === index) {
                         return <div key={i} className={`content portfolio-detail ${isOnTrue ? "display-block" : "display-none"}`}>
                             <div className='detail-header'>
-                                <button className='pdBack' onClick={backFn}><Back /></button>
+                                <button className='pdBack' onClick={backFn}><Back />뒤로가기</button>
                                 <div className='pdIndex'>
                                     <button className='leftBtn' onClick={() => { setIndex(i - 1) }}>←</button>
                                     <p>{i + 1}/5</p>
                                     <button className='rightBtn' onClick={() => { setIndex(i + 1) }}>→</button>
                                 </div>
                             </div>
-                            <div className='detail-title'>
-                                <h3>{obj.name}</h3>
-                                <span>{obj.dateteam}</span>
-                            </div>
-                            <div className='detail-image'>
-                                <a href={obj.deployurl} target="_blank" >
-                                    <img src={obj.imageurl} alt="썸네일이미지" ></img>
-                                </a>
-                            </div>
                             <div className='detail-introduce'>
                                 <div className='detail-left'>
-                                    <div className='develop-goal'>
-                                        <h4 className='title'>⚽ 개발 목표</h4>
-                                        <ul>
-                                            {
-                                                obj.goal.map((item: goal, i: number) =>
-                                                    <li key={i}>{item.goal}</li>
-                                                )
-                                            }
-                                        </ul>
+                                    <div className='detail-title'>
+                                        <h3>{obj.name}</h3>
+                                        <span>{obj.dateteam}</span>
+                                    </div>
+                                    <div className='detail-image'>
+                                        <img src={obj.imageurl} alt="썸네일이미지" ></img>
                                     </div>
                                     <div className='develop-link'>
                                         <h4 className='title'>⛪ 링크</h4>

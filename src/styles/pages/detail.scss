@@ -1,15 +1,27 @@
 .portfolio-detail {
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
+    z-index: 3;
+    position: relative;
 
     .detail-header {
         width: 100%;
+        height: 2rem;
         display: flex;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background-color: #fff;
 
         .pdBack {
+            display: flex;
+            align-items: center;
+
             svg {
                 cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
             }
@@ -22,15 +34,19 @@
                 width: 24px;
                 height: 24px;
             }
-
-            ;
         }
 
         .pdIndex {
             display: flex;
             justify-content: center;
+            align-items: center;
             gap: 1rem;
             background-color: transparent;
+
+            button {
+                padding: 0.2rem;
+                background-color: #eee;
+            }
         }
     }
 
@@ -53,49 +69,40 @@
         transition: 0.3s ease;
         position: relative;
         z-index: 0;
-        cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
+        // cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
 
-        * {
-            cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
-        }
+        // * {
+        //     cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
+        // }
 
         img {
             width: 100%;
         }
 
-        &::after {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            content: '';
-            color: #fff;
-            width: 0;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            top: 0;
-            left: 0;
-            position: absolute;
-            z-index: 10;
-            transition: 0.3s ease;
-        }
+        // &:hover {
+        //     & {
+        //         img {
+        //             transition: 0.3s;
+        //             opacity: 0.3;
+        //         }
+        //     }
 
-        &:hover {
-            &::after {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                content: '바로가기';
-                color: #fff;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                top: 0;
-                left: 0;
-                position: absolute;
-                z-index: 10;
-                transition: 0.3s ease;
-            }
-        }
+        //     &::after {
+        //         display: flex;
+        //         justify-content: center;
+        //         align-items: center;
+        //         content: '👍바로가기👍';
+        //         font-weight: 700;
+        //         color: #000;
+        //         width: 100%;
+        //         height: 100%;
+        //         top: 0;
+        //         left: 0;
+        //         position: absolute;
+        //         z-index: 10;
+        //         transition: 0.3s ease;
+        //     }
+        // }
     }
 
 

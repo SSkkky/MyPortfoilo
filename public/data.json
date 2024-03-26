@@ -39,23 +39,23 @@
         ],
         "skill": [
             {
-                "name": "Frontend",
+                "name": "프론트엔드",
                 "skills": "Next.js, Typescript, axios, SASS, zustand"
             },
             {
-                "name": "Package",
+                "name": "패키지",
                 "skills": "next-auth, dayjs, sweetalert, swiper, react-hook-form"
             },
             {
-                "name": "Backend",
+                "name": "서버",
                 "skills": "MongoDB, Firebase"
             },
             {
-                "name": "Deployment",
+                "name": "배포",
                 "skills": "Vercel"
             },
             {
-                "name": "Etc",
+                "name": "협업",
                 "skills": "GitHub, figma"
             }
         ],
@@ -127,11 +127,11 @@
         ],
         "skill": [
             {
-                "name": "Frontend",
+                "name": "프론트엔드",
                 "skills": "React, SASS, JavaScript, Zustand, Swiper, Axios"
             },
             {
-                "name": "Deployment",
+                "name": "배포",
                 "skills": "GitHub Pages"
             }
         ],
@@ -150,13 +150,6 @@
                 "problem": "참조타입 오류로 인한 배열 초기화 실패",
                 "reason": "출력 함수 배열에 담은 로컬스토리지 값이 함수 실행시 초기화되지 않고 누적됨",
                 "solve": "비구조화 할당 문법을 활용하여 초기 배열을 저장함"
-            },
-            {
-                "id": 2,
-                "title": "검색 결과 클릭시 이동 기능 구현에 어려움을 겪음",
-                "problem": "배열내 값을 활용해 location.href로 이동을 구현하려 함",
-                "reason": "data 전송(get) 방식 구조의 이해도가 낮아 로직을 구현하기 어려웠음",
-                "solve": "제품 URL의 구조를 이해하고(/view.html?name=beer&idx=3 으로 주종과 idx를 지정한 형태) 검색 결과의 idx를 각각의 dataset에 저장하여 그 값을 활용하는 식으로 이동 기능을 구현함"
             }
         ]
     },
@@ -224,15 +217,15 @@
         ],
         "skill": [
             {
-                "name": "Frontend",
+                "name": "프론트엔드",
                 "skills": "HTML, SASS, JavaScript"
             },
             {
-                "name": "Deployment",
+                "name": "배포",
                 "skills": "GitHub Pages"
             },
             {
-                "name": "Etc",
+                "name": "협업",
                 "skills": "GitHub, figma"
             }
         ],
@@ -298,11 +291,11 @@
         ],
         "skill": [
             {
-                "name": "Frontend",
+                "name": "프론트엔드",
                 "skills": "HTML, SASS, JavaScript"
             },
             {
-                "name": "Deployment",
+                "name": "배포",
                 "skills": "GitHub Pages"
             }
         ],
@@ -361,11 +354,11 @@
         ],
         "skill": [
             {
-                "name": "Frontend",
+                "name": "프론트엔드",
                 "skills": "React, SASS, JavaScript, Zustand, Swiper, Axios"
             },
             {
-                "name": "Deployment",
+                "name": "배포",
                 "skills": "GitHub Pages"
             }
         ],
