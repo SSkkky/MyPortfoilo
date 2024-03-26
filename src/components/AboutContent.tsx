@@ -3,18 +3,18 @@ import { useStore } from '../store';
 
 function AboutContent() {
     const pRefs = useRef<null[] | HTMLParagraphElement[]>([]);
-    const [level, setLevel] = useState<number>(0);
+    const [level, setLevel] = useState<number>(1);
     const [active, setActive] = useState(false);
     const { about } = useStore();
 
     const textAnimation = () => {
-        let i = 0;
+        let i = 1;
         let delay = 1000;
 
         const levelUp = () => {
-            setLevel(++i);
-            if (7 > i && i > 2) { delay /= 2; }
-            else if (15 > i && i >= 7) { delay /= 5; }
+            setLevel(i++);
+            if (7 > i && i > 2) { delay /= 5; }
+            else if (15 > i && i >= 7) { delay /= 10; }
             else if (i > 15) { delay /= 100; }
             const timeoutId = setTimeout(levelUp, delay);
             if (i === 100) {
@@ -40,8 +40,8 @@ function AboutContent() {
         <div className='content about'>
             <section className='about-top'>
                 <div className={active ? 'about-ani active' : 'about-ani'}>
-                    <p className="ani1">프론트엔드 개발자 손하늘</p>
-                    <p className="ani2">프론트엔드 개발자 손하늘</p>
+                    <p className="ani1">{active ? '프론트엔드 개발자 손하늘' : '레벨업중....레벨업중....'}</p>
+                    <p className="ani2">{active ? '프론트엔드 개발자 손하늘' : '레벨업중....레벨업중....'}</p>
                 </div>
                 <div className={active ? 'about-chara active' : 'about-chara'}>
                     <p>LV.<span>{level}</span> 하늘하늘</p>

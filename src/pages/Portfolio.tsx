@@ -15,10 +15,10 @@ function Portfolio({ name }: Own) {
     const { zNum, setZNum } = zIndex();
 
     const [state, setState] = React.useState<State>({
-        width: window.innerWidth * 0.6,
-        height: window.innerHeight * 0.7,
+        width: window.innerWidth * 0.8,
+        height: window.innerHeight * 1.2,
         x: 60,
-        y: 30
+        y: 40
     });
 
     const updateWindowDimensions = () => {
