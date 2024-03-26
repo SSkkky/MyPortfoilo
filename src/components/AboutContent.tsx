@@ -73,22 +73,31 @@ function AboutContent() {
                     </div>
                     <div className="content-bg-text content-bg-l skills-cont">
                         <ul className='skills'>
-                            <li>HTML</li>
-                            <li>SASS</li>
-                            <li>JavaScript</li>
-                            <li>TypeScript</li>
-                            <li>Next.js</li>
-                            <li>REACT</li>
-                            <li>Git</li>
-                        </ul>
-                        <ul className='skills-level'>
-                            <li className="HTML"></li>
-                            <li className="SASS"></li>
-                            <li className="JavaScript"></li>
-                            <li className="TypeScript"></li>
-                            <li className="Next.js"></li>
-                            <li className="REACT"></li>
-                            <li className="CSS3"></li>
+                            <li className='HTML'>
+                                <h4>HTML</h4>
+                                <p>시멘틱 태그를 작성하여 마크업 할 수 있습니다.</p>
+                            </li>
+                            <li className='CSS'>
+                                <h4>CSS</h4>
+                                <p>디자인 의도에 맞게 스타일을 적용할 수 있습니다.</p></li>
+                            <li className='SASS'>
+                                <h4>SASS</h4>
+                                <p>Mixin, 변수를 활용해 스타일을 적용할 수 있습니다.</p></li>
+                            <li className='JavaScript'>
+                                <h4>JavaScript</h4>
+                                <p>동적인 기능을 추가하거나 수정할 수 있습니다.</p></li>
+                            <li className='TypeScript'>
+                                <h4>TypeScript</h4>
+                                <p>데이터 타입과 인터페이스를 선언해 활용할 수 있습니다.</p></li>
+                            <li className='React'>
+                                <h4>React</h4>
+                                <p>리액트 훅을 활용한 프로젝트를 개발할 수 있습니다.</p></li>
+                            <li className='NextJS'>
+                                <h4>Next.js</h4>
+                                <p>App Route를 활용한 프로젝트를 개발할 수 있습니다.</p></li>
+                            <li className='Git'>
+                                <h4>Git</h4>
+                                <p>branch pull, push, commit등을 사용할 수 있습니다.</p></li>
                         </ul>
                     </div>
                 </div>
@@ -102,10 +111,12 @@ function AboutContent() {
                         <div className='edus'>
                             <ul>
                                 <li>
-                                    <span>2023.10 ~</span>
+                                    <b className='title'>01.</b>
+                                    <span>2023.10 ~ 2024.04</span>
                                     <p>강남 그린컴퓨터 아카데미<br></br>프론트엔드(React&Vue) 웹&앱 SW개발자 양성과정</p>
                                 </li>
                                 <li>
+                                    <b className='title'>02.</b>
                                     <span>2022.06 ~ 2022.08</span>
                                     <p>인프런<br></br>풀스택을 위한 탄탄한 프런트엔드 부트캠프</p>
                                 </li>
