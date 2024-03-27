@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useStore } from '../store';
 
-import { Logo, WifiIcon, BetteryIcon, HanIcon, MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, Resume } from '../assets/icons/icons';
-import '../styles/base/common.scss'
-import '../styles/pages/home.scss';
+import { MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, Resume } from '../assets/icons/icons';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
+
 import About from './About';
 import Contact from './Contact';
 import Portfolio from './Portfolio';
 import TextAnimation from '../components/TextAnimation';
-import Widget from '../components/Widget';
+import Widget from '../components/widget/Widget';
+import Header from '../components/Header';
+
+import '../styles/base/common.scss'
+import '../styles/pages/home.scss';
 
 function Home() {
     // 실시간 날짜
@@ -23,7 +26,6 @@ function Home() {
         }, 60000);
         return () => clearInterval(interval); // 컴포넌트 언마운트 시 인터벌 해제
     }, []);
-
 
     // 메뉴 오픈
     const { about, nowMenu, setNowMenu, setAbout, setPortfolio, setContact } = useStore();
@@ -57,23 +59,7 @@ function Home() {
 
     return (
         <>
-            <header>
-                <nav>
-                    <h1><Logo /></h1>
-                    <p>{nowMenu}</p>
-                    {/* <p>손하늘 포트폴리오</p> */}
-                </nav>
-                <div className="side">
-                    <WifiIcon width="20" fill="#000" />
-                    <div className="bettery">
-                        100% <BetteryIcon width="28" stroke="#000" fill="#000" />
-                    </div>
-                    <HanIcon />
-                    <span>
-                        {time.format("(ddd) HH시 mm분")}
-                    </span>
-                </div>
-            </header>
+            <Header />
             <section id="main-section">
                 <TextAnimation />
                 <Widget />

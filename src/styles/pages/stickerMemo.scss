@@ -1,0 +1,36 @@
+@import '../main.scss';
+
+.stickerMemo {
+    width: 280px;
+    height: 280px;
+    padding: 2rem;
+    padding-top: 5.5rem;
+    box-sizing: border-box;
+    background: url('../../assets/images/stickerMemo.png');
+    background-size: cover;
+    color: $grayDark;
+
+    @include column-flexbox(sb, s);
+    display: flex !important;
+
+    * {
+        font-family: "Pretendard Variable", 'Pretendard';
+        line-height: 1.4;
+        color: $grayDark;
+    }
+
+    h3 {
+        font-size: 1rem;
+        font-family: 'Galmuri9';
+    }
+
+    .contents {
+        @include column-flexbox;
+        gap: 0.5rem;
+
+        span {
+            font-size: 0.8rem;
+            color: $gray;
+        }
+    }
+}

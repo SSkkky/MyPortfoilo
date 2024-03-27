@@ -1,0 +1,56 @@
+@import '../main.scss';
+
+.todoList {
+    width: 280px;
+    height: 280px;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: url('../../assets/images/boxBG.svg');
+    background-size: cover;
+    color: $grayDark;
+
+    @include column-flexbox(sb, s);
+    display: flex !important;
+
+    header {
+        width: 100%;
+        @include flexbox(sb, s);
+        margin-bottom: 1rem;
+
+        .more {
+            width: 40px;
+            height: 40px;
+            background: url('../../assets/images/todoButton.svg');
+            top: 2rem;
+            left: 2rem;
+        }
+
+        .day {
+            font-size: 2rem;
+        }
+    }
+
+    .contents {
+        width: 100%;
+        margin-top: 2rem;
+
+        * {
+            font-family: "Pretendard Variable", 'Pretendard';
+            line-height: 1.4;
+            padding-top: 1rem;
+        }
+
+        .title {
+            color: $orange;
+        }
+
+        p {
+            color: $grayDark;
+        }
+
+        .author {
+            color: $gray;
+            font-size: 0.8rem;
+        }
+    }
+}
