@@ -9,7 +9,8 @@ interface TodoListType {
 }
 export default function TodoList({ down768, down430 }: TodoListType) {
   const [getData, setGetData] = useState()
-  useEffect(() => {
+
+  useEffect(() => { // mongodb 데이터 가져오기
     const fetchGuestBook = async () => {
       const response = await axios.get('http://localhost:5000');
       setGetData(response.data);
