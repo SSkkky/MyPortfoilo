@@ -3,13 +3,18 @@ import { render } from "react-dom";
 import { Rnd } from "react-rnd";
 import '../../styles/pages/stickerMemo.scss';
 
-export default function StickerMemo() {
+interface StickerMemoType {
+    down768: boolean,
+    down430: boolean
+}
+
+export default function StickerMemo({ down768, down430 }: StickerMemoType) {
     return (
         <Rnd
-            className='stickerMemo'
+            className={'stickerMemo' + (down768 ? ' down768' : '') + (down430 ? ' down430' : '')}
             default={{
-                x: 340,
-                y: 40,
+                x: down768 ? 40 : 0,
+                y: down768 ? 0 : 340,
                 width: 280,
                 height: 280
             }}

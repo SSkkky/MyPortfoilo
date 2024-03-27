@@ -3,7 +3,11 @@ import { render } from "react-dom";
 import { Rnd } from "react-rnd";
 import '../../styles/pages/todoList.scss';
 
-export default function TodoList() {
+interface TodoListType {
+    down768: boolean,
+    down430: boolean
+}
+export default function TodoList({ down768, down430 }: TodoListType) {
     return (
         <Rnd
             className='todoList'
