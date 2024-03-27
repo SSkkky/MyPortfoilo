@@ -1,5 +1,5 @@
-import * as React from "react";
-import { render } from "react-dom";
+import  React, { useEffect, useState } from "react";
+import axios from 'axios';
 import { Rnd } from "react-rnd";
 import '../../styles/pages/todoList.scss';
 
@@ -8,6 +8,16 @@ interface TodoListType {
     down430: boolean
 }
 export default function TodoList({ down768, down430 }: TodoListType) {
+  const [getData, setGetData] = useState()
+  useEffect(() => {
+    const fetchGuestBook = async () => {
+      const response = await axios.get('http://localhost:5000');
+      setGetData(response.data);
+    };
+    fetchGuestBook();
+    console.log(getData)
+  }, []);
+
     return (
         <Rnd
             className='todoList'
