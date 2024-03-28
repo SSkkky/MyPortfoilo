@@ -1,24 +1,35 @@
+@import '../main.scss';
+
 .contect {
     text-align: center;
-    display: flex;
+    @include flexbox(sb, s);
     gap: 2rem;
-    flex-direction: column;
-    align-items: center;
+    overflow-y: hidden !important;
+    padding-right: 0 !important;
 
+    // 상단부
     .contectFirst {
-        display: flex;
-        flex-direction: column;
+        @include column-flexbox(c, c);
         gap: 2rem;
+
+        width: 300px;
+        height: 100%;
+        padding: 1rem;
+        border-radius: 1rem;
+
+        position: sticky;
+        top: 0;
+        left: 0;
 
         span {
             display: block;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
             margin: 2rem 0;
         }
 
         p {
-            font-size: 1rem;
+            font-size: 0.9rem;
             line-height: 1.6;
         }
 
@@ -29,6 +40,88 @@
 
             p {
                 margin-top: 0.5rem;
+            }
+        }
+    }
+
+    .contectSecond {
+        width: 100%;
+        height: 100%;
+
+        @include column-flexbox(sb, s);
+        gap: 2rem;
+
+        // GuestBookList
+
+        .inputForm {
+            width: 100%;
+            position: sticky;
+            bottom: 0;
+            right: 0;
+
+            form {
+                width: 100%;
+
+                .inputTopCont {
+                    width: 100%;
+                    @include flexbox();
+                    gap: 1rem;
+                    margin-bottom: 0.5rem;
+
+                    .inputCont {
+                        @include flexbox();
+                        gap: 0.5rem;
+
+                        label {
+                            color: $orange;
+                            font-size: 0.8rem;
+                            white-space: nowrap;
+                        }
+
+                        input {
+                            width: 5rem;
+                        }
+                    }
+                }
+
+
+                input {}
+
+                .name {}
+
+                .password {}
+
+                textarea {
+                    width: 100%;
+                    resize: none;
+                    padding: 1rem;
+                    border-radius: 0.5rem;
+                    border: 2px solid $grayLight;
+
+                    padding-right: 4rem;
+                    overflow: hidden;
+
+                    &:focus {
+                        border-color: $orange;
+                    }
+                }
+
+                button {
+                    background-color: $grayDark;
+                    color: #fff;
+                    padding: 0.5rem;
+                    border-radius: 5px;
+
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1rem;
+
+                    transition: 0.2s ease;
+
+                    &:hover {
+                        background-color: $orange;
+                    }
+                }
             }
         }
     }

@@ -3,27 +3,23 @@ import axios from 'axios';
 import { guestBookListType } from '../models/dataTypes';
 import '../styles/pages/guestBookList.scss'
 
-export default function GuestBookList() {
-    const [getData, setGetData] = useState<guestBookListType[]>([]);
-    const serverURI = process.env.REACT_APP_SERVER_URI as string;
+interface guestBookType {
+    getData: guestBookListType[]
+}
 
-    useEffect(() => {
-        const fetchGuestBook = async () => {
-            const response = await axios.get(serverURI);
-            setGetData(response.data);
-        };
-        fetchGuestBook();
-        console.log(getData)
-    }, []);
-
+export default function GuestBookList({ getData }: guestBookType) {
     return (
         <section className="GuestBookList">
             {
-                getData && getData.map((item, i) => (
-                    <div key={i}>
-                        <p>작성자 : {item.name}</p>
+                getData.map((item, i) => (
+                    <div className="GuestBookMsg" key={i}>
+                        <p className="name">작성자 : {item.name}</p>
                         <p>메시지 : {item.message}</p>
                         <p>작성일 : {item.date}</p>
+                        <p className="deleteAndUpdate">
+                            <button>수정</button>
+                            <button>삭제</button>
+                        </p>
                     </div>
                 ))
             }
