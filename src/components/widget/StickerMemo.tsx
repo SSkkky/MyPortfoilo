@@ -13,8 +13,8 @@ export default function StickerMemo({ down768, down430 }: StickerMemoType) {
         <Rnd
             className={'stickerMemo' + (down768 ? ' down768' : '') + (down430 ? ' down430' : '')}
             default={{
-                x: down768 ? 40 : 0,
-                y: down768 ? 0 : 340,
+                x: 340,
+                y: 40,
                 width: 280,
                 height: 280
             }}
