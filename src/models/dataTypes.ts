@@ -49,3 +49,9 @@ export type trouble = {
     "reason": string,
     "solve": string
 }
+
+export type guestBookListType = {
+    "name": string,
+    "message": string,
+    "date": string
+}

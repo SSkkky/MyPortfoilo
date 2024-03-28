@@ -1,24 +1,36 @@
 import React from 'react'
 import { Tel2, Email } from '../assets/icons/icons';
+import GuestBookList from './GuestBookList';
 
 function ContactContent() {
   return (
-    <div className='content contect'>
-      <div className='contect-top'>
-        <span>Thx:)</span>
-        <p>이 포트폴리오가 흥미롭다면<br></br>피드백 부탁드립니다!</p>
-      </div>
-      <div className='contect-cont'>
-        <div className='contect-email'>
-          <Email height="60" />
-          <p>worte5633@gmail.com</p>
+    <section className='content contect'>
+      <section className='contectFirst'>
+        <span>🖤감사합니다🖤</span>
+        <p>이 포트폴리오가 흥미롭다면 메시지를 남겨주세요!</p>
+        <div className='iconCont'>
+          <div className='myEmail'>
+            <Email height="60" />
+            <p>worte5633@gmail.com</p>
+          </div>
+          <div className='myPhone'>
+            <Tel2 height="60" />
+            <p>010-7569-1925</p>
+          </div>
         </div>
-        <div className='contect-phone'>
-          <Tel2 height="60" />
-          <p>010-7569-1925</p>
+      </section>
+      <section className='contectSecond'>
+        <section className='guestBookList'>
+          <GuestBookList />
+        </section>
+        <div className='inputForm'>
+          <form>
+            <textarea placeholder='메시지를 입력해주세요' />
+            <button type='submit'>전송</button>
+          </form>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   )
 }
 

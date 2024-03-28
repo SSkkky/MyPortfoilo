@@ -1,6 +1,6 @@
 "use client"
 
-import TodoList from './TodoList';
+import GuestBook from './GuestBook';
 import StickerMemo from './StickerMemo';
 import { useEffect, useState } from 'react';
 
@@ -39,7 +39,7 @@ export default function Widget() {
 
     return (
         <>
-            <TodoList down768={down768} down430={down430} />
+            <GuestBook down768={down768} down430={down430} />
             <StickerMemo down768={down768} down430={down430} />
         </>
     )

@@ -1,27 +1,22 @@
-import  React, { useEffect, useState } from "react";
-import axios from 'axios';
 import { Rnd } from "react-rnd";
-import '../../styles/pages/todoList.scss';
+import { useStore, zIndex } from '../../store';
+import '../../styles/pages/guestBook.scss';
 
-interface TodoListType {
+interface GuestBookType {
     down768: boolean,
     down430: boolean
 }
-export default function TodoList({ down768, down430 }: TodoListType) {
-  const [getData, setGetData] = useState()
+export default function GuestBook({ down768, down430 }: GuestBookType) {
+    const { setContact } = useStore();
 
-  useEffect(() => { // mongodb 데이터 가져오기
-    const fetchGuestBook = async () => {
-      const response = await axios.get('http://localhost:5000');
-      setGetData(response.data);
-    };
-    fetchGuestBook();
-    console.log(getData)
-  }, []);
+
+    const onClickMenuBtnHandler = () => {
+        setContact(true)
+    }
 
     return (
         <Rnd
-            className='todoList'
+            className='GuestBook'
             default={{
                 x: 40,
                 y: 40,
@@ -32,7 +27,7 @@ export default function TodoList({ down768, down430 }: TodoListType) {
             bounds="parent"
         >
             <header>
-                <button className="more"></button>
+                <button className="more" onClick={onClickMenuBtnHandler} />
                 <h3 className="day">{new Date().getDate()}</h3>
             </header>
             <div className="contents">

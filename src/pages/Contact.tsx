@@ -16,8 +16,8 @@ function Contact({ name }: Own) {
     const { zNum, setZNum } = zIndex();
 
     const [state, setState] = React.useState<State>({
-        width: window.innerWidth * 0.5,
-        height: window.innerHeight * 0.5,
+        width: window.innerWidth * 0.7,
+        height: window.innerHeight * 0.6,
         x: 50,
         y: 60
     });
@@ -25,8 +25,8 @@ function Contact({ name }: Own) {
     const updateWindowDimensions = () => {
         setState(prevState => ({
             ...prevState,
-            width: Math.min(window.innerWidth * 0.5, prevState.width),
-            height: Math.min(window.innerHeight * 0.5, prevState.height)
+            width: Math.min(window.innerWidth * 0.7, prevState.width),
+            height: Math.min(window.innerHeight * 0.6, prevState.height)
         }));
     };
 
