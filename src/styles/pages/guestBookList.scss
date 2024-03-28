@@ -1,13 +1,12 @@
 @import '../main.scss';
 
 .GuestBookList {
-    * {
-        font-family: "Pretendard Variable", "Pretendard";
-    }
+    // * {
+    //     font-family: "Pretendard Variable", "Pretendard";
+    // }
 
-    @include column-flexbox();
-    flex-direction: column-reverse;
-
+    @include flexbox();
+    flex-wrap: wrap;
     width: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -30,25 +29,140 @@
         border-radius: 1rem;
     }
 
-    div:nth-child(4n) {
-        background-color: #ffecd3;
-    }
+    .GuestBookMsg {
+        width: calc((100% - 2rem) / 3);
+        border-radius: 1rem;
+        background-color: #fff;
+        border: 2px solid $grayDark;
 
-    div:nth-child(4n-1) {
-        background-color: #dcffd3;
-    }
+        &:nth-child(5n) {
+            .GuestBookMsgHeader {
+                background-color: #ffecd3;
+            }
+        }
 
-    div:nth-child(4n-2) {
-        background-color: #d3f3ff;
-    }
+        &:nth-child(5n-1) {
+            .GuestBookMsgHeader {
+                background-color: #dcffd3;
+            }
+        }
 
-    div:nth-child(4n-3) {
-        background-color: #ffe4fb;
+        &:nth-child(5n-2) {
+            .GuestBookMsgHeader {
+                background-color: #d3f3ff;
+            }
+        }
+
+        &:nth-child(5n-3) {
+            .GuestBookMsgHeader {
+                background-color: #ffe4fb;
+            }
+        }
+
+        &:nth-child(5n-4) {
+            .GuestBookMsgHeader {
+                background-color: #feffc9;
+            }
+        }
+
+        .GuestBookMsgHeader {
+            width: 100%;
+            border-bottom: 2px solid $grayDark;
+            background-color: #fff;
+            border-radius: 1rem 1rem 0 0;
+            padding: 0.5rem 0;
+
+            position: relative;
+
+            .btnCont {
+                position: absolute;
+                top: 50%;
+                left: 0.5rem;
+                transform: translateY(-50%);
+            }
+        }
+
+        .GuestBookMsgCont {
+            padding: 1rem;
+
+            .message {
+                width: 100%;
+                word-wrap: break-word;
+            }
+
+            .date {
+                font-size: 0.9rem;
+                margin-top: 1rem;
+            }
+
+            .deleteAndUpdate {
+                margin: 1.5rem 0 0.5rem 0;
+                @include flexbox(c);
+                gap: 1rem;
+
+                button {
+                    padding: 0.3rem 1rem;
+                    border: 2px outset $gray;
+                    background-color: #eee;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+// -- 반응형 960px 이하 --
+.down960 {
+    .GuestBookMsg {
+        width: calc((100% - 1rem) / 2);
+    }
+}
+
+// -- 반응형 600px 이하 --
+.down600 {
+    flex-direction: column;
+
+    .contectFirst {
+        width: 100% !important;
+        gap: 1rem !important;
+        padding: 0;
+
+        span {
+            margin: 0 !important;
+        }
+
+        .iconCont {
+            transform: translateX(-20px);
+            @include flexbox(c, c);
+            flex-direction: column;
+            gap: 1rem;
+
+            p {
+                margin: 0 !important;
+            }
+
+            svg {
+                height: 24px;
+                margin-right: 0.5rem;
+            }
+
+            div {
+                @include flexbox;
+            }
+
+            .myPhone {
+                margin: 0 !important;
+            }
+        }
     }
 
     .GuestBookMsg {
-        padding: 1rem;
-        border-radius: 1rem;
-        background-color: #fff;
+        width: 100%;
+    }
+
+    .contectSecond {
+        .GuestBookList {
+            height: calc(100% - 320px);
+        }
     }
 }

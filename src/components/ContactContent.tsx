@@ -8,7 +8,12 @@ import '../styles/pages/contect.scss';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
 
-function ContactContent() {
+interface contentType {
+  down960: boolean;
+  down600: boolean;
+}
+
+function ContactContent({ down960, down600 }: contentType) {
   const [getData, setGetData] = useState<guestBookListType[]>([]);
   const serverURI = process.env.REACT_APP_SERVER_URI as string;
   const [userName, setUserName] = useState<string>('');
@@ -52,6 +57,7 @@ function ContactContent() {
     setUserMessage(e.target.value)
   }
 
+
   useEffect(() => {
     const fetchGuestBook = async () => {
       const response = await axios.get(serverURI);
@@ -61,7 +67,7 @@ function ContactContent() {
   }, []);
 
   return (
-    <section className='content contect'>
+    <section className={'contect content' + (down960 ? ' down960' : '') + (down600 ? ' down600' : '')}>
       <section className='contectFirst'>
         <span>🖤감사합니다🖤</span>
         <p>이 포트폴리오가 흥미롭다면 메시지를 남겨주세요!</p>

@@ -9,6 +9,8 @@ interface Own { name: string }
 function Contact({ name }: Own) {
     const { contact } = useStore();
     const refDiv = useRef<Rnd>(null);
+    const [down960, setDown960] = useState(false);
+    const [down600, setDown600] = useState(false);
     const [zIdx, setZidx] = useState(0)
 
     const { maxMenu, onClickMenu } = useStore();
@@ -62,10 +64,34 @@ function Contact({ name }: Own) {
     }
 
     useEffect(() => {
-        if (onClickMenu == 'Contact') {
+        if (onClickMenu === 'Contact') {
 
         }
     }, [onClickMenu]);
+
+
+    // ------------------- 반응형
+    useEffect(() => {
+        if (600 < state.width && state.width < 960) {
+            if (down960 === true) {
+                return
+            } else {
+                setDown960(true)
+                setDown600(false)
+            }
+            setDown960(true)
+        } else if (state.width < 600) {
+            if (down600 === true) {
+                return
+            } else {
+                setDown960(false)
+                setDown600(true)
+            }
+        } else if (state.width >= 960) {
+            setDown960(false)
+            setDown600(false)
+        } // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [state.width]);
 
     return (
         <div className={`${contact ? "display-block" : "display-none"}`} onClick={zIndexUp}>
@@ -82,7 +108,9 @@ function Contact({ name }: Own) {
                 <p className='positionTitle'>CONTECT</p>
                 <div className="contact main-sec-cont">
                     <Menubg name={name} />
-                    <ContactContent />
+                    <ContactContent
+                        down960={down960}
+                        down600={down600} />
                 </div>
             </Rnd>
         </div>
