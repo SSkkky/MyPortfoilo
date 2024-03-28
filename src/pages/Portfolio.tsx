@@ -19,7 +19,7 @@ function Portfolio({ name }: Own) {
 
     const [state, setState] = React.useState<State>({
         width: window.innerWidth * 0.8,
-        height: window.innerHeight * 1.2,
+        height: window.innerHeight * 0.8,
         x: 60,
         y: 40
     });
@@ -28,7 +28,7 @@ function Portfolio({ name }: Own) {
         setState(prevState => ({
             ...prevState,
             width: Math.min(window.innerWidth * 0.8, prevState.width),
-            height: Math.min(window.innerHeight * 0.7, prevState.height)
+            height: Math.min(window.innerHeight * 0.8, prevState.height)
         }));
     };
 

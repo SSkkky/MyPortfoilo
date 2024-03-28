@@ -1,3 +1,5 @@
+import { Types } from 'mongoose';
+
 export interface State {
     width: number,
     height: number,
@@ -53,5 +55,7 @@ export type trouble = {
 export type guestBookListType = {
     "name": string,
     "message": string,
-    "date": string
+    "date": string,
+    "password": string,
+    "_id": Types.ObjectId
 }

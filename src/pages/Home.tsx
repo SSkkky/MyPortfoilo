@@ -30,11 +30,11 @@ function Home() {
     // 메뉴 오픈
     const { about, nowMenu, setNowMenu, setAbout, setPortfolio, setContact } = useStore();
     const handleClick = (e: string) => {
-        if (e == 'About') {
+        if (e === 'About') {
             setAbout(true); // display:block
             setNowMenu('About');
         }
-        else if (e == 'Portfolio') {
+        else if (e === 'Portfolio') {
             setPortfolio(true);
             setNowMenu('Portfolio');
         }
