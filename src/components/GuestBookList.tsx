@@ -9,7 +9,7 @@ interface guestBookType {
 }
 
 export default function GuestBookList({ getData }: guestBookType) {
-    
+
     const updateHandler = (id:Types.ObjectId) => {
         console.log(id)
     }
@@ -26,10 +26,10 @@ export default function GuestBookList({ getData }: guestBookType) {
                         <section className="GuestBookMsgCont">
                             <p className="message">{item.message}</p>
                             <p className="date">{item.date}</p>
-                            <p className="deleteAndUpdate">
+                            {/* <p className="deleteAndUpdate">
                                 <button onClick={()=>{updateHandler(item._id)}}>수정</button>
                                 <button>삭제</button>
-                            </p>
+                            </p> */}
                         </section>
                     </article>
                 ))
