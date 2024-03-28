@@ -5,10 +5,11 @@ import '../styles/pages/guestBookList.scss'
 
 export default function GuestBookList() {
     const [getData, setGetData] = useState<guestBookListType[]>([]);
+    const serverURI = process.env.REACT_APP_SERVER_URI as string;
 
-    useEffect(() => { // mongodb 데이터 가져오기
+    useEffect(() => {
         const fetchGuestBook = async () => {
-            const response = await axios.get('http://localhost:5000');
+            const response = await axios.get(serverURI);
             setGetData(response.data);
         };
         fetchGuestBook();
@@ -19,7 +20,11 @@ export default function GuestBookList() {
         <section className="GuestBookList">
             {
                 getData && getData.map((item, i) => (
-                    <div key={i}>{item.name}</div>
+                    <div key={i}>
+                        <p>작성자 : {item.name}</p>
+                        <p>메시지 : {item.message}</p>
+                        <p>작성일 : {item.date}</p>
+                    </div>
                 ))
             }
         </section>

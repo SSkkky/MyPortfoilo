@@ -4,7 +4,6 @@ import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
 import ContactContent from '../components/ContactContent';
 import { useStore, zIndex } from '../store';
-import '../styles/pages/contect.scss';
 
 interface Own { name: string }
 function Contact({ name }: Own) {

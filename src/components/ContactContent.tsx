@@ -1,6 +1,7 @@
 import React from 'react'
 import { Tel2, Email } from '../assets/icons/icons';
 import GuestBookList from './GuestBookList';
+import '../styles/pages/contect.scss';
 
 function ContactContent() {
   return (
@@ -19,7 +20,7 @@ function ContactContent() {
           </div>
         </div>
       </section>
-      <section className='contectSecond'>
+      {/* <section className='contectSecond'>
         <section className='guestBookList'>
           <GuestBookList />
         </section>
@@ -29,7 +30,7 @@ function ContactContent() {
             <button type='submit'>전송</button>
           </form>
         </div>
-      </section>
+      </section> */}
     </section>
   )
 }
