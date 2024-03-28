@@ -121,6 +121,7 @@
 // -- 반응형 600px 이하 --
 .down600 {
     flex-direction: column;
+    gap: 1rem !important;
 
     .contectFirst {
         width: 100% !important;
@@ -158,11 +159,26 @@
 
     .GuestBookMsg {
         width: 100%;
+
+        p {
+            font-size: 0.8rem !important;
+        }
     }
 
     .contectSecond {
         .GuestBookList {
-            height: calc(100% - 320px);
+            height: calc(100% - 330px);
+
+        }
+
+        .inputCont {
+            input {
+                width: 4rem !important;
+            }
+
+            * {
+                font-size: 0.7rem !important;
+            }
         }
     }
 }
