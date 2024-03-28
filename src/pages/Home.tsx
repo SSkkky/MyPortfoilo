@@ -62,7 +62,7 @@ function Home() {
             <Header />
             <section id="main-section">
                 <TextAnimation />
-                <Widget />
+               // <Widget />
                 <div id="main-right-cont">
                     <ul>
                         <li onClick={() => { handleClick('About') }}><MeIcon /><p>ABOUT_ME</p></li>
