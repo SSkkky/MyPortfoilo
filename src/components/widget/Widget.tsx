@@ -10,27 +10,30 @@ export default function Widget() {
 
     useEffect(() => {
         const handleResize = () => {
-            if (430 < window.innerWidth && window.innerWidth < 768) {
+            if (430 < window.innerWidth && window.innerWidth <= 768) {
                 if (down768 === true) {
                     return
                 } else {
+                    console.log('ㅇㅅㅇ?')
                     setDown768(true)
                     setDown430(false)
                 }
                 setDown768(true)
-            } else if (window.innerWidth < 430) {
+            } else if (window.innerWidth <= 430) {
                 if (down430 === true) {
                     return
                 } else {
                     setDown768(false)
                     setDown430(true)
                 }
-            } else if (window.innerWidth >= 768) {
+            } else if (window.innerWidth > 768) {
                 setDown768(false)
                 setDown430(false)
             } // eslint-disable-next-line react-hooks/exhaustive-deps
         };
         window.addEventListener('resize', handleResize);
+        console.log('down768', down768)
+        console.log('down430', down430)
         return () => {
             window.removeEventListener('resize', handleResize);
         };

@@ -1,6 +1,7 @@
 @import '../main.scss';
 
 .GuestBook {
+    transition: 0.2s ease;
     width: 280px;
     height: 280px;
     padding: 2rem;
@@ -32,7 +33,6 @@
 
     .contents {
         width: 100%;
-        margin-top: 2rem;
 
         * {
             font-family: "Pretendard Variable", 'Pretendard';
@@ -51,6 +51,58 @@
         .author {
             color: $gray;
             font-size: 0.8rem;
+        }
+    }
+}
+
+.GuestBook.down768 {
+    width: 220px !important;
+    height: 220px !important;
+
+    header {
+        .more {
+            width: 30px;
+            height: 30px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+    }
+
+    .contents {
+        * {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@include responsive(s) {
+    .GuestBook {
+        padding: 1.5rem;
+        width: 200px !important;
+        height: 200px !important;
+
+        header {
+            .more {
+                width: 30px;
+                height: 30px;
+            }
+
+            h3 {
+                font-size: 1.5rem !important;
+            }
+        }
+
+        .contents {
+            * {
+                padding-top: 0.5rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
         }
     }
 }

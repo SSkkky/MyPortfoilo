@@ -17,6 +17,7 @@
 
         .text {
             margin: 0 6rem;
+            text-align: center;
             font-size: 4rem;
             color: #fff;
         }
@@ -144,21 +145,21 @@ footer {
     #main-section {
         flex-direction: column-reverse;
         justify-content: flex-end;
-        gap: 20svh;
+        gap: 10svh;
 
         #main-left-cont {
             .text {
-                font-size: 3rem;
+                font-size: 2rem;
                 margin: 0 2rem;
+                text-align: center;
             }
         }
 
         #main-right-cont {
+            @include flexbox(e);
+
             ul {
-                flex-direction: row;
-                align-items: flex-end;
-                justify-content: space-between;
-                gap: 0;
+                width: 80px;
             }
         }
     }
@@ -166,14 +167,4 @@ footer {
 
 @media (min-width: 100px) and (max-width: 1023px) {
     /* 브라우저 사이즈 768px이상, 1023px이하 일때,*/
-}
-
-// 포인터가 없는(휴대폰) 일때
-@media (pointer:coarse) and (max-width: 555px) {
-    .react-draggable {
-        user-select: none;
-        transform: translate(0, 28px) !important;
-        width: 100svw !important;
-        height: calc(100svh - 55.5px) !important;
-    }
 }

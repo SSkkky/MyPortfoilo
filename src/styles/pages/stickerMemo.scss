@@ -1,6 +1,7 @@
 @import '../main.scss';
 
 .stickerMemo {
+    transition: 0.2s ease;
     width: 280px;
     height: 280px;
     padding: 2rem;
@@ -36,7 +37,49 @@
 }
 
 // ------------------- 반응형 (768px)
-.down768 {}
+@include responsive(s) {
+    .stickerMemo {
+        width: 220px !important;
+        height: 220px !important;
+        // top: 240px !important;
+        // left: -300px !important;
+
+        padding-top: 4.5rem;
+
+        h3,
+        p {
+            font-size: 0.8rem;
+        }
+    }
+}
+
 
 // ------------------- 반응형 (430px)
-.down430 {}
+@include responsive(s) {
+    .stickerMemo {
+        padding: 1.5rem;
+        padding-top: 4rem;
+        top: 140px !important;
+        left: -300px !important;
+        width: 200px !important;
+        height: 200px !important;
+
+        h3 {
+            font-size: 0.8rem;
+        }
+
+        .contents {
+            * {
+                font-size: 0.9rem;
+            }
+
+            .responsiveNone {
+                display: none;
+            }
+
+            span {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}
