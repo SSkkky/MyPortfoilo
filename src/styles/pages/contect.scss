@@ -166,7 +166,12 @@
             input {
                 margin-left: 0.5rem;
                 background-color: #eee;
+                border: 2px solid #eee;
                 padding: 0.5rem;
+            }
+
+            input:focus {
+                border: 2px solid #000;
             }
         }
 
@@ -185,6 +190,18 @@
             button:hover {
                 color: #fff;
                 background-color: #000;
+            }
+        }
+    }
+
+    .popupContUpdate {
+        #updateArea {
+            width: calc(100% - 3rem);
+            height: calc(100% - 10rem);
+            background-color: #eee;
+
+            &:focus {
+                border: 2px solid #000;
             }
         }
     }

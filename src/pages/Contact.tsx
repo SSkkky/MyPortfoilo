@@ -11,8 +11,10 @@ interface Own { name: string }
 function Contact({ name }: Own) {
   const [getData, setGetData] = useState<guestBookListType[]>([]);
   const [isPasswordRight, setIsPasswordRight] = useState(true)
+  const [guestBookUpdate, setGuestBookUpdate] = useState(false)
     const serverURI = process.env.REACT_APP_SERVER_URI as string;
     const { maxMenu, popupKeyword, contact, isOnDelAndUpdate, setDelAndUpdate, popupInputUserPassword, setPopupInputUserPassword, guestBookDataObject } = useStore();
+    const [updateTextAreaValue, setUpdateTextAreaValue] = useState('');
     const refDiv = useRef<Rnd>(null);
     const [down960, setDown960] = useState(false);
     const [down600, setDown600] = useState(false);
@@ -105,6 +107,7 @@ function Contact({ name }: Own) {
         switch (type) {
             case 'cancle':
                 setDelAndUpdate(false)
+                setGuestBookUpdate(false)
                 break;
         
             case 'submit':
@@ -113,7 +116,7 @@ function Contact({ name }: Own) {
                 console.log('입력한 비밀번호는 ', popupInputUserPassword)
                 if(guestBookDataObject?.password === popupInputUserPassword){ // 일치
                     if(popupKeyword === '수정'){
-                        console.log('수정 팝업을 띄웁니다');
+                        setGuestBookUpdate(true)
                     } else if(popupKeyword === '삭제'){
                         console.log('삭제합니다');
                         const fetchGuestBook = async () => {
@@ -122,10 +125,10 @@ function Contact({ name }: Own) {
                           setGetData(response.data);
                         };
                         fetchGuestBook();
+                        setDelAndUpdate(false)
                     } else{
                         window.alert('[오류 발생] 새로고침 후 다시 시도해주세요!')
                     }
-                    setDelAndUpdate(false)
                 } else{ // 불일치
                     setIsPasswordRight(false)
                 }
@@ -137,6 +140,26 @@ function Contact({ name }: Own) {
 
     const inputChangeHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
         setPopupInputUserPassword(e.target.value)
+    }
+
+    const updateDataHandler = () => {
+        const updateData = {
+            "name" : guestBookDataObject?.name,
+            "message" : updateTextAreaValue,
+            "date" : guestBookDataObject?.date,
+            "password" : guestBookDataObject?.password
+        }
+        const fetchGuestBook = async () => {
+          const response = await axios.put(`${serverURI}/${guestBookDataObject?._id}`, updateData
+        );
+          setGetData(response.data);
+        };
+        fetchGuestBook();
+        setDelAndUpdate(false); // 팝업 닫음
+    }
+
+    const setUpdateTextArea = (e:React.ChangeEvent<HTMLTextAreaElement>)=>{
+        setUpdateTextAreaValue(e.target.value)
     }
 
     return (
@@ -162,20 +185,33 @@ function Contact({ name }: Own) {
                         />
                 </div>
                 <div className={'isOnDeleteAndUpdate' + (isOnDelAndUpdate ? ' active' : ' ')}>
-                    <div className='popupCont'>
-                        <header>
-                            잠깐!
-                        </header>
-                        <h4 className={isPasswordRight ? '' : 'isPasswordFalse'}>{isPasswordRight ? ` 정말 ${popupKeyword}하시겠습니까?` : `비밀번호가 일치하지 않습니다!`}</h4>
-                        <div className='popupContInput'>
-                            <label htmlFor='password'>비밀번호</label>
-                            <input type="password" name="password" value={popupInputUserPassword} onChange={(e)=>{inputChangeHandler(e)}} />
+                    {
+                        guestBookUpdate
+                        ? <div className='popupCont popupContUpdate'>
+                            <header>🧡 글을 수정합니다 🧡</header>
+                            <textarea
+                            name="updateArea"
+                            id="updateArea" 
+                            defaultValue={guestBookDataObject?.message}
+                            onChange={(e)=>setUpdateTextArea(e)}/>
+                            <div className='popupContBtns'>
+                                <button onClick={()=>{delAndUpdatePopupHandler('cancle')}}>취소</button>
+                                <button onClick={updateDataHandler}>확인</button>
+                            </div>
                         </div>
-                        <div className='popupContBtns'>
-                            <button onClick={()=>{delAndUpdatePopupHandler('cancle')}}>취소</button>
-                            <button onClick={()=>{delAndUpdatePopupHandler('submit')}}>확인</button>
+                        : <div className="popupCont">
+                            <header>잠깐!</header>
+                            <h4 className={isPasswordRight ? '' : 'isPasswordFalse'}>{isPasswordRight ? ` 정말 ${popupKeyword}하시겠습니까?` : `비밀번호가 일치하지 않습니다!`}</h4>
+                            <div className='popupContInput'>
+                                <label htmlFor='password'>비밀번호</label>
+                                <input type="password" name="password" value={popupInputUserPassword} onChange={(e)=>{inputChangeHandler(e)}} />
+                            </div>
+                            <div className='popupContBtns'>
+                                <button onClick={()=>{delAndUpdatePopupHandler('cancle')}}>취소</button>
+                                <button onClick={()=>{delAndUpdatePopupHandler('submit')}}>확인</button>
+                            </div>
                         </div>
-                    </div>
+                    }
                 </div>
             </Rnd>
         </div>
