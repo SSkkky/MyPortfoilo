@@ -163,6 +163,8 @@
         }
 
         .popupContInput {
+            @include flexbox(c, c);
+
             input {
                 margin-left: 0.5rem;
                 background-color: #eee;
@@ -203,6 +205,21 @@
             &:focus {
                 border: 2px solid #000;
             }
+        }
+    }
+}
+
+.isOnDeleteAndUpdate.active.down600 .popupCont {
+    width: calc(100% - 4rem);
+
+    .popupContInput {
+        label {
+            font-size: 0.8rem;
+        }
+
+        input {
+            width: 100%;
+            max-width: calc(100% - 6rem);
         }
     }
 }

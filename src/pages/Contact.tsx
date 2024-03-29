@@ -186,7 +186,7 @@ function Contact({ name }: Own) {
                         setGetData={setGetData}
                         />
                 </div>
-                <div className={'isOnDeleteAndUpdate' + (isOnDelAndUpdate ? ' active' : ' ')}>
+                <div className={'isOnDeleteAndUpdate' + (isOnDelAndUpdate ? ' active' : ' ') + (down600 ? ' down600' : '') + (down960 ? ' down960' : '')}>
                     {
                         guestBookUpdate
                         ? <div className='popupCont popupContUpdate'>

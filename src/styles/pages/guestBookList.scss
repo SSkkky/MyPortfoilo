@@ -83,7 +83,9 @@
         }
 
         .GuestBookMsgCont {
+            @include column-flexbox(sb, c);
             padding: 1rem;
+            height: calc(100% - 40px);
 
             .message {
                 width: 100%;
