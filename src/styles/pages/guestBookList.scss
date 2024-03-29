@@ -1,10 +1,6 @@
 @import '../main.scss';
 
 .GuestBookList {
-    // * {
-    //     font-family: "Pretendard Variable", "Pretendard";
-    // }
-
     @include flexbox();
     flex-wrap: wrap;
     width: 100%;
@@ -169,7 +165,7 @@
     }
 
     .contectSecond {
-        height: calc(100% - 200px);
+        height: calc(100% - 200px) !important;
 
         .inputForm {
             background: #fff;
