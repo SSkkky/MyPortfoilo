@@ -1,14 +1,11 @@
-import { Rnd } from "react-rnd";
-import { useStore, zIndex } from '../../store';
+import {useRef} from "react";
+import { Rnd } from 'react-rnd';
+import { useStore } from '../../store';
 import '../../styles/pages/guestBook.scss';
 
-interface GuestBookType {
-    down768: boolean,
-    down430: boolean
-}
-export default function GuestBook({ down768, down430 }: GuestBookType) {
+export default function GuestBook() {
+    const refDiv = useRef<Rnd>(null);
     const { setContact } = useStore();
-
 
     const onClickMenuBtnHandler = () => {
         setContact(true)
@@ -16,7 +13,7 @@ export default function GuestBook({ down768, down430 }: GuestBookType) {
 
     return (
         <Rnd
-            className='GuestBook'
+            className={'GuestBook drag-handle101'}
             default={{
                 x: 40,
                 y: 40,
@@ -24,15 +21,18 @@ export default function GuestBook({ down768, down430 }: GuestBookType) {
                 height: 280
             }}
             enableResizing={false}
-            bounds="parent"
+            ref={refDiv}
+            dragHandleClassName='drag-handle101'
+            bounds="body"
+            cancel=".no-drag"
         >
             <header>
-                <button className="more" onClick={onClickMenuBtnHandler} />
+                <button className="more no-drag" onClick={onClickMenuBtnHandler} />
                 <h3 className="day">{new Date().getDate()}</h3>
             </header>
             <div className="contents">
                 <h4 className="title">알림</h4>
-                <p>제 포트폴리오 홈페이지에 방문해주셔서 감사드립니다 😍🥰</p>
+                <p>버튼을 클릭해 응원의 메시지를 작성해주세요! 😍🥰</p>
                 <span className="author">하늘</span>
             </div>
         </Rnd>

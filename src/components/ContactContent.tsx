@@ -3,7 +3,6 @@ import axios from 'axios';
 import { guestBookListType } from '../models/dataTypes';
 import { Tel2, Email } from '../assets/icons/icons';
 import GuestBookList from './GuestBookList';
-import '../styles/pages/contect.scss';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
@@ -11,10 +10,11 @@ import 'dayjs/locale/ko';
 interface contentType {
   down960: boolean;
   down600: boolean;
+  getData: guestBookListType[];
+  setGetData: React.Dispatch<React.SetStateAction<guestBookListType[]>>
 }
 
-function ContactContent({ down960, down600 }: contentType) {
-  const [getData, setGetData] = useState<guestBookListType[]>([]);
+function ContactContent({ down960, down600, getData, setGetData }: contentType) {
   const serverURI = process.env.REACT_APP_SERVER_URI as string;
   const [userName, setUserName] = useState<string>('');
   const [userPassword, setUserPassword] = useState('');
@@ -56,15 +56,6 @@ function ContactContent({ down960, down600 }: contentType) {
   const messageOnChangeHandler = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setUserMessage(e.target.value)
   }
-
-
-  useEffect(() => {
-    const fetchGuestBook = async () => {
-      const response = await axios.get(serverURI);
-      setGetData(response.data);
-    };
-    fetchGuestBook();
-  }, []);
 
   return (
     <section className={'contect content' + (down960 ? ' down960' : '') + (down600 ? ' down600' : '')}>

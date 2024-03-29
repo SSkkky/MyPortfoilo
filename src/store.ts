@@ -1,4 +1,6 @@
 import { create } from 'zustand';
+import { Types } from 'mongoose';
+import { guestBookListType } from './models/dataTypes';
 
 interface useStoreState {
     menuActive: boolean;
@@ -33,6 +35,21 @@ interface useStoreState {
 
     onClickMenu: string;
     setOnClickMenu: (onClickMenu: string) => void;
+
+    isOnDelAndUpdate: boolean,
+    setDelAndUpdate: (isOnDelAndUpdate: boolean) => void;
+
+    objectId: Types.ObjectId | null;
+    setObjectId: (objectId: Types.ObjectId) => void;
+
+    guestBookDataObject: guestBookListType | null;
+    setGuestBookDataObject: (guestBookDataObject: guestBookListType) => void;
+
+    popupKeyword: string;
+    setPopupKeyword: (popupKeyword: string) => void;
+
+    popupInputUserPassword: string;
+    setPopupInputUserPassword: (popupInputUserPassword: string) => void;
 }
 
 export const useStore = create<useStoreState>((set) => ({
@@ -68,6 +85,21 @@ export const useStore = create<useStoreState>((set) => ({
 
     onClickMenu: '',
     setOnClickMenu: (onClickMenu) => set({ onClickMenu }),
+
+    isOnDelAndUpdate : false,
+    setDelAndUpdate : (isOnDelAndUpdate) => set({ isOnDelAndUpdate }),
+
+    objectId: null,
+    setObjectId: (objectId) => set({ objectId }),
+
+    guestBookDataObject: null,
+    setGuestBookDataObject: (guestBookDataObject) => set({ guestBookDataObject }),
+
+    popupKeyword: '',
+    setPopupKeyword: (popupKeyword) => set({ popupKeyword }),
+
+    popupInputUserPassword: '',
+    setPopupInputUserPassword: (popupInputUserPassword) => set({ popupInputUserPassword }),
 }));
 
 interface zIndexState {

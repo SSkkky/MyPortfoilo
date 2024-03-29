@@ -26,11 +26,11 @@ $b-breakpoint: 1024px;
         @media screen and (max-width: $b-breakpoint) {
             @content;
         }
+    }
 
-        @if ($screen) {
-            @media screen and (max-width: $screen) {
-                @content;
-            }
+    @if ($screen) {
+        @media screen and (max-width: $screen) {
+            @content;
         }
     }
 }

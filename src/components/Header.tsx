@@ -25,7 +25,6 @@ export default function Header() {
         <header id="header">
             <nav>
                 <h1><Logo /></h1>
-                <p>{nowMenu}</p>
             </nav>
             <div className="side">
                 <WifiIcon width="20" fill="#000" />

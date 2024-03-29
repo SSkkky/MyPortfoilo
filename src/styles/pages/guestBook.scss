@@ -1,6 +1,7 @@
 @import '../main.scss';
 
 .GuestBook {
+    transition: 0.2s ease;
     width: 280px;
     height: 280px;
     padding: 2rem;
@@ -23,6 +24,7 @@
             background: url('../../assets/images/todoButton.svg');
             top: 2rem;
             left: 2rem;
+            transition: 0.2s;
         }
 
         .day {
@@ -32,7 +34,6 @@
 
     .contents {
         width: 100%;
-        margin-top: 2rem;
 
         * {
             font-family: "Pretendard Variable", 'Pretendard';
@@ -51,6 +52,63 @@
         .author {
             color: $gray;
             font-size: 0.8rem;
+        }
+    }
+}
+
+@include responsive(768px) {
+    .GuestBook {
+        width: 240px !important;
+        height: 240px !important;
+
+        header {
+            align-items: center;
+
+            .more {
+                width: 30px;
+                height: 30px;
+            }
+
+            .day {
+                font-size: 1.5rem;
+                line-height: 1;
+            }
+        }
+
+        .contents {
+            * {
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+@include responsive(s) {
+    .GuestBook {
+        padding: 1.5rem;
+        width: 200px !important;
+        height: 200px !important;
+        left: -20px !important;
+
+        header {
+            .more {
+                width: 30px;
+                height: 30px;
+            }
+
+            h3 {
+                font-size: 1.5rem !important;
+            }
+        }
+
+        .contents {
+            * {
+                padding-top: 0.5rem;
+            }
+
+            p {
+                font-size: 0.85rem;
+            }
         }
     }
 }
