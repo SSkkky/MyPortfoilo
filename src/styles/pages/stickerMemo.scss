@@ -37,18 +37,22 @@
 }
 
 // ------------------- 반응형 (768px)
-@include responsive(s) {
+@include responsive(768px) {
     .stickerMemo {
-        width: 220px !important;
-        height: 220px !important;
-        // top: 240px !important;
-        // left: -300px !important;
-
+        width: 240px !important;
+        height: 240px !important;
+        left: -300px !important;
+        top: 260px !important;
         padding-top: 4.5rem;
 
-        h3,
-        p {
-            font-size: 0.8rem;
+        h3 {
+            font-size: 0.9rem;
+        }
+
+        .contents {
+            p {
+                font-size: 0.9rem;
+            }
         }
     }
 }
@@ -59,10 +63,10 @@
     .stickerMemo {
         padding: 1.5rem;
         padding-top: 4rem;
-        top: 140px !important;
-        left: -300px !important;
         width: 200px !important;
         height: 200px !important;
+        left: -320px !important;
+        top: 220px !important;
 
         h3 {
             font-size: 0.8rem;

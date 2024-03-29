@@ -24,6 +24,7 @@
             background: url('../../assets/images/todoButton.svg');
             top: 2rem;
             left: 2rem;
+            transition: 0.2s;
         }
 
         .day {
@@ -55,25 +56,29 @@
     }
 }
 
-.GuestBook.down768 {
-    width: 220px !important;
-    height: 220px !important;
+@include responsive(768px) {
+    .GuestBook {
+        width: 240px !important;
+        height: 240px !important;
 
-    header {
-        .more {
-            width: 30px;
-            height: 30px;
+        header {
+            align-items: center;
+
+            .more {
+                width: 30px;
+                height: 30px;
+            }
+
+            .day {
+                font-size: 1.5rem;
+                line-height: 1;
+            }
         }
 
-        h3 {
-            font-size: 1.5rem;
-            line-height: 1;
-        }
-    }
-
-    .contents {
-        * {
-            font-size: 0.8rem;
+        .contents {
+            * {
+                font-size: 0.9rem;
+            }
         }
     }
 }
@@ -83,6 +88,7 @@
         padding: 1.5rem;
         width: 200px !important;
         height: 200px !important;
+        left: -20px !important;
 
         header {
             .more {
@@ -101,7 +107,7 @@
             }
 
             p {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
             }
         }
     }

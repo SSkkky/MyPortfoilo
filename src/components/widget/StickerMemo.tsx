@@ -1,19 +1,12 @@
-import React, {useState, useEffect, useRef} from "react";
-import { render } from "react-dom";
-import { Rnd, DraggableData } from "react-rnd";
+import { useRef } from "react";
+import { Rnd } from "react-rnd";
 import '../../styles/pages/stickerMemo.scss';
-
-interface StickerMemoType {
-    down768: boolean,
-    down430: boolean
-}
-
-export default function StickerMemo({ down768, down430 }: StickerMemoType) {
+export default function StickerMemo() {
     const refDiv = useRef<Rnd>(null);
 
     return (
         <Rnd
-            className={'stickerMemo drag-handle100' + (down768 ? ' down768' : '') + (down430 ? ' down430' : '')}
+            className={'stickerMemo drag-handle100'}
             default={{
                 x: 340,
                 y: 40,
@@ -23,7 +16,6 @@ export default function StickerMemo({ down768, down430 }: StickerMemoType) {
             enableResizing={false}
             ref={refDiv}
             dragHandleClassName='drag-handle100'
-            bounds="body"
         >
             <h3>Readme.md</h3>
             <div className="contents">

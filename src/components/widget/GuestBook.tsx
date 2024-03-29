@@ -3,11 +3,7 @@ import { Rnd } from 'react-rnd';
 import { useStore } from '../../store';
 import '../../styles/pages/guestBook.scss';
 
-interface GuestBookType {
-    down768: boolean,
-    down430: boolean
-}
-export default function GuestBook({ down768, down430 }: GuestBookType) {
+export default function GuestBook() {
     const refDiv = useRef<Rnd>(null);
     const { setContact } = useStore();
 
@@ -17,7 +13,7 @@ export default function GuestBook({ down768, down430 }: GuestBookType) {
 
     return (
         <Rnd
-            className={'GuestBook drag-handle101' + (down768 ? ' down768' : '') + (down430 ? ' down430' : '')}
+            className={'GuestBook drag-handle101'}
             default={{
                 x: 40,
                 y: 40,
