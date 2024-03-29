@@ -116,6 +116,12 @@ function Contact({ name }: Own) {
                         console.log('수정 팝업을 띄웁니다');
                     } else if(popupKeyword === '삭제'){
                         console.log('삭제합니다');
+                        const fetchGuestBook = async () => {
+                          const response = await axios.delete(`${serverURI}/${guestBookDataObject._id}`
+                        );
+                          setGetData(response.data);
+                        };
+                        fetchGuestBook();
                     } else{
                         window.alert('[오류 발생] 새로고침 후 다시 시도해주세요!')
                     }
