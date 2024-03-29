@@ -3,7 +3,6 @@ import axios from 'axios';
 import { guestBookListType } from '../models/dataTypes';
 import { Tel2, Email } from '../assets/icons/icons';
 import GuestBookList from './GuestBookList';
-import '../styles/pages/contect.scss';
 
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';

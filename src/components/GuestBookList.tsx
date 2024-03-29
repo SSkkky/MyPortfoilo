@@ -3,15 +3,20 @@ import axios from 'axios';
 import { Types } from 'mongoose';
 import { guestBookListType } from '../models/dataTypes';
 import '../styles/pages/guestBookList.scss'
+import { useStore } from '../store';
 
 interface guestBookType {
     getData: guestBookListType[]
 }
 
 export default function GuestBookList({ getData }: guestBookType) {
+    const { setObjectId, setPopupKeyword, setDelAndUpdate } = useStore();
 
-    const updateHandler = (id:Types.ObjectId) => {
-        console.log(id)
+    // 비밀번호 입력 팝업 active
+    const setInputPassword = (id:Types.ObjectId, type:string) => {
+        setObjectId(id)
+        setPopupKeyword(type)
+        setDelAndUpdate(true)
     }
 
     return (
@@ -26,10 +31,10 @@ export default function GuestBookList({ getData }: guestBookType) {
                         <section className="GuestBookMsgCont">
                             <p className="message">{item.message}</p>
                             <p className="date">{item.date}</p>
-                            {/* <p className="deleteAndUpdate">
-                                <button onClick={()=>{updateHandler(item._id)}}>수정</button>
-                                <button>삭제</button>
-                            </p> */}
+                            <div className="deleteAndUpdate">
+                                <button onClick={()=>{setInputPassword(item._id, '수정')}}>수정</button>
+                                <button onClick={()=>{setInputPassword(item._id, '삭제')}}>삭제</button>
+                            </div>
                         </section>
                     </article>
                 ))

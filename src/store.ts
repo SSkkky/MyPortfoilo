@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { Types } from 'mongoose';
 
 interface useStoreState {
     menuActive: boolean;
@@ -33,6 +34,15 @@ interface useStoreState {
 
     onClickMenu: string;
     setOnClickMenu: (onClickMenu: string) => void;
+
+    isOnDelAndUpdate: boolean,
+    setDelAndUpdate: (isOnDelAndUpdate: boolean) => void;
+
+    objectId: Types.ObjectId | null;
+    setObjectId: (objectId: Types.ObjectId) => void;
+
+    popupKeyword: string;
+    setPopupKeyword: (popupKeyword: string) => void;
 }
 
 export const useStore = create<useStoreState>((set) => ({
@@ -68,6 +78,15 @@ export const useStore = create<useStoreState>((set) => ({
 
     onClickMenu: '',
     setOnClickMenu: (onClickMenu) => set({ onClickMenu }),
+
+    isOnDelAndUpdate : false,
+    setDelAndUpdate : (isOnDelAndUpdate) => set({ isOnDelAndUpdate }),
+
+    objectId: null,
+    setObjectId: (objectId) => set({ objectId }),
+
+    popupKeyword: '',
+    setPopupKeyword: (popupKeyword) => set({ popupKeyword }),
 }));
 
 interface zIndexState {

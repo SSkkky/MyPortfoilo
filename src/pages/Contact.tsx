@@ -4,16 +4,16 @@ import { State } from '../models/dataTypes';
 import Menubg from '../components/Menubg';
 import ContactContent from '../components/ContactContent';
 import { useStore, zIndex } from '../store';
+import '../styles/pages/contect.scss';
 
 interface Own { name: string }
 function Contact({ name }: Own) {
-    const { contact } = useStore();
+    const { maxMenu, popupKeyword, contact, isOnDelAndUpdate, setDelAndUpdate } = useStore();
     const refDiv = useRef<Rnd>(null);
     const [down960, setDown960] = useState(false);
     const [down600, setDown600] = useState(false);
     const [zIdx, setZidx] = useState(0)
 
-    const { maxMenu, onClickMenu } = useStore();
     const { zNum, setZNum } = zIndex();
 
     const [state, setState] = React.useState<State>({
@@ -63,12 +63,6 @@ function Contact({ name }: Own) {
         setZNum(zNum + 1)
     }
 
-    useEffect(() => {
-        if (onClickMenu === 'Contact') {
-
-        }
-    }, [onClickMenu]);
-
 
     // ------------------- 반응형
     useEffect(() => {
@@ -93,6 +87,20 @@ function Contact({ name }: Own) {
         } // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [state.width]);
 
+    // ------------------- 비밀번호 입력 팝업
+    const delAndUpdatePopupHandler = (type:string) => {
+        switch (type) {
+            case 'cancle':
+                setDelAndUpdate(false)
+                break;
+        
+            case 'submit':
+                console.log('비밀번호 대조 함수')
+                setDelAndUpdate(false)
+                break;
+        }
+    }
+
     return (
         <div className={`${contact ? "display-block" : "display-none"}`} onClick={zIndexUp}>
             <Rnd className={`${maxMenu ? "max-menu" : ""}`}
@@ -111,6 +119,17 @@ function Contact({ name }: Own) {
                     <ContactContent
                         down960={down960}
                         down600={down600} />
+                </div>
+                <div className={'isOnDeleteAndUpdate' + (isOnDelAndUpdate ? ' active' : ' ')}>
+                    <div className='popupCont'>
+                        <h4>정말 {popupKeyword}하시겠습니까?</h4>
+                        <p>비밀번호를 입력해주세요!</p>
+                        <input type="text" />
+                        <div>
+                            <button onClick={()=>{delAndUpdatePopupHandler('cancle')}}>취소</button>
+                            <button onClick={()=>{delAndUpdatePopupHandler('submit')}}>확인</button>
+                        </div>
+                    </div>
                 </div>
             </Rnd>
         </div>
