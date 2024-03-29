@@ -154,7 +154,9 @@ function Contact({ name }: Own) {
         );
         setGetData(response.data);
         };
+        
         fetchGuestBook();
+        setGuestBookUpdate(false)
         setDelAndUpdate(false); // 팝업 닫음
     }
 
