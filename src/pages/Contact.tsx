@@ -152,7 +152,7 @@ function Contact({ name }: Own) {
         const fetchGuestBook = async () => {
           const response = await axios.put(`${serverURI}/${guestBookDataObject?._id}`, updateData
         );
-          setGetData(response.data);
+        setGetData(response.data);
         };
         fetchGuestBook();
         setDelAndUpdate(false); // 팝업 닫음
