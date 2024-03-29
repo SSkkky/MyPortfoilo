@@ -10,6 +10,7 @@ import '../styles/pages/contect.scss';
 interface Own { name: string }
 function Contact({ name }: Own) {
   const [getData, setGetData] = useState<guestBookListType[]>([]);
+  const [isPasswordRight, setIsPasswordRight] = useState(true)
     const serverURI = process.env.REACT_APP_SERVER_URI as string;
     const { maxMenu, popupKeyword, contact, isOnDelAndUpdate, setDelAndUpdate, popupInputUserPassword, setPopupInputUserPassword, guestBookDataObject } = useStore();
     const refDiv = useRef<Rnd>(null);
@@ -99,6 +100,8 @@ function Contact({ name }: Own) {
 
     // ------------------- 비밀번호 입력 팝업
     const delAndUpdatePopupHandler = (type:string) => {
+        setIsPasswordRight(true) // 초기화
+
         switch (type) {
             case 'cancle':
                 setDelAndUpdate(false)
@@ -108,16 +111,22 @@ function Contact({ name }: Own) {
                 console.log('------------비밀번호 대조 함수---------------')
                 console.log(guestBookDataObject)
                 console.log('입력한 비밀번호는 ', popupInputUserPassword)
-                if(guestBookDataObject?.password === popupInputUserPassword){
-                    console.log('입력한 비밀번호가 일치함!')
-                } else{
-                    console.log('비밀번호가 일치하지 않습니다.')
+                if(guestBookDataObject?.password === popupInputUserPassword){ // 일치
+                    if(popupKeyword === '수정'){
+                        console.log('수정 팝업을 띄웁니다');
+                    } else if(popupKeyword === '삭제'){
+                        console.log('삭제합니다');
+                    } else{
+                        window.alert('[오류 발생] 새로고침 후 다시 시도해주세요!')
+                    }
+                    setDelAndUpdate(false)
+                } else{ // 불일치
+                    setIsPasswordRight(false)
                 }
-                setDelAndUpdate(false)
                 break;
         }
-        
-        setPopupInputUserPassword(''); // input value 초기화
+
+        setPopupInputUserPassword(''); // 초기화
     }
 
     const inputChangeHandler = (e:React.ChangeEvent<HTMLInputElement>) => {
@@ -151,7 +160,7 @@ function Contact({ name }: Own) {
                         <header>
                             잠깐!
                         </header>
-                        <h4>정말 {popupKeyword}하시겠습니까?</h4>
+                        <h4 className={isPasswordRight ? '' : 'isPasswordFalse'}>{isPasswordRight ? ` 정말 ${popupKeyword}하시겠습니까?` : `비밀번호가 일치하지 않습니다!`}</h4>
                         <div className='popupContInput'>
                             <label htmlFor='password'>비밀번호</label>
                             <input type="password" name="password" value={popupInputUserPassword} onChange={(e)=>{inputChangeHandler(e)}} />
