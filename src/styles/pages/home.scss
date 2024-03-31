@@ -100,11 +100,11 @@ aside {
             height: 55px;
         }
 
-        p {
+        .trash {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            width: 83px;
+            justify-content: center;
+            width: 100px;
 
             img {
                 cursor: url(../../assets/icons/cursorFull.svg), auto !important;
@@ -114,6 +114,67 @@ aside {
 
     .active {
         transform: translateY(-3.8rem);
+    }
+
+    .ballon {
+        position: relative;
+        z-index: 0;
+    }
+
+    .ballon:hover::after {
+        font-size: 0.8rem;
+        text-align: center;
+        background: url('../../assets/icons/ballon.svg');
+        background-repeat: no-repeat;
+        position: absolute;
+        padding: 1rem;
+        width: 150px;
+        height: 30px;
+        bottom: 4rem;
+        left: -50%;
+        z-index: 1;
+
+        animation-duration: 100s;
+        animation-name: ballonOpacity;
+        animation-direction: alternate;
+
+        @keyframes ballonOpacity {
+            0% {
+                opacity: 1;
+            }
+
+            0.5% {
+                opacity: 1;
+            }
+
+            1% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+
+    .GitIcon:hover::after {
+        content: '깃허브로 이동합니다';
+        transform: translate(-2rem);
+    }
+
+    .VelogIcon:hover::after {
+        content: '벨로그로 이동합니다';
+        transform: translateX(-2rem);
+    }
+
+    .Resume:hover::after {
+        content: '이력서를 다운받습니다';
+        transform: translateX(-2.8rem);
+    }
+
+    .trash:hover::after {
+        content: '누르면 어떤 일이...?';
+        transform: translateX(0.5rem);
     }
 }
 

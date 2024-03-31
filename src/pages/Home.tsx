@@ -73,10 +73,25 @@ function Home() {
             </section>
             <aside>
                 <div className="main-side-icons" >
-                    <a href="https://github.com/SSkkky" target='_blank'><GitIcon /></a>
-                    <a href="https://velog.io/@worte5633/posts" target='_blank'><VelogIcon /></a>
-                    <a href="./resume.pdf" download="프론트엔드_손하늘"><Resume /></a>
-                    <p><img src={process.env.PUBLIC_URL + trashSrc} onClick={onClickTrash} id="TrIcon" /></p>
+                    <a href="https://github.com/SSkkky" target='_blank'
+                    rel="noreferrer"
+                    className='GitIcon ballon'>
+                        <GitIcon />
+                        </a>
+                    <a href="https://velog.io/@worte5633/posts" target='_blank'
+                    rel="noreferrer"
+                     className='VelogIcon ballon'>
+                        <VelogIcon />
+                        </a>
+                    <a href="./resume.pdf" download="프론트엔드_손하늘"
+                    rel="noreferrer"
+                    className='Resume ballon'>
+                        <Resume/>
+                        </a>
+                    <div className='trash ballon'>
+                        <img src={process.env.PUBLIC_URL + trashSrc} onClick={onClickTrash} id="TrIcon"
+                        alt="휴지통"/>
+                    </div>
                 </div>
             </aside>
             <footer>
