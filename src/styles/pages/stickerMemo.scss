@@ -1,9 +1,9 @@
 @import '../main.scss';
 
 .stickerMemo {
+    width: 280px !important;
+    height: 280px !important;
     transition: 0.2s ease;
-    width: 280px;
-    height: 280px;
     padding: 2rem;
     padding-top: 5.5rem;
     box-sizing: border-box;
@@ -41,9 +41,11 @@
     .stickerMemo {
         width: 240px !important;
         height: 240px !important;
-        left: -300px !important;
-        top: 260px !important;
         padding-top: 4.5rem;
+
+        top: 260px !important;
+        left: -300px !important;
+
 
         h3 {
             font-size: 0.9rem;
@@ -61,12 +63,13 @@
 // ------------------- 반응형 (430px)
 @include responsive(s) {
     .stickerMemo {
-        padding: 1.5rem;
-        padding-top: 4rem;
         width: 200px !important;
         height: 200px !important;
-        left: -320px !important;
+        padding: 1.5rem;
+        padding-top: 4rem;
+
         top: 220px !important;
+        left: -320px !important;
 
         h3 {
             font-size: 0.8rem;
