@@ -229,3 +229,9 @@ footer {
 @media (min-width: 100px) and (max-width: 1023px) {
     /* 브라우저 사이즈 768px이상, 1023px이하 일때,*/
 }
+
+@media screen and (max-height: 780px) {
+    #main-left-cont {
+        display: none !important;
+    }
+}
