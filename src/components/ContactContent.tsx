@@ -49,8 +49,13 @@ function ContactContent({ down960, down600, getData, setGetData }: contentType) 
     }
 
     const fetchGuestBook = async () => {
-      const response = await axios.post(serverURI, userData);
-      setGetData([...getData, response.data]);
+      try {
+        const response = await axios.post(serverURI, userData);
+        setGetData([...getData, response.data]);
+        toast.success('방명록이 정상적으로 등록되었습니다!', { position: 'bottom-right' });
+      } catch (error) {
+        toast.error('전송중 오류가 발생했습니다!', { position: 'bottom-right' });
+      }
     };
 
     fetchGuestBook();
