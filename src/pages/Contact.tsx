@@ -126,7 +126,7 @@ function Contact({ name }: Own) {
                         setDelAndUpdate(false)
                         toast.success('방명록이 정상적으로 삭제되었습니다!', { position: 'bottom-right' });
                     } else {
-                        window.alert('[오류 발생] 새로고침 후 다시 시도해주세요!')
+                        toast.error('[오류 발생] 새로고침 후 다시 시도해주세요!', { position: 'bottom-right' });
                     }
                 } else { // 불일치
                     setIsPasswordRight(false)
