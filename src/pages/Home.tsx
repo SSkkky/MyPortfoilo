@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { ToastContainer } from 'react-toastify';
 import { useStore } from '../store';
 
 import { MeIcon, PfIcon, CtIcon, GitIcon, VelogIcon, Resume } from '../assets/icons/icons';
@@ -74,23 +75,23 @@ function Home() {
             <aside>
                 <div className="main-side-icons" >
                     <a href="https://github.com/SSkkky" target='_blank'
-                    rel="noreferrer"
-                    className='GitIcon ballon'>
+                        rel="noreferrer"
+                        className='GitIcon ballon'>
                         <GitIcon />
-                        </a>
+                    </a>
                     <a href="https://velog.io/@worte5633/posts" target='_blank'
-                    rel="noreferrer"
-                     className='VelogIcon ballon'>
+                        rel="noreferrer"
+                        className='VelogIcon ballon'>
                         <VelogIcon />
-                        </a>
+                    </a>
                     <a href="./resume.pdf" download="프론트엔드_손하늘"
-                    rel="noreferrer"
-                    className='Resume ballon'>
-                        <Resume/>
-                        </a>
+                        rel="noreferrer"
+                        className='Resume ballon'>
+                        <Resume />
+                    </a>
                     <div className='trash ballon'>
                         <img src={process.env.PUBLIC_URL + trashSrc} onClick={onClickTrash} id="TrIcon"
-                        alt="휴지통"/>
+                            alt="휴지통" />
                     </div>
                 </div>
             </aside>
@@ -100,6 +101,7 @@ function Home() {
             <About name="about" />
             <Portfolio name="portfolio" />
             <Contact name="contact" />
+            <ToastContainer />
         </>
     );
 }

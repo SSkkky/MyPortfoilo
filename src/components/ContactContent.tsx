@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { toast } from 'react-toastify';
 import { guestBookListType } from '../models/dataTypes';
 import { Tel2, Email } from '../assets/icons/icons';
+import 'react-toastify/dist/ReactToastify.css';
 import GuestBookList from './GuestBookList';
 
 import dayjs from 'dayjs';
@@ -22,6 +24,19 @@ function ContactContent({ down960, down600, getData, setGetData }: contentType) 
 
   const onSubmitHandler = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (userName.length < 1) {
+      toast.error('작성자 이름을 입력해주세요', { position: 'bottom-right' });
+      return
+    }
+    else if (userPassword.length < 1) {
+      toast.error('비밀번호를 입력해주세요', { position: 'bottom-right' });
+      return
+    }
+    else if (userMessage.length < 2) {
+      toast.error('메시지를 2글자 이상 입력해주세요 💌', { position: 'bottom-right' });
+      return
+    }
 
     dayjs.locale('ko');
     const today = dayjs().format("YYYY년 MM월 D일");
