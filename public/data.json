@@ -1,160 +1,69 @@
 [
     {
         "id": 0,
-        "name": "초딩",
-        "keyword": "choding",
-        "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2Fchoding.png?alt=media&token=156b58df-1f96-48cd-b3c3-eb24b667fc2d",
+        "name": "나이키 클론",
+        "keyword": "nike",
+        "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FnikeThumb.png?alt=media&token=90996bd1-24a0-491c-ba49-c20d4ac88867",
         "videourl": "dd",
-        "deployurl": "https://choding.vercel.app/",
-        "dateteam": "2024.02 ~ 2024.03 (3명)",
+        "deployurl": "https://sskkky.github.io/NIKE-WOMAN/",
+        "dateteam": "2023.12 (개인)",
         "goal": [
             {
-                "goal": "프로젝트 협업"
+                "goal": "데스크탑, 태블릿, 모바일 반응형 대응"
             },
             {
-                "goal": "Next-auth를 활용한 자체 회원가입, 로그인 구현"
+                "goal": "시멘틱 마크업 학습"
             },
             {
-                "goal": "MongoDB CRUD"
-            },
-            {
-                "goal": "Firebase를 활용한 게시글 작성, 수정 구현"
+                "goal": "웹 사이트 기본 구조 학습"
             }
         ],
-        "link": "https://github.com/SSkkky/choding",
-        "overview": "초보들의 코딩 공부, 초딩은 초보 프론트엔드 개발자들이 각자의 고민을 공유하고 작은 포트폴리오 조각을 소개하는 초보 개발자를 위한 웹 사이트입니다. 초보 개발자들끼리 편하게 경험과 고민을 나누며 강의를 추천, 검색할 수 있도록 <전체 검색> 기능, <내 프로젝트>, <QnA> 게시판을 기획했고 게시글을 수정하거나 삭제할 수 있도록 회원가입, 로그인 기능들을 점차 기획해나가며 하나의 서비스가 되어가는 과정이 무척 재미있었습니다. 저는 초딩 프로젝트에서 메인(home), 회원가입, 로그인, 강의 검색, MongoDB, Firebase, <내 프로젝트>게시판 개발과 기획, 디자인에 참여했습니다.",
+        "link": "https://github.com/SSkkky/NIKE-WOMAN",
+        "overview": "<나이키 홈페이지 클론>은 기초 HTML, CSS, JavaScript 지식을 바탕으로 나이키 우먼 웹사이트를 클론하여 개념을 실제로 활용하는 법을 학습한 프로젝트입니다.",
         "function": [
             {
                 "fn": "모바일/태블릿/데스크탑 웹 해상도 대응"
             },
             {
-                "fn": "소셜 로그인, 회원 가입"
+                "fn": "메뉴 hover, 옵저브 스크롤 애니메이션"
             },
             {
-                "fn": "내 프로젝트 게시글 작성, 수정, 삭제 및 좋아요, 댓글 기능"
+                "fn": "모바일 검색 화면, 버거 메뉴 구현"
             },
             {
-                "fn": "강의 검색 및 스크랩"
+                "fn": "Top버튼(상단 이동 스크롤) 구현"
             }
         ],
         "skill": [
             {
                 "name": "프론트엔드",
-                "skills": "Next.js, Typescript, axios, SASS, zustand"
-            },
-            {
-                "name": "패키지",
-                "skills": "next-auth, dayjs, sweetalert, swiper, react-hook-form"
-            },
-            {
-                "name": "서버",
-                "skills": "MongoDB, Firebase"
-            },
-            {
-                "name": "배포",
-                "skills": "Vercel"
-            },
-            {
-                "name": "협업",
-                "skills": "GitHub, figma"
-            }
-        ],
-        "review": "<초딩>은 포트폴리오와 이력서를 정리하며 '이런 작은 컴포넌트 단위를 포트폴리오라고 소개해도 되는걸까?', '개발자는 이력서를 어떻게 적어야할까? 누가 알려줬으면 좋겠다' 등 많은 고민을 했던 경험을 토대로 기획한 웹 서비스입니다.\n \n 내가 필요한 서비스를 만들어서 그런지 게시판 내 검색, 필터 등 사용자 입장에서 필요한 기능을 다양하게 개발할 수 있어서 무척 재미있었습니다. 그리고 팀원간 협업을 위해 초기 폴더 구조를 생성함에 있어서 보편적인 폴더 이름과 작명, API 등 다양한 규칙을 정하는 과정과 공용 SASS Mixin, 컴포넌트를 개발하며 다른 사람이 봤을 때 이해하기 쉬운 변수 이름과 코드를 고민하는 과정을 통해 코드 재사용과 가독성을 좀 더 염두에 두고 개발, 전보다 발전한 것 같아 뿌듯합니다.",
-        "trouble": [
-            {
-                "id": 0,
-                "title": "홈페이지 메인에 회원 데이터(레벨)에 상응하는 데이터 출력하기",
-                "problem": "정해진(같은)키워드를 노출하던 기존과 달리 회원의 레벨에 따라 다른 정보를 노출하도록 변경하는 과정이 어려웠습니다. ",
-                "reason": "조건과 상황이 늘어나며 회원(레벨 테스트를 했거나 안했거나), 비회원 등 다양한 경우를 처리해야했기 때문입니다.",
-                "solve": "레벨별 출력 데이터 분리하고 세션 상태 확인 => DB의 회원 데이터 조회 => 레벨 값에 상응하는 데이터 지정하는 순으로 차근차근 코드를 수정했으며 레벨을 담당하는 팀원과 대화를 통해 레벨 시스템을 이해하는 과정을 통해 수정 방향을 명확하게 알 수 있었습니다."
-            },
-            {
-                "id": 1,
-                "title": "API 사용 할당량 최소화",
-                "problem": "낮은 사용량 대비 높은 1회 사용량을 최소화하는 방안을 고민했습니다.",
-                "reason": "Youtube API는 일일 사용량 제한이 있습니다. 그 중 검색은 총 사용량 10,000중 1,600을 소모하여 테스트 과정에서 당일 사용량을 전부 소진하는 등 문제가 발생했습니다.",
-                "solve": "레벨별로 메인화면에서 보여줄 키워드를 선별해 Youtube 검색 결과를 미리 저장함으로써 일일 사용량 제한에 구애받지 않게 되었습니다. 또한 데이터를 저장할때 일반 검색이 아닌 재생목록 데이터를 가져옴으로써 get 사용량을 1600에서 100으로 감소시킬 수 있었습니다."
-            },
-            {
-                "id": 2,
-                "title": "CRUD와 매개변수(인자) 이해",
-                "problem": "DB 연결 등 자주 사용하는 기능을 함수로 만들어 사용함",
-                "reason": "Next.js 14의 API route와 DB collection 분리로 데이터 연결, 매개변수 지정 등이 이전 개발 수준보다 난이도가 상승하여 무척 어려웠습니다. 그 중 자주 사용하는 DB 연결, API 호출, store 등 코드가 반복적으로 사용되며 차지하는 면적이 커짐에 따라 함수로 분리하는 작업을 진행했습니다.",
-                "solve": "가독성과 목적을 고려하여 함수를 만들고 사용법을 팀원과 공유했습니다. DB연결 함수는 serverStore(type, collection, data, id)를 인자로 받아 원하는 데이터베이스 컬렉션(collection)에 특정 데이터(data)를 게시글 번호(id)에 update(type)할 수 있습니다. 동일한 규칙의 코드를 통해 다른 팀원이 봐도 이 코드가 어떤 기능을 하고 있는지 알게 되어 함수를 만들기 잘했다고 생각했습니다."
-            }
-        ]
-    },
-    {
-        "id": 1,
-        "name": "SFLIX",
-        "keyword": "sflix",
-        "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FsflixThumb.png?alt=media&token=11b604d6-e8e2-4e4b-824e-ec05661798bb",
-        "videourl": "dd",
-        "deployurl": "https://skyflix-ten.vercel.app/",
-        "dateteam": "2024.01 (개인)",
-        "goal": [
-            {
-                "goal": "MOVIE API 활용"
-            },
-            {
-                "goal": "Postman을 이용한 데이터 검증"
-            },
-            {
-                "goal": "React 컴포넌트 설계 및 Route 응용"
-            },
-            {
-                "goal": "로컬스토리지 데이터 저장"
-            },
-            {
-                "goal": "전역 상태 관리"
-            },
-            {
-                "goal": "Swiper JS 응용"
-            }
-        ],
-        "link": "https://github.com/SSkkky/SFLIX",
-        "overview": "<SFLIX>는 사용자가 영화와 TV 프로그램에 대한 정보를 확인할 수 있는 웹 서비스입니다. 이 서비스는 themoviedb API를 활용하여 개발되었습니다. 메인 페이지에서는 실시간 박스오피스 순위 정보를 슬라이드 형식으로 제공하며, 인기순/신규순으로 정렬된 미디어 정보를 리스트로 확인할 수 있습니다. UI 디자인은 넷플릭스를 참고하여 사용자 친화적이고 직관적인 스타일로 구성하였습니다.",
-        "function": [
-            {
-                "fn": "영화 박스오피스 노출"
-            },
-            {
-                "fn": "미디어 상세 정보 확인(제목, 줄거리, 제작진, 배우 등)"
-            },
-            {
-                "fn": "리스트 자동 슬라이드"
-            }
-        ],
-        "skill": [
-            {
-                "name": "프론트엔드",
-                "skills": "React, SASS, JavaScript, Zustand, Swiper, Axios"
+                "skills": "HTML, SASS, JavaScript"
             },
             {
                 "name": "배포",
                 "skills": "GitHub Pages"
             }
         ],
-        "review": "공개 API를 활용한 첫 프로젝트입니다. 지금까지 간단한 JSON 데이터를 만들어 데이터로 사용하였는데 이번 영화 웹 서비스 개발을 통해 API를 활용하며 다양한 API를 통해 데이터를 얻을 수 있다는 것을 알게되었습니다. 또한 그 활용은 개발자의 몫이므로 평소에 관심을 가지고 재미있는 아이디어를 구상해야겠다고 생각했습니다.\n 그리고 이번 개발을 통해 Axois로 API를 호출하는 방법을 공부했고 테스트를 위해 Postman과 같은 API 플랫폼을 사용하는게 편리하다는 걸 느꼈습니다.",
+        "review": "기초 지식이 파편화되어 있던 것을 클론 프로젝트를 통해 하나로 연결하며, 지식을 '알고 있다'와 '사용한다'는 것의 차이를 배우게 된 경험이었습니다. 유연한 해상도 대응을 위해 CSS를 flex, %, viewport를 활용하여 설계하고 구현하는 과정이 재미있었습니다. 프로젝트를 진행하며 JavaScript로 다양한 클릭 이벤트를 생성하였는데, 이 과정을 통해 JavaScript가 'HTML과 CSS로 구성된 웹 페이지를 동적으로 만들어주는 언어'라는 것을 명확히 이해할 수 있었습니다.",
         "trouble": [
             {
                 "id": 0,
-                "title": "출력 함수 로직 오류",
-                "problem": "전체 배열에 로컬스토리지값 적용 후 배열 정렬이 되지 않음",
-                "reason": "화면 출력 함수 내부에 로컬스토리지 값을 반영하는 함수가 있어서 정렬 후 출력 함수 실행시 로컬스토리지가 반영된 배열이 sort 배열을 덮음",
-                "solve": "화면 출력 함수 내 배열 처리 기능(getItem, print)을 분리함"
+                "title": "액자식 디자인 CSS 구현",
+                "problem": "액자식 디자인을 구현함에 있어서 유연한 반응형 해상도 대응이 어려웠습니다.",
+                "reason": "CSS display flex, grid의 지식과 숙련도가 미흡했습니다.",
+                "solve": "구성 요소의 구조를 파악해 html 코드를 수정하고 inline, block, flex, grid의 사용법을 공부하여 flex, grid 두 방법으로 각각 구현했습니다."
             },
             {
                 "id": 1,
-                "title": "로컬스토리지 리스트 중복 저장",
-                "problem": "참조타입 오류로 인한 배열 초기화 실패",
-                "reason": "출력 함수 배열에 담은 로컬스토리지 값이 함수 실행시 초기화되지 않고 누적됨",
-                "solve": "비구조화 할당 문법을 활용하여 초기 배열을 저장함"
+                "title": "시멘틱 마크업 고민",
+                "problem": "div 태그 남발로 문서의 의미 전달력이 떨어졌습니다.",
+                "reason": "html5 태그에 대한 지식이 부족해 아는 태그들만 사용하다보니 버릇적으로 div 태그를 많이 사용하게 되었습니다.",
+                "solve": "section, article, aside 등 HTML5 태그 종류를 학습하여 의도에 맞게 적재적소로 태그를 사용하는 연습을 했습니다."
             }
         ]
     },
     {
-        "id": 2,
+        "id": 1,
         "name": "해피펍",
         "keyword": "happypub",
         "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FhappyThumb.png?alt=media&token=89eac2e5-fcc0-40d2-ac46-c767c4fcb8a5",
@@ -255,101 +164,44 @@
         ]
     },
     {
-        "id": 3,
-        "name": "나이키 클론",
-        "keyword": "nike",
-        "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FnikeThumb.png?alt=media&token=90996bd1-24a0-491c-ba49-c20d4ac88867",
+        "id": 2,
+        "name": "SFLIX",
+        "keyword": "sflix",
+        "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FsflixThumb.png?alt=media&token=11b604d6-e8e2-4e4b-824e-ec05661798bb",
         "videourl": "dd",
-        "deployurl": "https://sskkky.github.io/NIKE-WOMAN/",
-        "dateteam": "2023.12 (개인)",
-        "goal": [
-            {
-                "goal": "데스크탑, 태블릿, 모바일 반응형 대응"
-            },
-            {
-                "goal": "시멘틱 마크업 학습"
-            },
-            {
-                "goal": "웹 사이트 기본 구조 학습"
-            }
-        ],
-        "link": "https://github.com/SSkkky/NIKE-WOMAN",
-        "overview": "<나이키 홈페이지 클론>은 기초 HTML, CSS, JavaScript 지식을 바탕으로 나이키 우먼 웹사이트를 클론하여 개념을 실제로 활용하는 법을 학습한 프로젝트입니다.",
-        "function": [
-            {
-                "fn": "모바일/태블릿/데스크탑 웹 해상도 대응"
-            },
-            {
-                "fn": "메뉴 hover, 옵저브 스크롤 애니메이션"
-            },
-            {
-                "fn": "모바일 검색 화면, 버거 메뉴 구현"
-            },
-            {
-                "fn": "Top버튼(상단 이동 스크롤) 구현"
-            }
-        ],
-        "skill": [
-            {
-                "name": "프론트엔드",
-                "skills": "HTML, SASS, JavaScript"
-            },
-            {
-                "name": "배포",
-                "skills": "GitHub Pages"
-            }
-        ],
-        "review": "기초 지식이 파편화되어 있던 것을 클론 프로젝트를 통해 하나로 연결하며, 지식을 '알고 있다'와 '사용한다'는 것의 차이를 배우게 된 경험이었습니다. 유연한 해상도 대응을 위해 CSS를 flex, %, viewport를 활용하여 설계하고 구현하는 과정이 재미있었습니다. 프로젝트를 진행하며 JavaScript로 다양한 클릭 이벤트를 생성하였는데, 이 과정을 통해 JavaScript가 'HTML과 CSS로 구성된 웹 페이지를 동적으로 만들어주는 언어'라는 것을 명확히 이해할 수 있었습니다.",
-        "trouble": [
-            {
-                "id": 0,
-                "title": "액자식 디자인 CSS 구현",
-                "problem": "액자식 디자인을 구현함에 있어서 유연한 반응형 해상도 대응이 어려웠습니다.",
-                "reason": "CSS display flex, grid의 지식과 숙련도가 미흡했습니다.",
-                "solve": "구성 요소의 구조를 파악해 html 코드를 수정하고 inline, block, flex, grid의 사용법을 공부하여 flex, grid 두 방법으로 각각 구현했습니다."
-            },
-            {
-                "id": 1,
-                "title": "시멘틱 마크업 고민",
-                "problem": "div 태그 남발로 문서의 의미 전달력이 떨어졌습니다.",
-                "reason": "html5 태그에 대한 지식이 부족해 아는 태그들만 사용하다보니 버릇적으로 div 태그를 많이 사용하게 되었습니다.",
-                "solve": "section, article, aside 등 HTML5 태그 종류를 학습하여 의도에 맞게 적재적소로 태그를 사용하는 연습을 했습니다."
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "name": "My Bucket List",
-        "keyword": "mybucketlist",
-        "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FbucketThumb.png?alt=media&token=b9e698fe-7a61-4d77-a081-de0f6b09ba34",
-        "videourl": "dd",
-        "deployurl": "https://sskkky.github.io/bucket-list/",
+        "deployurl": "https://skyflix-ten.vercel.app/",
         "dateteam": "2024.01 (개인)",
         "goal": [
             {
-                "goal": "Typescript의 데이터 타입 활용"
+                "goal": "MOVIE API 활용"
             },
             {
-                "goal": "MongoDB 도입 및 학습 "
+                "goal": "Postman을 이용한 데이터 검증"
             },
             {
-                "goal": "조건에 부합하는 리스트 출력"
+                "goal": "React 컴포넌트 설계 및 Route 응용"
+            },
+            {
+                "goal": "로컬스토리지 데이터 저장"
             },
             {
                 "goal": "전역 상태 관리"
             },
             {
-                "goal": "CRUD 구현"
+                "goal": "Swiper JS 응용"
             }
         ],
-        "link": "https://github.com/SSkkky/bucket-list",
-        "overview": "<2024 My Bucket List>는 사용자들이 자신의 버킷 리스트를 작성하고 관리할 수 있는 웹 서비스입니다. 진행 중이거나 완료한 목록을 별도로 확인할 수 있는 탭 기능을 추가하였으며, 사용자 경험 최적화를 위해 버킷 리스트 작성 화면을 팝업 형태로 제공하였습니다",
+        "link": "https://github.com/SSkkky/SFLIX",
+        "overview": "<SFLIX>는 사용자가 영화와 TV 프로그램에 대한 정보를 확인할 수 있는 웹 서비스입니다. 이 서비스는 themoviedb API를 활용하여 개발되었습니다. 메인 페이지에서는 실시간 박스오피스 순위 정보를 슬라이드 형식으로 제공하며, 인기순/신규순으로 정렬된 미디어 정보를 리스트로 확인할 수 있습니다. UI 디자인은 넷플릭스를 참고하여 사용자 친화적이고 직관적인 스타일로 구성하였습니다.",
         "function": [
             {
-                "fn": "버킷 리스트에 대한 CRUD(작성, 읽기, 수정, 삭제)"
+                "fn": "영화 박스오피스 노출"
             },
             {
-                "fn": "조건에 따른 리스트 정렬"
+                "fn": "미디어 상세 정보 확인(제목, 줄거리, 제작진, 배우 등)"
+            },
+            {
+                "fn": "리스트 자동 슬라이드"
             }
         ],
         "skill": [
@@ -362,29 +214,171 @@
                 "skills": "GitHub Pages"
             }
         ],
-        "review": "단순한 기능 학습이 아니라 사용자의 입장에서 기능을 고려한 후 개발 방향을 정한 첫 프로젝트여서 의미가 깊습니다. Typescript를 처음 사용해봤다는 것만으로도 의미가 있었지만 axios 통신 중에 Typescript가 데이터 타입을 한번 더 체크해줌으로써 통신 오류를 줄일 수 있다는 것을 직접 느낀 점에서 더욱 의미가 있었습니다. \n 또한 Express, axios, MongoDB를 통한 CRUD와 cors, dotenv의 기능과 역할에 대해 학습할 수 있었습니다.",
+        "review": "공개 API를 활용한 첫 프로젝트입니다. 지금까지 간단한 JSON 데이터를 만들어 데이터로 사용하였는데 이번 영화 웹 서비스 개발을 통해 API를 활용하며 다양한 API를 통해 데이터를 얻을 수 있다는 것을 알게되었습니다. 또한 그 활용은 개발자의 몫이므로 평소에 관심을 가지고 재미있는 아이디어를 구상해야겠다고 생각했습니다.\n 그리고 이번 개발을 통해 Axois로 API를 호출하는 방법을 공부했고 테스트를 위해 Postman과 같은 API 플랫폼을 사용하는게 편리하다는 걸 느꼈습니다.",
         "trouble": [
             {
                 "id": 0,
-                "title": "데이터 타입 에러",
-                "problem": "update, delete시 axios 에러가 발생했습니다.",
-                "reason": "type interface으로 id에 number타입을 적용했기 때문에 리퀘스트 값이 동일한 타입일 것이라고 생각하였으나, id의 타입이 숫자가 아니어서 에러가 발생했습니다.",
-                "solve": "DB 업데이트 시, Number()를 사용하여 데이터 타입을 명시하고 사용하려는 데이터의 타입을 인지하는 것이 중요하다는 것을 알게되었습니다."
+                "title": "출력 함수 로직 오류",
+                "problem": "전체 배열에 로컬스토리지값 적용 후 배열 정렬이 되지 않음",
+                "reason": "화면 출력 함수 내부에 로컬스토리지 값을 반영하는 함수가 있어서 정렬 후 출력 함수 실행시 로컬스토리지가 반영된 배열이 sort 배열을 덮음",
+                "solve": "화면 출력 함수 내 배열 처리 기능(getItem, print)을 분리함"
             },
             {
                 "id": 1,
-                "title": "로컬 통신",
-                "problem": "DB 데이터가 프론트에 출력되지 않았습니다.",
-                "reason": "클라이언트와 서버를 다른 도메인에서 구동시키고 있었으나 데이터 요청을 허가하는 대처를 따로 하지 않았습니다.",
-                "solve": "cors를 사용하여 프론트에서 들어오는 요청을 허가했습니다."
+                "title": "로컬스토리지 리스트 중복 저장",
+                "problem": "참조타입 오류로 인한 배열 초기화 실패",
+                "reason": "출력 함수 배열에 담은 로컬스토리지 값이 함수 실행시 초기화되지 않고 누적됨",
+                "solve": "비구조화 할당 문법을 활용하여 초기 배열을 저장함"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "초딩",
+        "keyword": "choding",
+        "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2Fchoding.png?alt=media&token=156b58df-1f96-48cd-b3c3-eb24b667fc2d",
+        "videourl": "dd",
+        "deployurl": "https://choding.vercel.app/",
+        "dateteam": "2024.02 ~ 2024.03 (3명)",
+        "goal": [
+            {
+                "goal": "프로젝트 협업"
+            },
+            {
+                "goal": "Next-auth를 활용한 자체 회원가입, 로그인 구현"
+            },
+            {
+                "goal": "MongoDB CRUD"
+            },
+            {
+                "goal": "Firebase를 활용한 게시글 작성, 수정 구현"
+            }
+        ],
+        "link": "https://github.com/SSkkky/choding",
+        "overview": "초보들의 코딩 공부, 초딩은 초보 프론트엔드 개발자들이 각자의 고민을 공유하고 작은 포트폴리오 조각을 소개하는 초보 개발자를 위한 웹 사이트입니다. 초보 개발자들끼리 편하게 경험과 고민을 나누며 강의를 추천, 검색할 수 있도록 <전체 검색> 기능, <내 프로젝트>, <QnA> 게시판을 기획했고 게시글을 수정하거나 삭제할 수 있도록 회원가입, 로그인 기능들을 점차 기획해나가며 하나의 서비스가 되어가는 과정이 무척 재미있었습니다. 저는 초딩 프로젝트에서 메인(home), 회원가입, 로그인, 강의 검색, MongoDB, Firebase, <내 프로젝트>게시판 개발과 기획, 디자인에 참여했습니다.",
+        "function": [
+            {
+                "fn": "모바일/태블릿/데스크탑 웹 해상도 대응"
+            },
+            {
+                "fn": "소셜 로그인, 회원 가입"
+            },
+            {
+                "fn": "내 프로젝트 게시글 작성, 수정, 삭제 및 좋아요, 댓글 기능"
+            },
+            {
+                "fn": "강의 검색 및 스크랩"
+            }
+        ],
+        "skill": [
+            {
+                "name": "프론트엔드",
+                "skills": "Next.js, Typescript, axios, SASS, zustand"
+            },
+            {
+                "name": "패키지",
+                "skills": "next-auth, dayjs, sweetalert, swiper, react-hook-form"
+            },
+            {
+                "name": "서버",
+                "skills": "MongoDB, Firebase"
+            },
+            {
+                "name": "배포",
+                "skills": "Vercel"
+            },
+            {
+                "name": "협업",
+                "skills": "GitHub, figma"
+            }
+        ],
+        "review": "<초딩>은 포트폴리오와 이력서를 정리하며 '이런 작은 컴포넌트 단위를 포트폴리오라고 소개해도 되는걸까?', '개발자는 이력서를 어떻게 적어야할까? 누가 알려줬으면 좋겠다' 등 많은 고민을 했던 경험을 토대로 기획한 웹 서비스입니다.\n \n 내가 필요한 서비스를 만들어서 그런지 게시판 내 검색, 필터 등 사용자 입장에서 필요한 기능을 다양하게 개발할 수 있어서 무척 재미있었습니다. 그리고 팀원간 협업을 위해 초기 폴더 구조를 생성함에 있어서 보편적인 폴더 이름과 작명, API 등 다양한 규칙을 정하는 과정과 공용 SASS Mixin, 컴포넌트를 개발하며 다른 사람이 봤을 때 이해하기 쉬운 변수 이름과 코드를 고민하는 과정을 통해 코드 재사용과 가독성을 좀 더 염두에 두고 개발, 전보다 발전한 것 같아 뿌듯합니다.",
+        "trouble": [
+            {
+                "id": 0,
+                "title": "홈페이지 메인에 회원 데이터(레벨)에 상응하는 데이터 출력하기",
+                "problem": "정해진(같은)키워드를 노출하던 기존과 달리 회원의 레벨에 따라 다른 정보를 노출하도록 변경하는 과정이 어려웠습니다. ",
+                "reason": "조건과 상황이 늘어나며 회원(레벨 테스트를 했거나 안했거나), 비회원 등 다양한 경우를 처리해야했기 때문입니다.",
+                "solve": "레벨별 출력 데이터 분리하고 세션 상태 확인 => DB의 회원 데이터 조회 => 레벨 값에 상응하는 데이터 지정하는 순으로 차근차근 코드를 수정했으며 레벨을 담당하는 팀원과 대화를 통해 레벨 시스템을 이해하는 과정을 통해 수정 방향을 명확하게 알 수 있었습니다."
+            },
+            {
+                "id": 1,
+                "title": "API 사용 할당량 최소화",
+                "problem": "낮은 사용량 대비 높은 1회 사용량을 최소화하는 방안을 고민했습니다.",
+                "reason": "Youtube API는 일일 사용량 제한이 있습니다. 그 중 검색은 총 사용량 10,000중 1,600을 소모하여 테스트 과정에서 당일 사용량을 전부 소진하는 등 문제가 발생했습니다.",
+                "solve": "레벨별로 메인화면에서 보여줄 키워드를 선별해 Youtube 검색 결과를 미리 저장함으로써 일일 사용량 제한에 구애받지 않게 되었습니다. 또한 데이터를 저장할때 일반 검색이 아닌 재생목록 데이터를 가져옴으로써 get 사용량을 1600에서 100으로 감소시킬 수 있었습니다."
             },
             {
                 "id": 2,
-                "title": "MongoDB 연결 실패",
-                "problem": "DB 쿼리 존재에도 불구하고 데이터가 빈 배열로 나타났습니다.",
-                "reason": "환경변수 주소와 모델명 불일치!",
-                "solve": "atlas에서 데이터베이스와 컬렉션 이름을 확인하고 환경변수 주소와 모델명을 수정했습니다."
+                "title": "CRUD와 매개변수(인자) 이해",
+                "problem": "DB 연결 등 자주 사용하는 기능을 함수로 만들어 사용함",
+                "reason": "Next.js 14의 API route와 DB collection 분리로 데이터 연결, 매개변수 지정 등이 이전 개발 수준보다 난이도가 상승하여 무척 어려웠습니다. 그 중 자주 사용하는 DB 연결, API 호출, store 등 코드가 반복적으로 사용되며 차지하는 면적이 커짐에 따라 함수로 분리하는 작업을 진행했습니다.",
+                "solve": "가독성과 목적을 고려하여 함수를 만들고 사용법을 팀원과 공유했습니다. DB연결 함수는 serverStore(type, collection, data, id)를 인자로 받아 원하는 데이터베이스 컬렉션(collection)에 특정 데이터(data)를 게시글 번호(id)에 update(type)할 수 있습니다. 동일한 규칙의 코드를 통해 다른 팀원이 봐도 이 코드가 어떤 기능을 하고 있는지 알게 되어 함수를 만들기 잘했다고 생각했습니다."
             }
         ]
+    },
+    {
+        "id": 4,
+        "name": "민초맵",
+        "keyword": "choding",
+        "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FminchomapThumb.png?alt=media&token=1c853688-91e2-4b57-b431-d3b7fcf9607d",
+        "videourl": "dd",
+        "deployurl": "https://minchomap.vercel.app/",
+        "dateteam": "2024.04.05 ~ 2024.04.22 (1명)",
+        "goal": [
+            {
+                "goal": "카카오맵 API를 활용한 지도 서비스 개발"
+            },
+            {
+                "goal": "JWT를 활용한 카카오로그인 구현"
+            },
+            {
+                "goal": "웹 표준 및 크로스 브라우징 대응"
+            }
+        ],
+        "link": "https://github.com/SSkkky/MinchoMap",
+        "overview": "<민초맵>은 내 주변에서 민트 초코와 관련된 상품을 판매하는 곳을 쉽게 알수있는 지도기반 웹 서비스입니다. 특히 민트 초코와 같은 디저트류는 개인의 입맛과 취향에 따라 평가가 다르기 때문에 맛집을 찾기 어렵고 기존 지도 서비스는 메뉴 이름 만으로 가게를 찾기 어려운 점이 있었습니다. 따라서 민트 초코 음식을 판매하는 가게를 쉽고 편하게 찾아보고 싶다는 수요로 민초맵 서비스를 개발하게 되었습니다.",
+        "function": [
+            {
+                "fn": "내 주변 가게 검색 및 메뉴 필터"
+            },
+            {
+                "fn": "카카오톡 연동 로그인"
+            },
+            {
+                "fn": "매장 별 후기 확인 및 작성"
+            },
+            {
+                "fn": "신규 매장 등록"
+            }
+        ],
+        "skill": [
+            {
+                "name": "프론트엔드",
+                "skills": "Vue3, TypeScript, SASS, HTML"
+            },
+            {
+                "name": "패키지",
+                "skills": "axios, bootstrap, dayjs, jwt-decode"
+            },
+            {
+                "name": "빌드",
+                "skills": "Vite"
+            },
+            {
+                "name": "서버",
+                "skills": "MongoDB"
+            },
+            {
+                "name": "배포",
+                "skills": "Vercel"
+            },
+            {
+                "name": "형상관리",
+                "skills": "Git"
+            }
+        ],
+        "review": "<민초맵>은 스스로 정말 사용할 서비스를 만들어보자는 취지로 기획된 웹사이트입니다. 낮은 러닝 커브와 빠른 렌더 속도, 프론트엔드에서 인기있는 프레임워크를 경험해보고 싶어서 Vue를 선택했고 빠르고 최적화된 빌드를 위해 Vite를 선택했습니다. 개발하면서 React에서 이렇게 작성했던 문법을 어떻게 사용해야할까? 라는 생각으로 Vue의 문법을 공부하니 보다 if, for 등의 문법이 직관적으로 느껴졌습니다. 그리고 카카오맵을 구현하며 외부 라이브러리를 필요한 부분만 적재적소로 활용하는 연습을 할 수 있었고, 카카오 로그인을 구현하며 REST API의 요청을 준수하며 통신, jwt 토큰을 활용해 로그인을 구현하는 경험을 할 수 있었습니다.",
+        "trouble": []
     }
 ]

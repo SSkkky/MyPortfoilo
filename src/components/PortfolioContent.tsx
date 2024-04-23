@@ -20,7 +20,8 @@ function PortfolioContent({ down880, down600 }: contentType) {
     try {
       await axios.get('./data.json')
         .then(response => {
-          setData(response.data);
+          const sortData = response.data.sort((a: ListType, b: ListType) => b.id - a.id) // id 내림차순
+          setData(sortData);
         });
     } catch (e) {
       console.error(e);
