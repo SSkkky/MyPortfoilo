@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 
 export default function TextAnimation() {
-    const content = "프론트엔드 개발을 합니다 :)";
+    const content = "화면을 개발하는 손하늘입니다 :)";
     const [txtAni, setTxtAni] = useState<string>(content[0]);
     let i = 0;
 
