@@ -21,6 +21,7 @@ export interface ListType {
     "videourl": string,
     "deployurl": string,
     "dateteam": string,
+    "year" : number,
     "goal": goal[],
     "link": string,
     "overview": string,
@@ -29,7 +30,6 @@ export interface ListType {
     "review": string,
     "trouble": trouble[]
 }
-
 
 export type goal = {
     "goal": string

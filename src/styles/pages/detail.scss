@@ -7,6 +7,10 @@
     z-index: 3;
     position: relative;
 
+    .detail-menu-inner {
+        margin-bottom: 1rem;
+    }
+
     .detail-header {
         width: 100%;
         height: 2rem;
@@ -125,7 +129,8 @@
             position: sticky;
             top: 0;
 
-            .develop-goal {}
+            background: #fafafa;
+            border-right: 1px solid #ddd;
 
             .develop-link {
                 a {

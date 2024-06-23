@@ -7,6 +7,7 @@
         "videourl": "dd",
         "deployurl": "https://sskkky.github.io/NIKE-WOMAN/",
         "dateteam": "2023.12 (개인)",
+        "year" : 2023,
         "goal": [
             {
                 "goal": "데스크탑, 태블릿, 모바일 반응형 대응"
@@ -70,6 +71,7 @@
         "videourl": "dd",
         "deployurl": "https://alclsrkawk.github.io/bottle/",
         "dateteam": "2023.12~2024.01 (5명)",
+        "year" : 2024,
         "goal": [
             {
                 "goal": "JSON fetch 활용 데이터 관리"
@@ -171,6 +173,7 @@
         "videourl": "dd",
         "deployurl": "https://skyflix-ten.vercel.app/",
         "dateteam": "2024.01 (개인)",
+        "year" : 2024,
         "goal": [
             {
                 "goal": "MOVIE API 활용"
@@ -240,6 +243,7 @@
         "videourl": "dd",
         "deployurl": "https://choding.vercel.app/",
         "dateteam": "2024.02 ~ 2024.03 (3명)",
+        "year" : 2024,
         "goal": [
             {
                 "goal": "프로젝트 협업"
@@ -325,6 +329,7 @@
         "videourl": "dd",
         "deployurl": "https://minchomap.vercel.app/",
         "dateteam": "2024.04.05 ~ 2024.04.22 (1명)",
+        "year" : 2024,
         "goal": [
             {
                 "goal": "카카오맵 API를 활용한 지도 서비스 개발"

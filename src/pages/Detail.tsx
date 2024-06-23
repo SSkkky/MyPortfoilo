@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useEffect } from 'react';
 import { useStore } from '../store';
 import { ListType, goal, fn, skill, trouble } from '../models/dataTypes';
 import { Back } from '../assets/icons/icons';
@@ -33,36 +33,74 @@ function Detail({ down880, down600 }: contentType) {
         setIsOnTrue(!isOnTrue)
     }
 
+    const AllYears = [2024, 2023];
+
+    // 좌측 메뉴 데이터 - 년도별 계산
+    const filteredYearData = (y : number) => {
+        return data.filter((item : ListType) => item.year === y)
+    } 
+
+    const onClickfilteredEvent = (item : ListType) => {
+        setIndex( (5 - 1) - item.id ); 
+    }
+
+    useEffect(()=>{
+    },[])
+    
+
     return (
         <>
             {
                 data.map((obj: ListType, i: number) => {
                     if (i === index) {
-                        return <div key={i} className={`content portfolio-detail ${isOnTrue ? "display-block" : "display-none"}` + (down880 ? ' down880' : '') + (down600 ? ' down600' : '')}>
-                            <div className='detail-header'>
-                                <button className='pdBack' onClick={backFn}><Back />뒤로가기</button>
-                                <div className='pdIndex'>
+                        return <div key={i} className={`content portfolio-detail ` + (down880 ? ' down880' : '') + (down600 ? ' down600' : '')}>
+                            <div className='detail-introduce'>
+                                <ul className='detail-left detail-menu'>
+                                    {
+                                        AllYears.map((item)=>
+                                        <ul className='detail-menu-inner'>
+                                        {
+                                            filteredYearData(item).length > 0
+                                            ? <>
+                                            <b>📁 {item}</b>
+                                            {
+                                                filteredYearData(item).map((item:ListType) => <li
+                                                onClick={()=>{onClickfilteredEvent(item)}}
+                                                style={{ backgroundColor: index === ((5 - 1) - item.id)
+                                                    ? '#eee'
+                                                    : 'transparent'}}
+                                                >
+                                                    {item.name}
+                                                </li>)
+                                            }
+                                            </>
+                                            : null
+                                        }   
+                                        </ul>
+                                        )
+                                    }
+                                </ul>
+                                <div className='detail-right'>
+                                    <section className='detail-right-header'>
+                                        <div className='pdIndex'>
                                     <button className='leftBtn' onClick={() => { setIndex(i - 1) }}>←</button>
                                     <p>{i + 1}/5</p>
                                     <button className='rightBtn' onClick={() => { setIndex(i + 1) }}>→</button>
-                                </div>
-                            </div>
-                            <div className='detail-introduce'>
-                                <div className='detail-left'>
-                                    <div className='detail-title'>
+                                        </div>
                                         <h3>{obj.name}</h3>
-                                        <span>{obj.dateteam}</span>
-                                    </div>
+                                    </section>
                                     <div className='detail-image'>
                                         <img src={obj.imageurl} alt="썸네일이미지" ></img>
+                                    </div>
+                                    <div className='develop-date'>
+                                        <h4 className='date'>🚗 기간 및 인원</h4>
+                                        <span>{obj.dateteam}</span>
                                     </div>
                                     <div className='develop-link'>
                                         <h4 className='title'>⛪ 링크</h4>
                                         <a href={obj.deployurl} target='_blank'>배포 주소</a>
                                         <a href={obj.link} target='_blank'>Github</a>
                                     </div>
-                                </div>
-                                <div className='detail-right'>
                                     <div className='develop-goal'>
                                         <h4 className='title'>⭐ 프로젝트 개요</h4>
                                         <p>{obj.overview}</p>
