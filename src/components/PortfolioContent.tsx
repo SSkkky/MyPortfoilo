@@ -53,7 +53,7 @@ function PortfolioContent({ down880, down600 }: contentType) {
 
   return (
     <>
-      <div className={`content portfolio ${isOnTrue ? "display-none" : "display-block"}`} ref={refPF}>
+      {/* <div className={`content portfolio ${isOnTrue ? "display-none" : "display-block"}`} ref={refPF}>
         {
           data?.map((item: ListType, i: number) =>
             <section className={'dot-bg portfolio-section' + (down880 ? ' down880' : '') + (down600 ? ' down600' : '')} key={item.id}>
@@ -68,7 +68,7 @@ function PortfolioContent({ down880, down600 }: contentType) {
             </section>
           )
         }
-      </div>
+      </div> */}
       <Detail
         down880={down880}
         down600={down600} />

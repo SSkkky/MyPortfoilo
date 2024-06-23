@@ -7,6 +7,10 @@
     z-index: 3;
     position: relative;
 
+    .detail-menu-inner {
+        margin-bottom: 1rem;
+    }
+
     .detail-header {
         width: 100%;
         height: 2rem;
@@ -35,19 +39,6 @@
                 height: 24px;
             }
         }
-
-        .pdIndex {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            background-color: transparent;
-
-            button {
-                padding: 0.2rem;
-                background-color: #eee;
-            }
-        }
     }
 
     .detail-title {
@@ -66,6 +57,7 @@
     }
 
     .detail-image {
+        margin-top: 1rem;
         transition: 0.3s ease;
         position: relative;
         z-index: 0;
@@ -125,7 +117,8 @@
             position: sticky;
             top: 0;
 
-            .develop-goal {}
+            background: #fafafa;
+            border-right: 1px solid #ddd;
 
             .develop-link {
                 a {
@@ -136,10 +129,29 @@
                     font-weight: 700;
                 }
             }
+
+            .pdIndex {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background-color: transparent;
+
+                button {
+                    width: 1.3rem;
+                    height: 1.5rem;
+                    background-color: #eee;
+                }
+            }
         }
 
         .detail-right {
             width: 70%;
+
+            .detail-right-header {
+                h3 {
+                    font-size: 2.5rem;
+                }
+            }
 
             .develop-skill {
                 span {
@@ -210,6 +222,12 @@
                 position: static;
                 width: 100%;
                 margin: 0;
+                border-right: 0;
+                background-color: transparent;
+
+                .detail-menu-inner {
+                    display: none;
+                }
 
                 .detail-title {
                     h3 {
