@@ -56,6 +56,11 @@ function Detail({ down880, down600 }: contentType) {
                         return <div key={i} className={`content portfolio-detail ` + (down880 ? ' down880' : '') + (down600 ? ' down600' : '')}>
                             <div className='detail-introduce'>
                                 <ul className='detail-left detail-menu'>
+                                    <div className='pdIndex'>
+                                        <button className='leftBtn' onClick={() => { setIndex(i - 1) }}>←</button>
+                                        <p>{i + 1}/5</p>
+                                        <button className='rightBtn' onClick={() => { setIndex(i + 1) }}>→</button>
+                                    </div>
                                     {
                                         AllYears.map((item)=>
                                         <ul className='detail-menu-inner'>
@@ -82,11 +87,6 @@ function Detail({ down880, down600 }: contentType) {
                                 </ul>
                                 <div className='detail-right'>
                                     <section className='detail-right-header'>
-                                        <div className='pdIndex'>
-                                    <button className='leftBtn' onClick={() => { setIndex(i - 1) }}>←</button>
-                                    <p>{i + 1}/5</p>
-                                    <button className='rightBtn' onClick={() => { setIndex(i + 1) }}>→</button>
-                                        </div>
                                         <h3>{obj.name}</h3>
                                     </section>
                                     <div className='detail-image'>
