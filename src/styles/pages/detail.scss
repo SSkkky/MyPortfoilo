@@ -11,35 +11,35 @@
         margin-bottom: 1rem;
     }
 
-    .detail-header {
-        width: 100%;
-        height: 2rem;
-        display: flex;
-        justify-content: space-between;
-        position: sticky;
-        top: 0;
-        left: 0;
-        z-index: 1;
-        background-color: #fff;
+    // .detail-header {
+    //     width: 100%;
+    //     height: 2rem;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     position: sticky;
+    //     top: 0;
+    //     left: 0;
+    //     z-index: 1;
+    //     background-color: #fff;
 
-        .pdBack {
-            display: flex;
-            align-items: center;
+    //     .pdBack {
+    //         display: flex;
+    //         align-items: center;
 
-            svg {
-                cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
-            }
-        }
+    //         svg {
+    //             cursor: url(../../assets/icons/cursorFull.svg) 2 2, auto !important;
+    //         }
+    //     }
 
-        button {
-            background-color: transparent;
+    //     button {
+    //         background-color: transparent;
 
-            svg {
-                width: 24px;
-                height: 24px;
-            }
-        }
-    }
+    //         svg {
+    //             width: 24px;
+    //             height: 24px;
+    //         }
+    //     }
+    // }
 
     .detail-title {
         text-align: center;
@@ -83,8 +83,9 @@
         margin-top: 1rem;
         width: 100%;
         display: flex;
+        justify-content: flex-end;
         gap: 2rem;
-        position: sticky;
+        position: relative;
 
         * {
             font-family: "Pretendard Variable", 'Pretendard';
@@ -110,13 +111,11 @@
         }
 
         .detail-left {
-            width: 30%;
-            height: 100%;
-            overflow: auto;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-
+            width: calc(30% - 4rem);
+            height: calc(100% - 6rem);
+            position: fixed;
+            top: 4rem;
+            left: 2rem;
             border-right: 1px solid #ddd;
 
             .develop-link {
@@ -215,14 +214,19 @@
 
         .detail-introduce {
             position: static;
+            justify-content: normal;
             flex-direction: column;
             gap: 0;
 
             .detail-left {
-                position: static;
-                width: 100%;
-                margin: 0;
+                position: fixed;
+                z-index: 1;
+                width: calc(100% - 6rem);
+                height: calc(24px + 1rem);
                 border-right: 0;
+                background: #fff;
+                box-shadow: 0px 20px 10px -6px rgba(0, 0, 0, 0.04);
+
 
                 .detail-menu-inner {
                     display: none;
@@ -236,6 +240,7 @@
             }
 
             .detail-right {
+                margin-top: 2rem;
                 width: 100%;
             }
         }
