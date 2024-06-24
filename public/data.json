@@ -69,7 +69,7 @@
         "keyword": "happypub",
         "imageurl": "https://firebasestorage.googleapis.com/v0/b/choding.appspot.com/o/gom%2FhappyThumb.png?alt=media&token=89eac2e5-fcc0-40d2-ac46-c767c4fcb8a5",
         "videourl": "dd",
-        "deployurl": "https://alclsrkawk.github.io/bottle/",
+        "deployurl": "https://sskkky.github.io/bottle/",
         "dateteam": "2023.12~2024.01 (5명)",
         "year" : 2024,
         "goal": [
@@ -95,7 +95,7 @@
                 "goal": "클릭시 상품 페이지 이동"
             }
         ],
-        "link": "https://github.com/alclsrkawk/bottle",
+        "link": "https://github.com/SSkkky/bottle",
         "overview": "<해피펍>은 주류 큐레이션 쇼핑몰로 HTML, SCSS, JAVASCRIPT를 활용하여 다양한 기능을 구현하였습니다. 팀원 모두가 공감하는 주류 문화를 기반으로 기획, 개발, 디자인했고 유연한 웹 해상도 대응을 위한 4단계 반응형 작업을 진행하였습니다. 저는 이 팀 프로젝트에서 고객 리뷰, 통합 검색 기능을 담당하고 JSON 데이터 수집, 기획, 디자인에 참여했습니다.",
         "function": [
             {
